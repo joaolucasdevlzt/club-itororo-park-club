@@ -9,9 +9,10 @@ import ListItemButton from '@mui/material/ListItemButton';
 
 import { RouterLink } from 'src/routes/components';
 
+import { HEADER } from 'src/layouts/config-layout';
+
 import Iconify from 'src/components/iconify';
 
-import { HEADER } from 'src/layouts/config-layout';
 import { NavItemProps, NavItemStateProps } from '../types';
 
 // ----------------------------------------------------------------------

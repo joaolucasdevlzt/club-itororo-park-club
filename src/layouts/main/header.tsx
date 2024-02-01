@@ -60,14 +60,14 @@ export default function Header() {
           {mdUp && <NavDesktop data={navConfig} />}
 
           {smUp && (
-            <Stack alignItems="baseline" justifyContent="center" direction="row" gap={1}>
+            <Stack alignItems="baseline" justifyContent="center" direction="row" gap={2}>
               <Link
                 sx={{
                   width: 'fit-content',
                   fontSize: '1rem',
                   fontFamily: 'Kanit-Black',
                   fontWeight: theme.typography.fontWeightSemiBold,
-                  marginRight: 2,
+                  marginRight: 1,
                   flexDirection: 'column',
                   display: 'flex',
                   alignItems: 'center',
@@ -75,13 +75,13 @@ export default function Header() {
                   color: '#28327F',
                   ...(home ? { color: '#E33149' } : {}),
                   '&:hover': {
-                    textDecoration:'none',
+                    textDecoration: 'none',
                     color: '#E33149',
                   },
                 }}
-                href="/registration"
+                href="/"
               >
-                <Box sx={{ marginRight: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
+                <Box sx={{ marginRight: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
                   <Iconify icon="bi:house-door" />
                   Home
                 </Box>
@@ -103,15 +103,14 @@ export default function Header() {
                   fontSize: '1rem',
                   fontFamily: 'Kanit-Black',
                   fontWeight: theme.typography.fontWeightSemiBold,
-
-                  marginRight: 2,
+                  marginRight: 1,
                   display: 'flex',
                   color: '#28327F',
                   alignItems: 'center',
                   gap: 1,
                   ...(about ? { color: '#E33149' } : {}),
                   '&:hover': {
-                    textDecoration:'none',
+                    textDecoration: 'none',
                     color: '#E33149',
                   },
                 }}

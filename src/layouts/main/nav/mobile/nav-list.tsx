@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 
 import Collapse from '@mui/material/Collapse';
+
 import { useActiveLink } from 'src/routes/hooks/use-active-link';
 
 import { NavSectionVertical } from 'src/components/nav-section';

@@ -20,7 +20,11 @@ export default function MainLayout({ children }: Props) {
       <Box
         component="main"
         sx={{
-          flexGrow: 1,
+          border:1,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
           ...(!homePage && {
             pt: { xs: `${HEADER.H_MOBILE}px`, md: `${HEADER.H_DESKTOP_OFFSET}px` },
           }),

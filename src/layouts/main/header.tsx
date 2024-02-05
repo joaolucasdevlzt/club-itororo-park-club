@@ -21,6 +21,7 @@ import HeaderShadow from '../common/header-shadow';
 // ----------------------------------------------------------------------
 
 export default function Header() {
+  
   const path = usePathname();
   const about = path === '/sobre';
   const home = path === '/';
@@ -37,6 +38,7 @@ export default function Header() {
   });
   const smUp = useMediaQuery(theme.breakpoints.up('sm'));
   const mdUp = useMediaQuery(theme.breakpoints.up('md'));
+  const lgUp = useMediaQuery(theme.breakpoints.up('lg'));
   const offsetTop = useOffSetTop(HEADER.H_DESKTOP);
 
   return (
@@ -59,7 +61,7 @@ export default function Header() {
 
           {mdUp && <NavDesktop data={navConfig} />}
 
-          {smUp && (
+          {mdUp && (
             <Stack alignItems="baseline" justifyContent="center" direction="row" gap={2}>
               <Link
                 sx={{
@@ -131,7 +133,7 @@ export default function Header() {
                   />
                 )}
               </Link>
-              <Link
+              <Box
                 sx={{
                   fontSize: '1rem',
                   fontFamily: 'Kanit-Black',
@@ -141,11 +143,12 @@ export default function Header() {
                   gap: 1,
                   color: '#28327F',
                 }}
-                href="/registration"
+                onClick={()=>window.open('https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0', '_blank')}
+
               >
                 <Iconify icon="vaadin:headset" />
                 Fale com um consultor
-              </Link>
+              </Box>
             </Stack>
           )}
           {!mdUp && <NavMobile data={navConfig} />}

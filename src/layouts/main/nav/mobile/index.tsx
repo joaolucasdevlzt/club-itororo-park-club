@@ -109,7 +109,7 @@ export default function NavMobile({ data }: NavProps) {
                   gap: 1,
                   color: '#28327F',
                 }}
-                onClick={()=>window.open('https://wa.me/553432290010', '_blank')}
+                onClick={()=>window.open('https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0', '_blank')}
               >
                 <Iconify icon="vaadin:headset" />
                 Fale com um consultor

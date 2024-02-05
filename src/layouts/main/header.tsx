@@ -21,6 +21,7 @@ import HeaderShadow from '../common/header-shadow';
 // ----------------------------------------------------------------------
 
 export default function Header() {
+  
   const path = usePathname();
   const about = path === '/sobre';
   const home = path === '/';
@@ -37,6 +38,7 @@ export default function Header() {
   });
   const smUp = useMediaQuery(theme.breakpoints.up('sm'));
   const mdUp = useMediaQuery(theme.breakpoints.up('md'));
+  const lgUp = useMediaQuery(theme.breakpoints.up('lg'));
   const offsetTop = useOffSetTop(HEADER.H_DESKTOP);
 
   return (
@@ -59,7 +61,7 @@ export default function Header() {
 
           {mdUp && <NavDesktop data={navConfig} />}
 
-          {smUp && (
+          {mdUp && (
             <Stack alignItems="baseline" justifyContent="center" direction="row" gap={2}>
               <Link
                 sx={{

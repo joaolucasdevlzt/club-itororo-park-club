@@ -7,6 +7,7 @@ import { Box, Link, createTheme } from '@mui/material';
 import { usePathname } from 'src/routes/hooks';
 
 import Logo from 'src/components/logo';
+import Iconify from 'src/components/iconify';
 import SvgColor from 'src/components/svg-color';
 import Scrollbar from 'src/components/scrollbar';
 
@@ -39,7 +40,7 @@ export default function NavMobile({ data }: NavProps) {
   return (
     <>
       <IconButton onClick={handleOpenMenu} sx={{ ml: 1 }}>
-        <SvgColor color="rgba(150, 150, 150, 1)" src="/assets/icons/navbar/ic_menu_item.svg" />
+        <Iconify height={28} width={28} icon="mingcute:menu-fill"/>
       </IconButton>
 
       <Drawer
@@ -68,29 +69,51 @@ export default function NavMobile({ data }: NavProps) {
               pt: 4,
             }}
           >
-            <Link variant="body2" href="/registration">
-              Cadastre-se
-            </Link>
             <Link
-              variant="body2"
-              href="https://ffoperadora.infotravel.com.br/infotravel/login.xhtml"
-              sx={{
-                py: 1,
-                px: 3,
-                borderRadius: 1,
-                backgroundColor: theme.palette.primary.main,
-                color: theme.palette.primary.contrastText,
-                '&:hover': {
-                  textDecoration: 'none',
-                  backgroundColor: theme.palette.grey[100],
-                  color: theme.palette.primary.main,
-                  borderColor: theme.palette.primary.main,
-                  border: 1,
-                },
-              }}
-            >
-              Entrar
-            </Link>
+                sx={{
+                  fontSize: '1rem',
+                  fontFamily: 'Kanit-Black',
+                  fontWeight: theme.typography.fontWeightSemiBold,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  color: '#28327F',
+                }}
+                href="/"
+              >
+                <Iconify icon="bi:house-door" />
+                Home
+              </Link>
+            <Link
+                sx={{
+                  fontSize: '1rem',
+                  fontFamily: 'Kanit-Black',
+                  fontWeight: theme.typography.fontWeightSemiBold,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  color: '#28327F',
+                }}
+                href="/sobre"
+              >
+                <Iconify icon="f7:info-circle" />
+                Sobre nós
+              </Link>
+            <Box
+                sx={{
+                  fontSize: '1rem',
+                  fontFamily: 'Kanit-Black',
+                  fontWeight: theme.typography.fontWeightSemiBold,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  color: '#28327F',
+                }}
+                onClick={()=>window.open('https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0', '_blank')}
+              >
+                <Iconify icon="vaadin:headset" />
+                Fale com um consultor
+              </Box>
           </Box>
         </Scrollbar>
       </Drawer>

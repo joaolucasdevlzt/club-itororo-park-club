@@ -23,6 +23,9 @@ export default function Banner({ sx, images }: BannerProps) {
         break;
     }
   };
+  if (!images.length) {
+    return <Box />;
+  }
   if (Array.isArray(images) && images.length) {
     return (
       <Box sx={{ width: '100%', position: 'relative', fontSize: 16 }}>
@@ -83,9 +86,7 @@ export default function Banner({ sx, images }: BannerProps) {
       </Box>
     );
   }
-  if (!images.length) {
-    return <Box />;
-  }
+
   return (
     <Box
       sx={{

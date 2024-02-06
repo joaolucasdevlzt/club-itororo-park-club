@@ -20,7 +20,6 @@ export default function MainLayout({ children }: Props) {
       <Box
         component="main"
         sx={{
-          border:1,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',

@@ -90,7 +90,6 @@ export default function Banner({ sx, images }: BannerProps) {
   return (
     <Box
       sx={{
-        border: 1,
         width: '100%',
         aspectRatio: '13/3.8',
         backgroundSize: 'contain',

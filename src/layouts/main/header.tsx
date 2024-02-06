@@ -36,9 +36,7 @@ export default function Header() {
       },
     },
   });
-  const smUp = useMediaQuery(theme.breakpoints.up('sm'));
   const mdUp = useMediaQuery(theme.breakpoints.up('md'));
-  const lgUp = useMediaQuery(theme.breakpoints.up('lg'));
   const offsetTop = useOffSetTop(HEADER.H_DESKTOP);
 
   return (

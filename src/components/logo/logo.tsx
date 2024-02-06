@@ -20,7 +20,7 @@ const Logo = forwardRef<HTMLDivElement, LogoProps>(
       <Box
         component="img"
         src="../../../public/logo/Logo_Lazertur.svg"
-        sx={{ width: 188, height: 40, cursor: 'pointer', ...sx }}
+        sx={{ width: 128, height: 40, cursor: 'pointer', ...sx }}
       />
     );
 

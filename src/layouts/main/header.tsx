@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
-import { Link, createTheme, useMediaQuery } from '@mui/material';
+import { Link, Typography, createTheme, useMediaQuery } from '@mui/material';
 
 import { usePathname } from 'src/routes/hooks';
 
@@ -21,7 +21,6 @@ import HeaderShadow from '../common/header-shadow';
 // ----------------------------------------------------------------------
 
 export default function Header() {
-  
   const path = usePathname();
   const about = path === '/sobre';
   const home = path === '/';
@@ -36,9 +35,7 @@ export default function Header() {
       },
     },
   });
-  const smUp = useMediaQuery(theme.breakpoints.up('sm'));
   const mdUp = useMediaQuery(theme.breakpoints.up('md'));
-  const lgUp = useMediaQuery(theme.breakpoints.up('lg'));
   const offsetTop = useOffSetTop(HEADER.H_DESKTOP);
 
   return (
@@ -62,12 +59,12 @@ export default function Header() {
           {mdUp && <NavDesktop data={navConfig} />}
 
           {mdUp && (
-            <Stack alignItems="baseline" justifyContent="center" direction="row" gap={2}>
+            <Stack alignItems="flex-start" justifyContent="center" direction="row" gap={2}>
               <Link
                 sx={{
                   width: 'fit-content',
                   fontSize: '1rem',
-                  fontFamily: 'Kanit-Black',
+                  fontFamily: 'Kanit-Regular',
                   fontWeight: theme.typography.fontWeightSemiBold,
                   marginRight: 1,
                   flexDirection: 'column',
@@ -84,7 +81,6 @@ export default function Header() {
                 href="/"
               >
                 <Box sx={{ marginRight: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
-                  <Iconify icon="bi:house-door" />
                   Home
                 </Box>
                 {home && (
@@ -102,13 +98,11 @@ export default function Header() {
               </Link>
               <Link
                 sx={{
-                  fontSize: '1rem',
-                  fontFamily: 'Kanit-Black',
                   fontWeight: theme.typography.fontWeightSemiBold,
                   marginRight: 1,
                   display: 'flex',
                   color: '#28327F',
-                  alignItems: 'center',
+                  alignItems: 'flex-start',
                   gap: 1,
                   ...(about ? { color: '#E33149' } : {}),
                   '&:hover': {
@@ -118,8 +112,15 @@ export default function Header() {
                 }}
                 href="/sobre"
               >
-                <Iconify width={22} icon="f7:info-circle" />
-                Sobre nós
+                <Typography
+                  sx={{
+                    fontSize: '1rem',
+                    fontFamily: 'Kanit-Regular',
+                  }}
+                >
+                  {' '}
+                  Sobre nós
+                </Typography>
                 {about && (
                   <Box
                     sx={{
@@ -136,15 +137,19 @@ export default function Header() {
               <Box
                 sx={{
                   fontSize: '1rem',
-                  fontFamily: 'Kanit-Black',
+                  fontFamily: 'Kanit-Regular',
                   fontWeight: theme.typography.fontWeightSemiBold,
                   display: 'flex',
                   alignItems: 'center',
                   gap: 1,
                   color: '#28327F',
                 }}
-                onClick={()=>window.open('https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0', '_blank')}
-
+                onClick={() =>
+                  window.open(
+                    'https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0',
+                    '_blank'
+                  )
+                }
               >
                 <Iconify icon="vaadin:headset" />
                 Fale com um consultor

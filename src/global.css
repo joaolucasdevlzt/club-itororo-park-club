@@ -3,6 +3,18 @@
 
 
 @font-face {
-    font-family: 'Kanit-Black';
+    font-family: 'Kanit-Regular';
     src: url('../public/fonts/Kanit-Regular.ttf');
+  }
+@font-face {
+    font-family: 'Kanit-Thin';
+    src: url('../public/fonts/Kanit-Thin.ttf');
+  }
+@font-face {
+    font-family: 'Kanit-Black';
+    src: url('../public/fonts/Kanit-Black.ttf');
+  }
+@font-face {
+    font-family: 'Kanit-Light';
+    src: url('../public/fonts/Kanit-Light.ttf');
   }

@@ -8,7 +8,6 @@ import { usePathname } from 'src/routes/hooks';
 
 import Logo from 'src/components/logo';
 import Iconify from 'src/components/iconify';
-import SvgColor from 'src/components/svg-color';
 import Scrollbar from 'src/components/scrollbar';
 
 import NavList from './nav-list';
@@ -72,7 +71,7 @@ export default function NavMobile({ data }: NavProps) {
             <Link
                 sx={{
                   fontSize: '1rem',
-                  fontFamily: 'Kanit-Black',
+                  fontFamily: 'Kanit-Regular',
                   fontWeight: theme.typography.fontWeightSemiBold,
                   display: 'flex',
                   alignItems: 'center',
@@ -87,7 +86,7 @@ export default function NavMobile({ data }: NavProps) {
             <Link
                 sx={{
                   fontSize: '1rem',
-                  fontFamily: 'Kanit-Black',
+                  fontFamily: 'Kanit-Regular',
                   fontWeight: theme.typography.fontWeightSemiBold,
                   display: 'flex',
                   alignItems: 'center',
@@ -102,7 +101,7 @@ export default function NavMobile({ data }: NavProps) {
             <Box
                 sx={{
                   fontSize: '1rem',
-                  fontFamily: 'Kanit-Black',
+                  fontFamily: 'Kanit-Regular',
                   fontWeight: theme.typography.fontWeightSemiBold,
                   display: 'flex',
                   alignItems: 'center',

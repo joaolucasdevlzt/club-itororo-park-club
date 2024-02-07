@@ -71,7 +71,7 @@ export default function NavMobile({ data }: NavProps) {
             <Link
                 sx={{
                   fontSize: '1rem',
-                  fontFamily: 'Kanit-Black',
+                  fontFamily: 'Kanit-Regular',
                   fontWeight: theme.typography.fontWeightSemiBold,
                   display: 'flex',
                   alignItems: 'center',
@@ -86,7 +86,7 @@ export default function NavMobile({ data }: NavProps) {
             <Link
                 sx={{
                   fontSize: '1rem',
-                  fontFamily: 'Kanit-Black',
+                  fontFamily: 'Kanit-Regular',
                   fontWeight: theme.typography.fontWeightSemiBold,
                   display: 'flex',
                   alignItems: 'center',
@@ -101,7 +101,7 @@ export default function NavMobile({ data }: NavProps) {
             <Box
                 sx={{
                   fontSize: '1rem',
-                  fontFamily: 'Kanit-Black',
+                  fontFamily: 'Kanit-Regular',
                   fontWeight: theme.typography.fontWeightSemiBold,
                   display: 'flex',
                   alignItems: 'center',

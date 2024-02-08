@@ -1,30 +1,14 @@
-import { Box, Grid, SxProps, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
+
+import { HighlightPackagesProps } from 'src/types/external/api';
 
 import Iconify from '../iconify';
 
-interface ContentProps {
-  icon: string;
-  text: string;
-}
-interface HighlightProps {
-  fn?: () => void;
-  sx?: SxProps;
-  imageSx?: SxProps;
-  width?: number;
-  image: string;
-  aspectRatio?: string;
-  title: string;
-  subtitle?: string;
-  content?: ContentProps[];
-  semiboldText?: string;
-  boldBottomText?: string;
-  bottomText?: string;
-}
 export default function HighlightCard({
   fn,
   sx,
   imageSx,
-  width = 310,
+  width,
   image,
   aspectRatio = '10/7.9',
   title,
@@ -32,14 +16,15 @@ export default function HighlightCard({
   content = [],
   semiboldText,
   boldBottomText,
-  bottomText = '_',
-}: HighlightProps) {
+  bottomText,
+}: HighlightPackagesProps) {
   return (
     <Box
       onClick={fn}
       sx={{
-        width,
+        minWidth:width,
         pb: 3,
+        height: '100%',
         border: 1,
         borderColor: 'transparent',
         display: 'flex',

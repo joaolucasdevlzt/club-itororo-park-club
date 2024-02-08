@@ -18,3 +18,19 @@
     font-family: 'Kanit-Light';
     src: url('../public/fonts/Kanit-Light.ttf');
   }
+@font-face {
+    font-family: 'Prompt-Black';
+    src: url('../public/fonts/Prompt-Black.ttf');
+  }
+@font-face {
+    font-family: 'Prompt-Thin';
+    src: url('../public/fonts/Prompt-Thin.ttf');
+  }
+@font-face {
+    font-family: 'Prompt-Regular';
+    src: url('../public/fonts/Prompt-Regular.ttf');
+  }
+@font-face {
+    font-family: 'Prompt-Medium';
+    src: url('../public/fonts/Prompt-Medium.ttf');
+  }

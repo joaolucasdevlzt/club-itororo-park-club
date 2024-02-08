@@ -1,75 +1,57 @@
-export const packaListMock = [
+import { HighlightPackagesProps } from 'src/types/external/api';
+
+export const packaListMock: HighlightPackagesProps[] = [
   {
-    image: '/assets/background/overlay_3.jpg',
+    image: '/assets/images/highlight-packages/rj.png',
     title: 'Rio de Janeiro',
-    subtitle: 'Pão de açucar',
+    subtitle: 'Rio de Janeiro',
     content: [
-        {icon:'icomoon-free:sun', text: '8 dias'},
-        {icon:'ci:coffee', text: 'Café incluso'},
-        {icon:'massage', text: 'massagista'},
+      { icon: 'sun', text: '8 dias' },
+      { icon: 'calendar', text: 'De 06/06/2024 à 15/06/2024' },
+      { icon: 'coffee', text: 'Café da manhã incluso' },
     ],
     semiboldText: 'a partir de',
     boldBottomText: 'R$ 350,90',
     bottomText: 'Parcela única',
   },
   {
-    image: '/assets/background/overlay_3.jpg',
-    title: 'Florianópolis',
-    subtitle: 'Praia da Galheta',
+    image: '/assets/images/highlight-packages/porto_galinhas.png',
+    title: 'Porto de Galinhas',
+    subtitle: 'Pernambuco',
     content: [
-        {icon:'icomoon-free:sun', text: '30 dias'},
-        {icon:'mdi:routes', text: 'Guia exclusivo'},
-        {icon:'tabler:map-2', text: 'Roteiro completo'},
-        {icon:'ci:coffee', text: 'Café incluso'},
-     
+    
+      { icon: 'sun', text: '8 dias' },
+      { icon: 'calendar', text: 'De 06/06/24 à 15/06/24' },
+      { icon: 'coffee', text: 'Café da manhã incluso' },
+    ],
+    semiboldText: '10x de',
+    boldBottomText: 'R$ 859,90',
+    bottomText: 'Sem entrada',
+  },
+  {
+    image: '/assets/images/highlight-packages/natal.png',
+    title: 'Natal',
+    subtitle: 'Rio Grande do Norte',
+    content: [
+      { icon: 'sun', text: '15 dias' },
+      { icon: 'calendar', text: 'De 10/05/24 à 25/05/24' },
+      { icon: 'all_inclusive', text: 'All inclusive' },
     ],
     semiboldText: '10x de',
     boldBottomText: 'R$ 1090,90',
     bottomText: 'Sem entrada',
   },
   {
-    image: '/assets/background/overlay_3.jpg',
-    title: 'Florianópolis',
-    subtitle: 'Praia da Galheta',
+    image: '/assets/images/highlight-packages/fortaleza.png',
+    title: 'Fortaleza',
+    subtitle: 'Ceará',
     content: [
-        {icon:'icomoon-free:sun', text: '30 dias'},
-        {icon:'mdi:routes', text: 'Guia exclusivo'},
-        {icon:'tabler:map-2', text: 'Roteiro completo'},
-        {icon:'ci:coffee', text: 'Café incluso'},
-     
+      { icon: 'sun', text: '5 dias' },
+      { icon: 'calendar', text: 'De 18/09/24 à 23/09/24' },
+      { icon: 'all_inclusive', text: 'All inclusive' },
     ],
     semiboldText: '10x de',
-    boldBottomText: 'R$ 1090,90',
-    bottomText: 'Sem entrada',
-  },
-  {
-    image: '/assets/background/overlay_3.jpg',
-    title: 'Florianópolis',
-    subtitle: 'Praia da Galheta',
-    content: [
-        {icon:'icomoon-free:sun', text: '30 dias'},
-        {icon:'mdi:routes', text: 'Guia exclusivo'},
-        {icon:'tabler:map-2', text: 'Roteiro completo'},
-        {icon:'ci:coffee', text: 'Café incluso'},
-     
-    ],
-    semiboldText: '10x de',
-    boldBottomText: 'R$ 1090,90',
-    bottomText: 'Sem entrada',
-  },
-  {
-    image: '/assets/background/overlay_3.jpg',
-    title: 'Florianópolis',
-    subtitle: 'Praia da Galheta',
-    content: [
-        {icon:'icomoon-free:sun', text: '30 dias'},
-        {icon:'mdi:routes', text: 'Guia exclusivo'},
-        {icon:'tabler:map-2', text: 'Roteiro completo'},
-        {icon:'ci:coffee', text: 'Café incluso'},
-     
-    ],
-    semiboldText: '10x de',
-    boldBottomText: 'R$ 1090,90',
+    boldBottomText: 'R$ 569,90',
     bottomText: 'Sem entrada',
   },
 ];

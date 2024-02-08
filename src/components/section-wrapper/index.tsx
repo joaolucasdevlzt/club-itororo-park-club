@@ -6,7 +6,7 @@ export default function SectionWrapper({ children }: { children: ReactNode }) {
   return (
     <Box
       sx={{
-        maxWidth: 1100,
+        maxWidth: 1350,
         width: '100%',
         height: 'auto',
         pt: 12,

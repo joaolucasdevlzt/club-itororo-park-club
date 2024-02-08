@@ -2,8 +2,6 @@ import { Box, Grid, Typography } from '@mui/material';
 
 import { HighlightPackagesProps } from 'src/types/external/api';
 
-import Iconify from '../iconify';
-
 export default function HighlightCard({
   fn,
   sx,
@@ -22,7 +20,8 @@ export default function HighlightCard({
     <Box
       onClick={fn}
       sx={{
-        minWidth:width,
+        minWidth: width,
+        maxWidth: width,
         pb: 3,
         height: '100%',
         border: 1,
@@ -84,7 +83,7 @@ export default function HighlightCard({
                 fontFamily: 'Kanit-Light',
               }}
             >
-              <Iconify icon={item.icon} />
+              <Box component="img" src={`/assets/icons/lazertur/${item.icon}.svg`} />
               <Typography variant="body1" sx={{ color: '#28327F', fontFamily: 'Kanit-Light' }}>
                 {item.text}
               </Typography>

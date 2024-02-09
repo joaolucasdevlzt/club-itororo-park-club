@@ -15,13 +15,12 @@ export default function CTACard({
       container
       sx={{
         borderRadius: 2,
-        marginBottom: 10,
         padding: 4,
         backgroundColor: '#E5E6EE',
         display: 'flex',
         justifyContent: { xs: 'flex-start', md: 'space-evenly' },
         alignItems: 'center',
-        gap: { xs: 3, md: 0, lg: 0 },
+        gap: { xs: 3, md: 0 },
         ...cardProps,
       }}
     >
@@ -66,6 +65,7 @@ export default function CTACard({
           lg={6}
           sx={{
             display: 'flex',
+            alignItems:'center',
             justifyContent: { sm: 'flex-end', md: 'flex-start', lg: 'flex-end' },
           }}
         >

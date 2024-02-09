@@ -1,30 +1,12 @@
-import { Box, Grid, SxProps, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 
-import Iconify from '../iconify';
+import { HighlightPackagesProps } from 'src/types/external/api';
 
-interface ContentProps {
-  icon: string;
-  text: string;
-}
-interface HighlightProps {
-  fn?: () => void;
-  sx?: SxProps;
-  imageSx?: SxProps;
-  width?: number;
-  image: string;
-  aspectRatio?: string;
-  title: string;
-  subtitle?: string;
-  content?: ContentProps[];
-  semiboldText?: string;
-  boldBottomText?: string;
-  bottomText?: string;
-}
 export default function HighlightCard({
   fn,
   sx,
   imageSx,
-  width = 310,
+  width,
   image,
   aspectRatio = '10/7.9',
   title,
@@ -32,14 +14,16 @@ export default function HighlightCard({
   content = [],
   semiboldText,
   boldBottomText,
-  bottomText = '_',
-}: HighlightProps) {
+  bottomText,
+}: HighlightPackagesProps) {
   return (
     <Box
       onClick={fn}
       sx={{
-        width,
+        minWidth: width,
+        maxWidth: width,
         pb: 3,
+        height: '100%',
         border: 1,
         borderColor: 'transparent',
         display: 'flex',
@@ -99,7 +83,7 @@ export default function HighlightCard({
                 fontFamily: 'Kanit-Light',
               }}
             >
-              <Iconify icon={item.icon} />
+              <Box component="img" src={`/assets/icons/lazertur/${item.icon}.svg`} />
               <Typography variant="body1" sx={{ color: '#28327F', fontFamily: 'Kanit-Light' }}>
                 {item.text}
               </Typography>

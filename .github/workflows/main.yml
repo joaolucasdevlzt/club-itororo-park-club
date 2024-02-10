@@ -1,0 +1,49 @@
+name: Build and deploy to S3
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Build React App for Dev environment
+        if: github.ref == 'refs/heads/dev'
+        run: node -v && yarn -v && yarn && yarn build
+
+      - name: Build React App for Prod environment
+        if: github.ref == 'refs/heads/main'
+        run: node -v && yarn -v && yarn && yarn build
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.npm
+            ~/.cache
+          key: ${{ runner.os }}-node-${{ hashFiles('**/*.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Deploy app build to Production S3 bucket
+        if: github.ref == 'refs/heads/main'
+        run: aws s3 sync ./dist s3://lazertur.com.br --delete
+
+      - name: Deploy app build to Development S3 bucket
+        if: github.ref == 'refs/heads/dev'
+        run: aws s3 sync ./dist s3://dev.lazertur.com.br --delete

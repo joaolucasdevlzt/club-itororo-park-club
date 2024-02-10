@@ -10,7 +10,6 @@ import { usePathname } from 'src/routes/hooks';
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
 
 import Logo from 'src/components/logo';
-import Iconify from 'src/components/iconify';
 
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
@@ -151,7 +150,7 @@ export default function Header() {
                   )
                 }
               >
-                <Iconify icon="vaadin:headset" />
+                <Box component="img" src="/assets/icons/lazertur/headset.svg" />
                 Fale com um consultor
               </Box>
             </Stack>

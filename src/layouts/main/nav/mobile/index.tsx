@@ -80,7 +80,7 @@ export default function NavMobile({ data }: NavProps) {
                 }}
                 href="/"
               >
-                <Iconify icon="bi:house-door" />
+             
                 Home
               </Link>
             <Link
@@ -95,7 +95,7 @@ export default function NavMobile({ data }: NavProps) {
                 }}
                 href="/sobre"
               >
-                <Iconify icon="f7:info-circle" />
+            
                 Sobre nós
               </Link>
             <Box
@@ -110,7 +110,7 @@ export default function NavMobile({ data }: NavProps) {
                 }}
                 onClick={()=>window.open('https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0', '_blank')}
               >
-                <Iconify icon="vaadin:headset" />
+                <Box component="img" src="/assets/icons/lazertur/headset.svg" />
                 Fale com um consultor
               </Box>
           </Box>

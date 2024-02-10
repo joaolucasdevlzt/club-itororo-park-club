@@ -3,6 +3,7 @@ import { Box, Grid, Button, Typography } from '@mui/material';
 import { CTACardInterface } from './types';
 
 export default function CTACard({
+  fn,
   icon,
   iconProps,
   text,
@@ -12,6 +13,7 @@ export default function CTACard({
 }: CTACardInterface) {
   return (
     <Grid
+      onClick={() => fn()}
       container
       sx={{
         borderRadius: 2,
@@ -65,7 +67,7 @@ export default function CTACard({
           lg={6}
           sx={{
             display: 'flex',
-            alignItems:'center',
+            alignItems: 'center',
             justifyContent: { sm: 'flex-end', md: 'flex-start', lg: 'flex-end' },
           }}
         >

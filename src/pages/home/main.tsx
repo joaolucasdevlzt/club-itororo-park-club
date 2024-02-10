@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
+import Image from 'src/components/image';
 import Banner from 'src/components/banner';
 import SectionWrapper from 'src/components/section-wrapper';
 
@@ -22,6 +23,10 @@ export default function HomePage() {
       </SectionWrapper>
       <SectionWrapper>
         <ContactsSection />
+      </SectionWrapper>
+      <SectionWrapper>
+        <Image image="rio" title="Rio de Janeiro" />
+        <Image image="rio" title="Rio de Janeiro" />
       </SectionWrapper>
     </>
   );

@@ -4,7 +4,12 @@ import { Box, Typography } from '@mui/material';
 
 import { ImageInterface } from './types';
 
-export default function Image({ image, title, titlePosition = 'bottom-left' }: ImageInterface) {
+export default function Image({
+  image,
+  title,
+  titlePosition = 'bottom-left',
+  aspectRatio = '16/9',
+}: ImageInterface) {
   const [hover, setHover] = useState<boolean>(false);
   const titlePositions = {
     'top-left': { top: 15, left: 15 },
@@ -29,7 +34,7 @@ export default function Image({ image, title, titlePosition = 'bottom-left' }: I
       <Box
         sx={{
           width: '100%',
-          aspectRatio: '16/9',
+          aspectRatio,
           borderRadius: 3,
           backgroundImage: `url(/assets/images/lazertur/${image}.png)`,
           backgroundSize: 'cover',

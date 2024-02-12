@@ -1,11 +1,11 @@
 import {
   Box,
+  Grid,
   Button,
   Checkbox,
-  FormControlLabel,
-  Grid,
   TextField,
   Typography,
+  FormControlLabel,
 } from '@mui/material';
 
 export default function Newsletter() {

@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
+import Image from 'src/components/image';
 import Banner from 'src/components/banner';
 import SectionWrapper from 'src/components/section-wrapper';
 

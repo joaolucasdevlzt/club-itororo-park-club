@@ -11,7 +11,7 @@ export default function CompanyRedirectCard({ company, url }: CompanyRedirectCar
         width: '100%',
         borderRadius: 2,
         py: 3,
-        px: 5,
+        px: 3,
         display: 'flex',
         justifyContent: 'space-evenly',
         alignItems: 'center',

@@ -6,7 +6,7 @@ import CTACard from 'src/components/cta-card';
 
 export default function ContactsSection() {
   return (
-    <Grid container sx={{ display: 'flex', flexDirection: 'row', gap: 1 }}>
+    <Grid container sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', gap:{xs:3, sm:0} }}>
       <Grid item xs={12} md={5.9}>
         <CTACard
           fn={() =>

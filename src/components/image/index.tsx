@@ -28,14 +28,14 @@ export default function Image({
         overflow: 'hidden',
         position: 'relative',
         width: '100%',
-        borderRadius: 3,
+        borderRadius: 2,
       }}
     >
       <Box
         sx={{
           width: '100%',
           aspectRatio,
-          borderRadius: 3,
+          borderRadius: 2,
           backgroundImage: `url(/assets/images/lazertur/${image}.png)`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -50,7 +50,7 @@ export default function Image({
         }}
       />
       <Box sx={{ position: 'absolute', ...titlePositions[titlePosition] }}>
-        <Typography sx={{ color: 'white', maxWidth: 500 }} variant="h3">
+        <Typography sx={{ color: 'white', fontFamily: 'Prompt-Medium', fontSize:{xs:16,sm:26, md:32,} }}>
           {title}
         </Typography>
       </Box>

@@ -4,18 +4,18 @@ export default function ExclusiveOffers() {
   return (
     <Box
       sx={{
-        maxWidth: 400,
-        backgroundSize: 'contain',
+        backgroundSize: { xs: 'cover' },
+        backgroundPosition: { xs: 'right', md: 'center' },
         backgroundRepeat: 'no-repeat',
         backgroundImage: `url(/assets/background/lazertur/especial_offers.svg)`,
-        aspectRatio: '3/4',
+        aspectRatio: { xs: '4/3', md: '3/4' },
         borderRadius: 3,
-        padding: 6,
+        padding: 3,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: 1,
+        gap: 3,
       }}
     >
       <Typography
@@ -29,7 +29,7 @@ export default function ExclusiveOffers() {
         Participe do nosso grupo VIP no WhatsApp e seja o primeiro a saber das melhores ofertas.
       </Typography>
       <Button
-      onClick={()=>alert('Você será redirecionado!')}
+        onClick={() => alert('Você será redirecionado!')}
         sx={{
           width: '100%',
           borderColor: '#F9FAFA',

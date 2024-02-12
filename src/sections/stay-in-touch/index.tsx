@@ -1,7 +1,9 @@
-import { Box } from '@mui/material';
 import React from 'react';
-import ExclusiveOffers from 'src/components/exclusive-offers';
+
+import { Box } from '@mui/material';
+
 import Newsletter from 'src/components/newsletter';
+import ExclusiveOffers from 'src/components/exclusive-offers';
 
 export default function StayInTouch() {
   return (

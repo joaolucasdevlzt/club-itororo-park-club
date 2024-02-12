@@ -1,6 +1,10 @@
 import { Box, Button } from '@mui/material';
 
-export default function CompanyRedirectCard({ company }: { company: string }) {
+interface CompanyRedirectCardProps {
+  company: string;
+  url: string;
+}
+export default function CompanyRedirectCard({ company, url }: CompanyRedirectCardProps) {
   return (
     <Box
       sx={{
@@ -27,6 +31,7 @@ export default function CompanyRedirectCard({ company }: { company: string }) {
         }}
       />
       <Button
+        onClick={() => window.open(url, '__blank')}
         sx={{
           width: 113,
           border: 1.7,

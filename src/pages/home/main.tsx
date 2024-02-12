@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 import Banner from 'src/components/banner';
 import SectionWrapper from 'src/components/section-wrapper';
+import ExclusiveOffers from 'src/components/exclusive-offers';
 
 import ContactsSection from 'src/sections/contact';
 import HighlightPackageSection from 'src/sections/highlight-package';
@@ -26,6 +27,9 @@ export default function HomePage() {
       </SectionWrapper>
       <SectionWrapper>
         <MostWantedDestinations />
+      </SectionWrapper>
+      <SectionWrapper>
+        <ExclusiveOffers />
       </SectionWrapper>
     </>
   );

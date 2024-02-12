@@ -2,9 +2,9 @@ import { Helmet } from 'react-helmet-async';
 
 import Banner from 'src/components/banner';
 import SectionWrapper from 'src/components/section-wrapper';
-import ExclusiveOffers from 'src/components/exclusive-offers';
 
 import ContactsSection from 'src/sections/contact';
+import StayInTouch from 'src/sections/stay-in-touch';
 import HighlightPackageSection from 'src/sections/highlight-package';
 import MostWantedDestinations from 'src/sections/most-wanted-destinations';
 
@@ -29,7 +29,7 @@ export default function HomePage() {
         <MostWantedDestinations />
       </SectionWrapper>
       <SectionWrapper>
-        <ExclusiveOffers />
+        <StayInTouch />
       </SectionWrapper>
     </>
   );

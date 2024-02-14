@@ -10,7 +10,7 @@ export default function ExclusiveOffers() {
         backgroundImage: `url(/assets/background/lazertur/especial_offers.svg)`,
         aspectRatio: { xs: '4/3', md: '3/4' },
         borderRadius: 3,
-        padding: 3,
+        padding: { xs: 3,sm:10, md:5 },
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -24,7 +24,7 @@ export default function ExclusiveOffers() {
         Quer receber ofertas exclusivas?
       </Typography>
       <Typography
-        sx={{ fontFamily: 'Kanit-Thin', fontSize: 20, textAlign: 'center', color: 'white' }}
+        sx={{ fontFamily: 'Kanit-ExtraLight', fontSize: 20, textAlign: 'center', color: 'white' }}
       >
         Participe do nosso grupo VIP no WhatsApp e seja o primeiro a saber das melhores ofertas.
       </Typography>
@@ -32,18 +32,19 @@ export default function ExclusiveOffers() {
         onClick={() => alert('Você será redirecionado!')}
         sx={{
           width: '100%',
-          borderColor: '#F9FAFA',
-          border: 1,
-          fontFamily: 'Kanit-Thin',
+          fontWeight:'light',
+          fontFamily: 'Kanit-Regular',
           fontSize: 20,
           textAlign: 'center',
-          color: '#E33149',
-          backgroundColor: '#F9FAFA',
+          backgroundColor: '#E33149',
+          color: '#F9FAFA',
+          border: 1,
+          borderColor: '#E33149',
           '&:hover': {
+            backgroundColor: '#F9FAFA',
+            color: '#E33149',
             borderColor: '#E33149',
             border: 1,
-            backgroundColor: '#E33149',
-            color: '#F9FAFA',
           },
         }}
       >
@@ -51,8 +52,7 @@ export default function ExclusiveOffers() {
       </Button>
       <Typography
         sx={{
-          fontWeight: 300,
-          fontFamily: 'Kanit-Thin',
+          fontFamily: 'Kanit-ExtraLight',
           fontSize: 20,
           textAlign: 'center',
           color: 'white',
@@ -62,7 +62,7 @@ export default function ExclusiveOffers() {
       </Typography>
       <Box
         sx={{
-          width: '50%',
+          width: { xs: 200, md: '50%' },
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
           backgroundImage: `url(/assets/images/lazertur/qr_code.svg)`,

@@ -27,7 +27,7 @@ export default function Newsletter() {
     >
       <Box
         sx={{
-          px: { xs: 3, lg: 15},
+          px: { xs: 3, lg: 15 },
           py: { xs: 5, lg: 15 },
           maxWidth: 800,
           display: 'flex',
@@ -39,8 +39,7 @@ export default function Newsletter() {
       >
         <Typography
           sx={{
-            fontWeight: '600',
-            fontFamily: 'Prompt-Medium',
+            fontFamily: 'Prompt-SemiBold',
             fontSize: { xs: 24, sm: 32 },
             textAlign: 'center',
             color: '#28327F',
@@ -50,7 +49,7 @@ export default function Newsletter() {
         </Typography>
         <Typography
           sx={{
-            fontFamily: 'Kanit-Regular',
+            fontFamily: 'Kanit-Light',
             fontSize: { xs: 16, sm: 20 },
             textAlign: 'center',
             color: '#28327F',
@@ -75,8 +74,20 @@ export default function Newsletter() {
           </Grid>
         </Grid>
         <FormControlLabel
+          sx={{ typography: { fontFamily: 'Kanit-Light', fontSize: { xs: 16, sm: 20 } } }}
           control={<Checkbox />}
-          label="Ao se inscrever, você concorda em receber nossa newsletter e receber dicas sobre os melhores passeios turísticos."
+          label={
+            <Typography
+              sx={{
+                fontFamily: 'Kanit-Light',
+                fontSize: 18,
+                color: '#28327F',
+              }}
+            >
+              Ao se inscrever, você concorda em receber nossa newsletter e receber dicas sobre os
+              melhores passeios turísticos.
+            </Typography>
+          }
         />
         <Button
           disabled
@@ -86,6 +97,7 @@ export default function Newsletter() {
             pr: 5,
             borderColor: '#F9FAFA',
             border: 1,
+            fontWeight: 'light',
             fontFamily: 'Kanit-Regular',
             fontSize: 20,
             textAlign: 'center',

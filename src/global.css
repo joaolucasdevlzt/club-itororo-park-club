@@ -15,8 +15,20 @@
     src: url('../public/fonts/Kanit-Black.ttf');
   }
 @font-face {
+    font-family: 'Kanit-Medium';
+    src: url('../public/fonts/Kanit-Medium.ttf');
+  }
+@font-face {
     font-family: 'Kanit-Light';
     src: url('../public/fonts/Kanit-Light.ttf');
+  }
+@font-face {
+    font-family: 'Kanit-ExtraLight';
+    src: url('../public/fonts/Kanit-ExtraLight.ttf');
+  }
+@font-face {
+    font-family: 'Kanit-SemiBold';
+    src: url('../public/fonts/Kanit-SemiBold.ttf');
   }
 @font-face {
     font-family: 'Prompt-Black';
@@ -33,4 +45,8 @@
 @font-face {
     font-family: 'Prompt-Medium';
     src: url('../public/fonts/Prompt-Medium.ttf');
+  }
+@font-face {
+    font-family: 'Prompt-SemiBold';
+    src: url('../public/fonts/Prompt-SemiBold.ttf');
   }

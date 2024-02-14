@@ -58,7 +58,7 @@ export default function Header() {
           {mdUp && <NavDesktop data={navConfig} />}
 
           {mdUp && (
-            <Stack alignItems="flex-start" justifyContent="center" direction="row" gap={2}>
+            <Stack alignItems="flex-start" justifyContent="center" direction="row" gap={4}>
               <Link
                 sx={{
                   width: 'fit-content',
@@ -140,7 +140,7 @@ export default function Header() {
                   fontWeight: theme.typography.fontWeightSemiBold,
                   display: 'flex',
                   alignItems: 'center',
-                  gap: 1,
+                  gap: 2.5,
                   color: '#28327F',
                 }}
                 onClick={() =>

@@ -5,7 +5,6 @@ export default function FAQCard() {
     <Box
       sx={{
         width: '100%',
-
         p: 5,
         display: 'flex',
         flexDirection: 'column',

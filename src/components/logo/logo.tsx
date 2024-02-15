@@ -13,13 +13,12 @@ export interface LogoProps extends BoxProps {
 
 const Logo = forwardRef<HTMLDivElement, LogoProps>(
   ({ disabledLink = false, sx, ...other }, ref) => {
-  
     // OR using local (public folder)
     // -------------------------------------------------------
     const logo = (
       <Box
         component="img"
-        src="../../../public/logo/Logo_Lazertur.svg"
+        src="/logo/Logo_Lazertur.svg"
         sx={{ width: 128, height: 40, cursor: 'pointer', ...sx }}
       />
     );

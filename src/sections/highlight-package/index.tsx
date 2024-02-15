@@ -13,10 +13,15 @@ export default function HighlightPackageSection({
     return <Box />;
   }
   return (
-    <Grid container sx={{ display: 'flex', justifyContent: 'center', pl: { xs: 3, md: 0 } }}>
+    <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
       <Grid item xs={12}>
         <Typography
-          sx={{ fontSize: 40, fontFamily: 'Prompt-Medium', fontWeight: '600', color: '#28327F' }}
+          sx={{
+            fontSize: { xs: 30, sm: 40 },
+            fontFamily: 'Prompt-Medium',
+            fontWeight: '600',
+            color: '#28327F',
+          }}
         >
           Pacote em destaque
         </Typography>
@@ -25,7 +30,7 @@ export default function HighlightPackageSection({
         sx={{
           width: '100%',
           pt: 6,
-          pb: 6,
+          pb: 3,
           display: 'flex',
           justifyContent: 'flex-start',
           gap: 3,

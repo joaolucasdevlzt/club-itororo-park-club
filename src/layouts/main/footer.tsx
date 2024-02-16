@@ -105,7 +105,6 @@ export default function Footer() {
                     fontSize: 18,
                     fontFamily: 'Kanit-SemiBold',
                     color: '#28327F',
-                    '&:hover': { textDecoration: 'underline' },
                   }}
                 >
                   Contato
@@ -117,7 +116,7 @@ export default function Footer() {
                   (34) 3237.2515
                 </Typography>
               </Grid>
-              <Grid item sx={{ display: 'flex', gap: 2, pr: 2 }}>
+              <Grid item sx={{ display: 'flex', gap: 2, pr: { xs: 2, lg: 4 } }}>
                 <Box component="img" src="/assets/icons/lazertur/location.svg" />
                 <Typography sx={{ fontFamily: 'Kanit-Regular', color: '#28327F' }}>
                   Av. Rondon Pacheco, 1756 Uberlândia, MG
@@ -143,7 +142,6 @@ export default function Footer() {
                     fontSize: 18,
                     fontFamily: 'Kanit-SemiBold',
                     color: '#28327F',
-                    '&:hover': { textDecoration: 'underline' },
                   }}
                 >
                   Câmbio do dia
@@ -153,7 +151,6 @@ export default function Footer() {
                     fontSize: 18,
                     fontFamily: 'Kanit-Regular',
                     color: '#28327F',
-                    '&:hover': { textDecoration: 'underline' },
                   }}
                 >
                   {new Date().toLocaleDateString()}

@@ -21,6 +21,7 @@ export default function MainLayout({ children }: Props) {
         component="main"
         sx={{
           display: 'flex',
+          backgroundColor: '#F9FAFA',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',

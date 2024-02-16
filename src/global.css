@@ -4,49 +4,49 @@
 
 @font-face {
     font-family: 'Kanit-Regular';
-    src: url('../public/fonts/Kanit-Regular.ttf');
+    src: url('/fonts/Kanit-Regular.ttf');
   }
 @font-face {
     font-family: 'Kanit-Thin';
-    src: url('../public/fonts/Kanit-Thin.ttf');
+    src: url('/fonts/Kanit-Thin.ttf');
   }
 @font-face {
     font-family: 'Kanit-Black';
-    src: url('../public/fonts/Kanit-Black.ttf');
+    src: url('/fonts/Kanit-Black.ttf');
   }
 @font-face {
     font-family: 'Kanit-Medium';
-    src: url('../public/fonts/Kanit-Medium.ttf');
+    src: url('/fonts/Kanit-Medium.ttf');
   }
 @font-face {
     font-family: 'Kanit-Light';
-    src: url('../public/fonts/Kanit-Light.ttf');
+    src: url('/fonts/Kanit-Light.ttf');
   }
 @font-face {
     font-family: 'Kanit-ExtraLight';
-    src: url('../public/fonts/Kanit-ExtraLight.ttf');
+    src: url('/fonts/Kanit-ExtraLight.ttf');
   }
 @font-face {
     font-family: 'Kanit-SemiBold';
-    src: url('../public/fonts/Kanit-SemiBold.ttf');
+    src: url('/fonts/Kanit-SemiBold.ttf');
   }
 @font-face {
     font-family: 'Prompt-Black';
-    src: url('../public/fonts/Prompt-Black.ttf');
+    src: url('/fonts/Prompt-Black.ttf');
   }
 @font-face {
     font-family: 'Prompt-Thin';
-    src: url('../public/fonts/Prompt-Thin.ttf');
+    src: url('/fonts/Prompt-Thin.ttf');
   }
 @font-face {
     font-family: 'Prompt-Regular';
-    src: url('../public/fonts/Prompt-Regular.ttf');
+    src: url('/fonts/Prompt-Regular.ttf');
   }
 @font-face {
     font-family: 'Prompt-Medium';
-    src: url('../public/fonts/Prompt-Medium.ttf');
+    src: url('/fonts/Prompt-Medium.ttf');
   }
 @font-face {
     font-family: 'Prompt-SemiBold';
-    src: url('../public/fonts/Prompt-SemiBold.ttf');
+    src: url('/fonts/Prompt-SemiBold.ttf');
   }

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Banner from 'src/components/banner';
 import SectionWrapper from 'src/components/section-wrapper';
 
+import FAQ from 'src/sections/faq';
 import ContactsSection from 'src/sections/contact';
 import AboutUsSection from 'src/sections/about-us';
 import StayInTouch from 'src/sections/stay-in-touch';
@@ -38,6 +39,9 @@ export default function HomePage() {
       </SectionWrapper>
       <SectionWrapper>
         <GroupCompanies />
+      </SectionWrapper>
+      <SectionWrapper>
+        <FAQ />
       </SectionWrapper>
     </>
   );

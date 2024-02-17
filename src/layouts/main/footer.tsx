@@ -4,8 +4,6 @@ import { Box, Grid, Typography } from '@mui/material';
 
 import SectionWrapper from 'src/components/section-wrapper';
 
-const centerContent = {};
-
 export default function Footer() {
   return (
     <Box sx={{ width: '100%', backgroundColor: '#F9FAFA', pt: 12 }}>

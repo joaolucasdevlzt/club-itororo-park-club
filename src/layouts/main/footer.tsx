@@ -4,6 +4,8 @@ import { Box, Grid, Typography } from '@mui/material';
 
 import SectionWrapper from 'src/components/section-wrapper';
 
+const centerContent = {};
+
 export default function Footer() {
   return (
     <Box sx={{ width: '100%', backgroundColor: '#F9FAFA', pt: 12 }}>
@@ -188,7 +190,11 @@ export default function Footer() {
               </Grid>
             </Grid>
             <Grid container item xs={4} md={3} sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Grid item md={12} display="flex" justifyContent="flex-end" alignItems="flex-start">
+              <Grid
+                item
+                md={12}
+                sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
+              >
                 <Box width={180} component="img" src="/logo/lazertur_viagens_logo.svg" />
               </Grid>
               <Grid

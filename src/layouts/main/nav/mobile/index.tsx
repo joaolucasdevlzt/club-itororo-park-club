@@ -76,7 +76,7 @@ export default function NavMobile({ data }: NavProps) {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 1,
-                  color: '#28327F',
+                  color: (t) => t.palette.secondary.main,
                 }}
                 href="/"
               >
@@ -91,7 +91,7 @@ export default function NavMobile({ data }: NavProps) {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 1,
-                  color: '#28327F',
+                  color: (t) => t.palette.secondary.main,
                 }}
                 href="/sobre"
               >
@@ -106,7 +106,7 @@ export default function NavMobile({ data }: NavProps) {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 1,
-                  color: '#28327F',
+                  color: (t) => t.palette.secondary.main,
                 }}
                 onClick={()=>window.open('https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0', '_blank')}
               >

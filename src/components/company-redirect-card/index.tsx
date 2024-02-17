@@ -52,10 +52,10 @@ export default function CompanyRedirectCard({ company, url }: CompanyRedirectCar
               height: { xs: 55, sm: 60, md: 40, lg:47 },
               fontFamily: 'Kanit-Light',
               fontSize: 18,
-              color: '#28327F',
+              color: (t) => t.palette.secondary.main,
               '&:hover': {
                 color: '#E5E6EE',
-                backgroundColor: '#28327F',
+                backgroundColor: (t) => t.palette.secondary.main,
               },
             }}
           >

@@ -10,7 +10,7 @@ export default function MostWantedDestinations() {
           fontSize: { xs: 30, sm: 40 },
           fontFamily: 'Prompt-Medium',
           fontWeight: '600',
-          color: '#28327F',
+          color: (t) => t.palette.secondary.main,
         }}
       >
         Destinos mais procurados

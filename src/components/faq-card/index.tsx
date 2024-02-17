@@ -24,10 +24,10 @@ export default function FAQCard({ link = false, title, text, sx }: FAQCardProps)
         ...sx,
       }}
     >
-      <Typography sx={{ fontFamily: 'Prompt-SemiBold', fontSize: 22, color: '#28327F' }}>
+      <Typography sx={{ fontFamily: 'Prompt-SemiBold', fontSize: 22, color: (t) => t.palette.secondary.main }}>
         {title}
       </Typography>
-      <Typography sx={{ fontFamily: 'kanit-Light', fontSize: 16, color: '#28327F' }}>
+      <Typography sx={{ fontFamily: 'kanit-Light', fontSize: 16, color: (t) => t.palette.secondary.main }}>
         {text}
         {link && (
           <a href="https://www.feriasfacil.com.br" target="__blank">

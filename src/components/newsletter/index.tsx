@@ -42,7 +42,7 @@ export default function Newsletter() {
             fontFamily: 'Prompt-SemiBold',
             fontSize: { xs: 24, sm: 32 },
             textAlign: 'center',
-            color: '#28327F',
+            color: (t) => t.palette.secondary.main,
           }}
         >
           Assine nossa newsletter e fique por dentro das novidades
@@ -52,7 +52,7 @@ export default function Newsletter() {
             fontFamily: 'Kanit-Light',
             fontSize: { xs: 16, sm: 20 },
             textAlign: 'center',
-            color: '#28327F',
+            color: (t) => t.palette.secondary.main,
           }}
         >
           Inscreva-se agora e receba dicas extraordinárias que vão te ajudar a planejar suas
@@ -81,7 +81,7 @@ export default function Newsletter() {
               sx={{
                 fontFamily: 'Kanit-Light',
                 fontSize: 18,
-                color: '#28327F',
+                color: (t) => t.palette.secondary.main,
               }}
             >
               Ao se inscrever, você concorda em receber nossa newsletter e receber dicas sobre os

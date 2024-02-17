@@ -50,7 +50,7 @@ export default function CTACard({
         <Grid item xs={12} sm={6} md={12} lg={6}>
           <Typography
             sx={{
-              color: '#28327F',
+              color: (t) => t.palette.secondary.main,
               fontSize: 14,
               fontFamily: 'Prompt-Regular',
               fontWeight: 600,
@@ -75,7 +75,7 @@ export default function CTACard({
             sx={{
               pl: 3,
               pr: 3,
-              color: '#28327F',
+              color: (t) => t.palette.secondary.main,
               border: 1,
               ...buttonProps,
             }}

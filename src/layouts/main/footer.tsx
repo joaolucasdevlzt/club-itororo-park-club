@@ -41,7 +41,7 @@ export default function Footer() {
                     sx={{
                       fontSize: 18,
                       fontFamily: 'Kanit-SemiBold',
-                      color: '#28327F',
+                      color: (t) => t.palette.secondary.main,
                       '&:hover': { textDecoration: 'underline' },
                     }}
                   >
@@ -55,7 +55,7 @@ export default function Footer() {
                     sx={{
                       fontSize: 18,
                       fontFamily: 'Kanit-SemiBold',
-                      color: '#28327F',
+                      color: (t) => t.palette.secondary.main,
                       '&:hover': { textDecoration: 'underline' },
                     }}
                   >
@@ -69,7 +69,7 @@ export default function Footer() {
                     sx={{
                       fontSize: 18,
                       fontFamily: 'Kanit-SemiBold',
-                      color: '#28327F',
+                      color: (t) => t.palette.secondary.main,
                       '&:hover': { textDecoration: 'underline' },
                     }}
                   >
@@ -83,7 +83,7 @@ export default function Footer() {
                     sx={{
                       fontSize: 18,
                       fontFamily: 'Kanit-SemiBold',
-                      color: '#28327F',
+                      color: (t) => t.palette.secondary.main,
                       '&:hover': { textDecoration: 'underline' },
                     }}
                   >
@@ -104,7 +104,7 @@ export default function Footer() {
                   sx={{
                     fontSize: 18,
                     fontFamily: 'Kanit-SemiBold',
-                    color: '#28327F',
+                    color: (t) => t.palette.secondary.main,
                   }}
                 >
                   Contato
@@ -112,19 +112,19 @@ export default function Footer() {
               </Grid>
               <Grid item sx={{ display: 'flex', gap: 2 }}>
                 <Box component="img" src="/assets/icons/lazertur/whatsapp.svg" />
-                <Typography sx={{ fontFamily: 'Kanit-Regular', color: '#28327F' }}>
+                <Typography sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}>
                   (34) 3237.2515
                 </Typography>
               </Grid>
               <Grid item sx={{ display: 'flex', gap: 2, pr: { xs: 2, lg: 4 } }}>
                 <Box component="img" src="/assets/icons/lazertur/location.svg" />
-                <Typography sx={{ fontFamily: 'Kanit-Regular', color: '#28327F' }}>
+                <Typography sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}>
                   Av. Rondon Pacheco, 1756 Uberlândia, MG
                 </Typography>
               </Grid>
               <Grid item sx={{ display: 'flex', gap: 2 }}>
                 <Box component="img" src="/assets/icons/lazertur/help.svg" />
-                <Typography sx={{ fontFamily: 'Kanit-Regular', color: '#28327F' }}>
+                <Typography sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}>
                   Ajuda
                 </Typography>
               </Grid>
@@ -141,7 +141,7 @@ export default function Footer() {
                   sx={{
                     fontSize: 18,
                     fontFamily: 'Kanit-SemiBold',
-                    color: '#28327F',
+                    color: (t) => t.palette.secondary.main,
                   }}
                 >
                   Câmbio do dia
@@ -150,7 +150,7 @@ export default function Footer() {
                   sx={{
                     fontSize: 18,
                     fontFamily: 'Kanit-Regular',
-                    color: '#28327F',
+                    color: (t) => t.palette.secondary.main,
                   }}
                 >
                   {new Date().toLocaleDateString()}
@@ -159,18 +159,18 @@ export default function Footer() {
 
               <Grid container sx={{ display: 'flex', flexDirection: 'column' }}>
                 <Grid item sx={{ display: 'flex', gap: 1 }}>
-                  <Typography sx={{ fontFamily: 'Kanit-SemiBold', color: '#28327F' }}>
+                  <Typography sx={{ fontFamily: 'Kanit-SemiBold', color: (t) => t.palette.secondary.main }}>
                     Dólar
                   </Typography>
-                  <Typography sx={{ fontFamily: 'Kanit-Regular', color: '#28327F' }}>
+                  <Typography sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}>
                     (USD): R$5.06
                   </Typography>
                 </Grid>
                 <Grid item sx={{ display: 'flex', gap: 1 }}>
-                  <Typography sx={{ fontFamily: 'Kanit-SemiBold', color: '#28327F' }}>
+                  <Typography sx={{ fontFamily: 'Kanit-SemiBold', color: (t) => t.palette.secondary.main }}>
                     Euro
                   </Typography>
-                  <Typography sx={{ fontFamily: 'Kanit-Regular', color: '#28327F' }}>
+                  <Typography sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}>
                     (EUR): R$5.54
                   </Typography>
                 </Grid>
@@ -225,7 +225,7 @@ export default function Footer() {
               </Grid>
             </Grid>
             <Grid item xs={12} sx={{ mt: { xs: 12, md: 0 } }}>
-              <Typography sx={{ fontSize: 12, fontFamily: 'Kanit-Regular', color: '#28327F' }}>
+              <Typography sx={{ fontSize: 12, fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}>
                 LAZERTUR TURISMO LTDA | 38.575.072/0001-30 | AV RONDON PACHECO 1756 CEP 38408343-
                 UBERLÂNDIA - MINAS GERAIS - BRASIL | LAZERTUR VIAGENS. Para mais informações sobre
                 reembolsos, devoluções, cancelamentos, SAC e demais questões relacionadas ao

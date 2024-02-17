@@ -72,6 +72,7 @@ export default function HighlightCard({
           </Grid>
           {content.map((item, index) => (
             <Grid
+              key={item.text}
               item
               xs={12}
               sx={{

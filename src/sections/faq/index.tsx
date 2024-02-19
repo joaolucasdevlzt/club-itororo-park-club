@@ -63,16 +63,36 @@ export default function FAQ() {
           sx={{ width: '100%', marginTop: 3, display: 'flex', gap: 2, justifyContent: 'center' }}
         >
           <Box
-            sx={{ border: 3, borderColor: '#28327F', width: 30, opacity: scroll === 0 ? 1 : 0.5 }}
+            sx={{
+              border: 3,
+              borderColor: (t) => t.palette.secondary.main,
+              width: 30,
+              opacity: scroll === 0 ? 1 : 0.5,
+            }}
           />
           <Box
-            sx={{ border: 3, borderColor: '#28327F', width: 30, opacity: scroll === 1 ? 1 : 0.5 }}
+            sx={{
+              border: 3,
+              borderColor: (t) => t.palette.secondary.main,
+              width: 30,
+              opacity: scroll === 1 ? 1 : 0.5,
+            }}
           />
           <Box
-            sx={{ border: 3, borderColor: '#28327F', width: 30, opacity: scroll === 2 ? 1 : 0.5 }}
+            sx={{
+              border: 3,
+              borderColor: (t) => t.palette.secondary.main,
+              width: 30,
+              opacity: scroll === 2 ? 1 : 0.5,
+            }}
           />
           <Box
-            sx={{ border: 3, borderColor: '#28327F', width: 30, opacity: scroll >= 3 ? 1 : 0.5 }}
+            sx={{
+              border: 3,
+              borderColor: (t) => t.palette.secondary.main,
+              width: 30,
+              opacity: scroll >= 3 ? 1 : 0.5,
+            }}
           />
         </Box>
       </Box>

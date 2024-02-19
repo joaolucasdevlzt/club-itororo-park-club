@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { usePathname } from 'src/routes/hooks';
 
 import Header from './header';
+import Footer from './footer';
 import { HEADER } from '../config-layout';
 
 // ----------------------------------------------------------------------
@@ -32,6 +33,7 @@ export default function MainLayout({ children }: Props) {
       >
         {children}
       </Box>
+      <Footer />
     </>
   );
 }

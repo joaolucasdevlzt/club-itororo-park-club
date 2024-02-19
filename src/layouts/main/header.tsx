@@ -70,7 +70,7 @@ export default function Header() {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 1,
-                  color: '#28327F',
+                  color: (t) => t.palette.secondary.main,
                   ...(home ? { color: '#E33149' } : {}),
                   '&:hover': {
                     textDecoration: 'none',
@@ -100,7 +100,7 @@ export default function Header() {
                   fontWeight: theme.typography.fontWeightSemiBold,
                   marginRight: 1,
                   display: 'flex',
-                  color: '#28327F',
+                  color: (t) => t.palette.secondary.main,
                   alignItems: 'flex-start',
                   gap: 1,
                   ...(about ? { color: '#E33149' } : {}),
@@ -141,7 +141,7 @@ export default function Header() {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 2.5,
-                  color: '#28327F',
+                  color: (t) => t.palette.secondary.main,
                 }}
                 onClick={() =>
                   window.open(

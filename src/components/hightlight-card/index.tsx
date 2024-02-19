@@ -66,7 +66,7 @@ export default function HighlightCard({
           </Grid>
 
           <Grid item xs={12} sx={{ p: '0px 0px 15px 25px' }}>
-            <Typography variant="body1" sx={{ color: '#28327F', fontFamily: 'Kanit-Light' }}>
+            <Typography variant="body1" sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Light' }}>
               {subtitle}
             </Typography>
           </Grid>
@@ -80,12 +80,12 @@ export default function HighlightCard({
                 display: 'flex',
                 alignItems: 'center',
                 gap: 1,
-                color: '#28327F',
+                color: (t) => t.palette.secondary.main,
                 fontFamily: 'Kanit-Light',
               }}
             >
               <Box component="img" src={`/assets/icons/lazertur/${item.icon}.svg`} />
-              <Typography variant="body1" sx={{ color: '#28327F', fontFamily: 'Kanit-Light' }}>
+              <Typography variant="body1" sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Light' }}>
                 {item.text}
               </Typography>
             </Grid>
@@ -94,18 +94,18 @@ export default function HighlightCard({
       </Box>
       <Grid container item>
         <Grid item xs={12} sx={{ p: '25px 0px 0px 25px' }}>
-          <Typography variant="subtitle1" sx={{ color: '#28327F', fontFamily: 'Kanit-Regular' }}>
+          <Typography variant="subtitle1" sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Regular' }}>
             {semiboldText}
           </Typography>
         </Grid>
         <Grid item xs={12} sx={{ p: '0px 0px 0px 25px' }}>
-          <Typography variant="h3" sx={{ color: '#28327F', fontFamily: 'Kanit-Regular' }}>
+          <Typography variant="h3" sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Regular' }}>
             {boldBottomText}
           </Typography>
         </Grid>
         {bottomText && (
           <Grid item xs={12} sx={{ p: '10px 0px 0px 25px' }}>
-            <Typography variant="body1" sx={{ color: '#28327F', fontFamily: 'Kanit-Light' }}>
+            <Typography variant="body1" sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Light' }}>
               {bottomText}
             </Typography>
           </Grid>

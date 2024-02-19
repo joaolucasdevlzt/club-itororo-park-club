@@ -1,4 +1,6 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+
+import StyledButton from '../button';
 
 export default function ExclusiveOffers() {
   return (
@@ -10,7 +12,7 @@ export default function ExclusiveOffers() {
         backgroundImage: `url(/assets/background/lazertur/especial_offers.svg)`,
         aspectRatio: { xs: '4/3', md: '3/4' },
         borderRadius: 3,
-        padding: { xs: 3,sm:10, md:5 },
+        padding: { xs: 3, sm: 10, md: 5 },
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -28,28 +30,7 @@ export default function ExclusiveOffers() {
       >
         Participe do nosso grupo VIP no WhatsApp e seja o primeiro a saber das melhores ofertas.
       </Typography>
-      <Button
-        onClick={() => alert('Você será redirecionado!')}
-        sx={{
-          width: '100%',
-          fontWeight:'light',
-          fontFamily: 'Kanit-Regular',
-          fontSize: 20,
-          textAlign: 'center',
-          backgroundColor: '#E33149',
-          color: '#F9FAFA',
-          border: 1,
-          borderColor: '#E33149',
-          '&:hover': {
-            backgroundColor: '#F9FAFA',
-            color: '#E33149',
-            borderColor: '#E33149',
-            border: 1,
-          },
-        }}
-      >
-        Clique aqui para participar
-      </Button>
+      <StyledButton text="Clique aqui para participar" callback={() => ''} />
       <Typography
         sx={{
           fontFamily: 'Kanit-ExtraLight',

@@ -159,7 +159,7 @@ export default function FAQ() {
             Sua resposta não foi encontrada acima?
           </Typography>
         </Grid>
-        <Grid item xs={12} md={3.7} paddingTop={5}>
+        <Grid item xs={12} md={3.3} paddingTop={5}>
           <StyledButton text="Entre em contato conosco" callback={() => ''} />
         </Grid>
       </Grid>

@@ -1,8 +1,9 @@
 import { useRef, useState } from 'react';
 
-import { Box, Grid, useTheme, useMediaQuery } from '@mui/material';
+import { Box, Grid, useTheme, Typography, useMediaQuery } from '@mui/material';
 
 import FAQCard from 'src/components/faq-card';
+import StyledButton from 'src/components/button';
 
 import { questions } from './questions';
 
@@ -95,6 +96,28 @@ export default function FAQ() {
             }}
           />
         </Box>
+        <Box
+          sx={{
+            paddingTop: 5,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: 'Prompt-SemiBold',
+              fontSize: 22,
+              textAlign: 'center',
+              marginBottom: 5,
+              color: (t) => t.palette.secondary.main,
+            }}
+          >
+            Sua resposta não foi encontrada acima?
+          </Typography>
+          <StyledButton sx={{ width: '90%' }} text="Entre em contato conosco" callback={() => ''} />
+        </Box>
       </Box>
     );
   }
@@ -113,6 +136,33 @@ export default function FAQ() {
           <FAQCard title={question.title} text={question.text} />
         </Grid>
       ))}
+      <Grid
+        container
+        item
+        xs={12}
+        sx={{
+          display: 'flex',
+
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Grid item xs={12} md={12} paddingTop={5} display="flex" justifyContent="center">
+          <Typography
+            sx={{
+              textAlign: 'center',
+              fontFamily: 'Prompt-SemiBold',
+              fontSize: 26,
+              color: (t) => t.palette.secondary.main,
+            }}
+          >
+            Sua resposta não foi encontrada acima?
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={3.7} paddingTop={5}>
+          <StyledButton text="Entre em contato conosco" callback={() => ''} />
+        </Grid>
+      </Grid>
     </Grid>
   );
 }

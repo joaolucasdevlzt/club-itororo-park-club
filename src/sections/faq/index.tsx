@@ -21,6 +21,17 @@ export default function FAQ() {
   if (smDown) {
     return (
       <Box>
+        <Typography
+          sx={{
+            fontSize: { xs: 30, sm: 40 },
+            fontFamily: 'Prompt-Medium',
+            fontWeight: '600',
+            pb: 5,
+            color: (t) => t.palette.secondary.main,
+          }}
+        >
+          Dúvidas frequentes
+        </Typography>
         <Box
           onScroll={() => handleScroll()}
           ref={scrollable}
@@ -131,6 +142,18 @@ export default function FAQ() {
         gap: { sm: 2, lg: 0 },
       }}
     >
+      <Grid item xs={12} pb={5}>
+        <Typography
+          sx={{
+            fontSize: { xs: 30, sm: 40 },
+            fontFamily: 'Prompt-Medium',
+            fontWeight: '600',
+            color: (t) => t.palette.secondary.main,
+          }}
+        >
+          Dúvidas frequentes
+        </Typography>
+      </Grid>
       {questions.map((question) => (
         <Grid key={question.title} item sm={5.8} lg={2.9}>
           <FAQCard title={question.title} text={question.text} />

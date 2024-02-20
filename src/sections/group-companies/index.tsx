@@ -5,31 +5,29 @@ import CompanyRedirectCard from 'src/components/company-redirect-card';
 
 export default function GroupCompanies() {
   return (
-    <Grid container sx={{ display: 'flex', justifyContent: 'space-between', gap: 3 }}>
-      <Grid item xs={12} md={3.7}>
-        <CompanyRedirectCard company="ferias_facil" url="" />
+    <Grid container sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
+      <Grid item  xs={12} sm={2.7} display="flex" justifyContent="center">
+        <CompanyRedirectCard company="ferias_facil" url=""  />
       </Grid>
-      <Grid item xs={12} md={3.7}>
+      <Grid item xs={12} sm={2.7} display="flex" justifyContent="center">
         <CompanyRedirectCard company="ffo" url="" />
       </Grid>
-      <Grid item xs={12} md={3.7}>
+      <Grid item xs={12} sm={2.7} display="flex" justifyContent="center">
         <CompanyRedirectCard company="experience" url="" />
       </Grid>
-      <Grid item xs={12} md={3.7}>
+      <Grid item xs={12} sm={2.7} display="flex" justifyContent="center">
         <CompanyRedirectCard company="corporate" url="" />
       </Grid>
-      <Grid item xs={12} md={3.7}>
+      <Grid item xs={12} sm={2.7} display="flex" justifyContent="center">
         <CompanyRedirectCard company="azul_udi" url="" />
       </Grid>
-      <Grid item xs={12} md={3.7}>
+      <Grid item xs={12} sm={2.7} display="flex" justifyContent="center">
         <CompanyRedirectCard company="azul_uberaba" url="" />
       </Grid>
-      <Grid item container xs={12} md={12} display="flex" justifyContent="center">
-        <Grid item container xs={12} md={3.7}>
-          <CompanyRedirectCard company="azul_vl" url="" />
-        </Grid>
+      <Grid item xs={12} sm={2.7} display="flex" justifyContent="center">
+        <CompanyRedirectCard company="azul_vl" url="" />
       </Grid>
-      <Grid container item xs={12} display="flex" justifyContent="center" pt={3}>
+      <Grid container item xs={12} display="flex" justifyContent="center" pt={5}>
         <Grid item xs={10} sm={5} md={3.3}>
           <StyledButton text="Saiba mais sobre o grupo LZT" callback={() => ''} />
         </Grid>

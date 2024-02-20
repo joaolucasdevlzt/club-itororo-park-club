@@ -1,4 +1,4 @@
-import { Box, Grid, Button } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 
 interface CompanyRedirectCardProps {
   company: string;
@@ -7,6 +7,7 @@ interface CompanyRedirectCardProps {
 export default function CompanyRedirectCard({ company, url }: CompanyRedirectCardProps) {
   return (
     <Box
+      onClick={() => window.open(url, 'blank')}
       sx={{
         width: '100%',
         borderRadius: 2,
@@ -16,8 +17,10 @@ export default function CompanyRedirectCard({ company, url }: CompanyRedirectCar
         justifyContent: 'space-evenly',
         alignItems: 'center',
         flexDirection: 'row',
-
-        backgroundColor: '#E5E6EE',
+        '&:hover': {
+          cursor: 'pointer',
+          backgroundColor: '#E5E6EE',
+        },
       }}
     >
       <Grid
@@ -42,25 +45,6 @@ export default function CompanyRedirectCard({ company, url }: CompanyRedirectCar
               aspectRatio: '16/7',
             }}
           />
-        </Grid>
-        <Grid item xs={4}>
-          <Button
-            onClick={() => window.open(url, '__blank')}
-            sx={{
-              width: '100%',
-              border: 1.7,
-              height: { xs: 55, sm: 60, md: 40, lg:47 },
-              fontFamily: 'Kanit-Light',
-              fontSize: 18,
-              color: (t) => t.palette.secondary.main,
-              '&:hover': {
-                color: '#E5E6EE',
-                backgroundColor: (t) => t.palette.secondary.main,
-              },
-            }}
-          >
-            Acessar
-          </Button>
         </Grid>
       </Grid>
     </Box>

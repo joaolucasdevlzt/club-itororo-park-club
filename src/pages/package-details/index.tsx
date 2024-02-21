@@ -4,6 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import IconButton from 'src/components/icon-button';
 import SectionWrapper from 'src/components/section-wrapper';
 
+import PackageDescription from 'src/sections/package-description';
+import { packageDescriptionMock } from './mock';
+
 export default function PackageDetails() {
   const params = useParams();
   const { id } = params;
@@ -19,6 +22,7 @@ export default function PackageDetails() {
           text="Voltar para home"
           direction="left"
         />
+        <PackageDescription data={packageDescriptionMock[0]} />
       </SectionWrapper>
     </>
   );

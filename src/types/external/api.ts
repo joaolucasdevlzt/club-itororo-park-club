@@ -18,3 +18,11 @@ export interface HighlightPackagesProps {
   boldBottomText?: string;
   bottomText?: string;
 }
+
+export interface PackageDescriptionProps {
+  sx?: SxProps;
+  title: string;
+  subtitle?: string;
+  content?: ContentProps[];
+  items?: string[];
+}

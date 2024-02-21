@@ -10,7 +10,7 @@ interface IconButtonProps {
   direction?: 'left' | 'right';
   iconSx?: SxProps;
   textSx?: SxProps;
-  callback: () => void;
+  callback?: () => void;
 }
 export default function IconButton({
   icon,
@@ -18,28 +18,34 @@ export default function IconButton({
   direction = 'left',
   iconSx,
   textSx,
-  callback
+  callback,
 }: IconButtonProps) {
   const iconPosition = {
     left: 'row',
     right: 'row-reverse',
   };
+  const hasCallback = typeof callback === 'function';
   return (
     <Box
       onClick={callback}
       sx={{
-        padding: 2,
-        borderRadius: 1,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: 3,
+        gap: 2,
         flexDirection: iconPosition[direction],
         width: 'fit-content',
-        '&:hover': {
-          cursor: 'pointer',
-          backgroundColor: '#E5E6EE99',
-        },
+        ...(hasCallback
+          ? {
+              gap: 3,
+              padding: 2,
+              borderRadius: 1,
+              '&:hover': {
+                cursor: 'pointer',
+                backgroundColor: '#E5E6EE99',
+              },
+            }
+          : {}),
       }}
     >
       {typeof icon === 'string' ? <Iconify icon={icon} sx={iconSx} /> : icon}

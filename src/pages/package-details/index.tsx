@@ -4,7 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import IconButton from 'src/components/icon-button';
 import SectionWrapper from 'src/components/section-wrapper';
 
+import PriceCard from 'src/sections/price-card';
 import PackageDescription from 'src/sections/package-description';
+
 import { packageDescriptionMock } from './mock';
 
 export default function PackageDetails() {
@@ -23,6 +25,9 @@ export default function PackageDetails() {
           direction="left"
         />
         <PackageDescription data={packageDescriptionMock[0]} />
+      </SectionWrapper>
+      <SectionWrapper>
+        <PriceCard data={packageDescriptionMock[0]} />
       </SectionWrapper>
     </>
   );

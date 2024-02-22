@@ -19,7 +19,15 @@ export interface HighlightPackagesProps {
   bottomText?: string;
 }
 
-export interface PackageDescriptionProps {
+export interface PriceCardProps {
+  price: number;
+  oldPrice?: number | null;
+  upfront?: string;
+  split?: string;
+  splitValue?: number;
+  descriptionText?: string;
+}
+export interface PackageDescriptionProps extends PriceCardProps {
   sx?: SxProps;
   title: string;
   subtitle?: string;

@@ -11,6 +11,12 @@ export const packageDescriptionMock: PackageDescriptionProps[] = [
       { icon: 'coffee', text: 'Café da manhã incluso' },
       { icon: 'bell_concierge', text: 'Hotel Pousada Azzurra' },
     ],
+    price: 1590.90,
+    oldPrice: 2000.00,
+    split: '10x',
+    splitValue: 489.90,
+    descriptionText: 'Valor por pessoa',
+    upfront: 'Entrada de duzentão',
     items: [
       'Piscina ao ar livre',
       'Quartos para não fumantes',
@@ -28,6 +34,8 @@ export const packageDescriptionMock: PackageDescriptionProps[] = [
       { icon: 'calendar', text: 'De 06/06/24 à 15/06/24' },
       { icon: 'coffee', text: 'Café da manhã incluso' },
     ],
+    price: 1590.9,
+    oldPrice: 2000.0,
     items: [
       'Piscina ao ar livre',
       'Quartos para não fumantes',
@@ -45,6 +53,8 @@ export const packageDescriptionMock: PackageDescriptionProps[] = [
       { icon: 'calendar', text: 'De 10/05/24 à 25/05/24' },
       { icon: 'all_inclusive', text: 'All inclusive' },
     ],
+    price: 1590.9,
+    oldPrice: 2000.0,
     items: [
       'Piscina ao ar livre',
       'Quartos para não fumantes',
@@ -62,6 +72,8 @@ export const packageDescriptionMock: PackageDescriptionProps[] = [
       { icon: 'calendar', text: 'De 18/09/24 à 23/09/24' },
       { icon: 'all_inclusive', text: 'All inclusive' },
     ],
+    price: 1590.9,
+    oldPrice: 2000.0,
     items: [
       'Piscina ao ar livre',
       'Quartos para não fumantes',

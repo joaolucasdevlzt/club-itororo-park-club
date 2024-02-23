@@ -1,33 +1,21 @@
-import { useParams } from 'react-router';
+// import { useParams } from 'react-router';
 import { Helmet } from 'react-helmet-async';
 
-import IconButton from 'src/components/icon-button';
 import SectionWrapper from 'src/components/section-wrapper';
 
-import PriceCard from 'src/sections/price-card';
-import PackageDescription from 'src/sections/package-description';
-
-import { packageDescriptionMock } from './mock';
+import CompletePackageInfo from 'src/sections/complete-package-info';
 
 export default function PackageDetails() {
-  const params = useParams();
-  const { id } = params;
+  // const params = useParams();
+  // // const { id } = params;
   return (
     <>
       <Helmet>
         <title> Lazertur</title>
       </Helmet>
-      <SectionWrapper>
-        <IconButton
-          callback={() => console.log('voltar')}
-          icon="gravity-ui:chevron-left"
-          text="Voltar para home"
-          direction="left"
-        />
-        <PackageDescription data={packageDescriptionMock[0]} />
-      </SectionWrapper>
-      <SectionWrapper>
-        <PriceCard data={packageDescriptionMock[0]} />
+
+      <SectionWrapper sx={{ paddingTop: 5 }}>
+        <CompletePackageInfo />
       </SectionWrapper>
     </>
   );

@@ -23,7 +23,7 @@ export default function HomePage() {
       </Helmet>
       <Banner images="/assets/images/contact/banner_topo.jpg" />
       <SectionWrapper>
-        <HighlightPackageSection packageList={packaListMock} />
+        <HighlightPackageSection sectionTitle="Pacote em destaque" packageList={packaListMock} />
       </SectionWrapper>
       <SectionWrapper>
         <ContactsSection />

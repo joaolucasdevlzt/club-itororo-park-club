@@ -5,8 +5,10 @@ import HighlightCard from 'src/components/hightlight-card';
 import { HighlightPackagesProps } from 'src/types/external/api';
 
 export default function HighlightPackageSection({
+  sectionTitle,
   packageList,
 }: {
+  sectionTitle?: string;
   packageList: HighlightPackagesProps[];
 }) {
   if (!Array.isArray(packageList) || !packageList.length) {
@@ -14,18 +16,20 @@ export default function HighlightPackageSection({
   }
   return (
     <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
-      <Grid item xs={12}>
-        <Typography
-          sx={{
-            fontSize: { xs: 30, sm: 40 },
-            fontFamily: 'Prompt-Medium',
-            fontWeight: '600',
-            color: (t) => t.palette.secondary.main,
-          }}
-        >
-          Pacote em destaque
-        </Typography>
-      </Grid>
+      {sectionTitle && (
+        <Grid item xs={12}>
+          <Typography
+            sx={{
+              fontSize: { xs: 30, sm: 40 },
+              fontFamily: 'Prompt-Medium',
+              fontWeight: '600',
+              color: (t) => t.palette.secondary.main,
+            }}
+          >
+            {sectionTitle}
+          </Typography>
+        </Grid>
+      )}
       <Box
         sx={{
           width: '100%',

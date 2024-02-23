@@ -4,6 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import SectionWrapper from 'src/components/section-wrapper';
 
 import CompletePackageInfo from 'src/sections/complete-package-info';
+import HighlightPackageSection from 'src/sections/highlight-package';
+
+import { packaListMock } from '../home/mock';
 
 export default function PackageDetails() {
   // const params = useParams();
@@ -16,6 +19,12 @@ export default function PackageDetails() {
 
       <SectionWrapper sx={{ paddingTop: 5 }}>
         <CompletePackageInfo />
+      </SectionWrapper>
+      <SectionWrapper>
+        <HighlightPackageSection
+          sectionTitle="Outros pacotes em destaque"
+          packageList={packaListMock}
+        />
       </SectionWrapper>
     </>
   );

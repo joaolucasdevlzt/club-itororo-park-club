@@ -10,8 +10,8 @@ export default function PackageDescription({ data }: { data: PackageDescriptionP
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
         <Typography
-          variant="h3"
-          sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
+          variant="h2"
+          sx={{ fontFamily: 'Prompt-Regular', color: (t) => t.palette.secondary.main }}
         >
           {data.title}
         </Typography>

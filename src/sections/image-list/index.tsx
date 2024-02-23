@@ -21,7 +21,9 @@ export default function ImageSection() {
       window.removeEventListener('resize', handleWindowResize);
     };
   });
+  // calcula o tamanho que a imagem precisa ter para continuar preenchendo o espaço do pai
   const handleImageWidth = () => {
+    // só calcula para desktop >900
     const value = widths - 900;
     const heightRatio = 18.5 - value * 0.02;
     if (heightRatio <= 10.5) return 10.5;
@@ -35,7 +37,6 @@ export default function ImageSection() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-
           height: '100%',
           gap: 2,
         }}
@@ -61,7 +62,6 @@ export default function ImageSection() {
         flexDirection: 'column',
         justifyContent: 'space-between',
         pr: 3,
-        pl: 3,
         height: '100%',
       }}
     >

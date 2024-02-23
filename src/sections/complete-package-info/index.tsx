@@ -15,7 +15,6 @@ export default function CompletePackageInfo() {
     <Grid
       container
       sx={{
-        height: '100%',
         gap: { xs: 5, md: 0 },
       }}
     >
@@ -41,7 +40,7 @@ export default function CompletePackageInfo() {
           display: 'flex',
           flexDirection: 'column',
           gap: 5,
-          paddingLeft:2,
+          paddingLeft: 2,
           alignItems: { xs: 'center', sm: 'flex-start' },
         }}
       >

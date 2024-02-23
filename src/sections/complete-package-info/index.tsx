@@ -41,6 +41,7 @@ export default function CompletePackageInfo() {
           display: 'flex',
           flexDirection: 'column',
           gap: 5,
+          paddingLeft:2,
           alignItems: { xs: 'center', sm: 'flex-start' },
         }}
       >

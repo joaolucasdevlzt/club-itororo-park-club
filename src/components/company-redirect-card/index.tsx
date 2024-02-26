@@ -10,11 +10,9 @@ export default function CompanyRedirectCard({ company, url }: CompanyRedirectCar
       onClick={() => window.open(url, 'blank')}
       sx={{
         width: '100%',
-        borderRadius: 2,
-        py: 2,
-        px: { xs: 3, sm: 10, md: 3 },
+        padding: 2,
         display: 'flex',
-        justifyContent: 'space-evenly',
+        justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
         '&:hover': {
@@ -23,30 +21,16 @@ export default function CompanyRedirectCard({ company, url }: CompanyRedirectCar
         },
       }}
     >
-      <Grid
-        container
+      <Box
         sx={{
           width: '100%',
-          height: '100%',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          gap: 1,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundImage: `url(/assets/images/lazertur/companies/${company}.svg)`,
+          aspectRatio: '16/6',
         }}
-      >
-        <Grid item xs={7} md>
-          <Box
-            sx={{
-              width: '100%',
-              backgroundSize: 'contain',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              backgroundImage: `url(/assets/images/lazertur/companies/${company}.svg)`,
-              aspectRatio: '16/7',
-            }}
-          />
-        </Grid>
-      </Grid>
+      />
     </Box>
   );
 }

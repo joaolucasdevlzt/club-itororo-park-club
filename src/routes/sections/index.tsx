@@ -8,6 +8,7 @@ import { mainRoutes } from './main';
 import { authRoutes } from './auth';
 import { dashboardRoutes } from './dashboard';
 
+const MostWantedDestinationsPage = lazy(() => import('src/pages/most-wanted-destinations'));
 const PackageDetails = lazy(() => import('src/pages/package-details'));
 const SplashScreen = lazy(() => import('src/components/loading-screen/splash-screen'));
 
@@ -47,6 +48,21 @@ export default function Router() {
               </Suspense>
             </MainLayout>
           ),
+        },
+      ],
+    },
+    {
+      path: 'destinos-mais-procurados/:id',
+      children: [
+        {
+          element: (
+            <MainLayout>
+              <Suspense fallback={<SplashScreen />}>
+                <MostWantedDestinationsPage />
+              </Suspense>
+            </MainLayout>
+          ),
+          index: true,
         },
       ],
     },

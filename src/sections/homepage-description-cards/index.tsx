@@ -41,7 +41,7 @@ export default function HomepageDescriptionCardsSection() {
       />
       <CardWithTitleAndText
         image="disney"
-        title="Pacotes, passagens e muito mais"
+        title="Pacotes, passagens, hotéis e muito mais"
         text="Monte sua viagem personalizada e tenha assistência em seguros, aluguéis e ingressos."
       />
     </Box>

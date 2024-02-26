@@ -11,7 +11,7 @@ export default function SectionWrapper({ children, sx }: { children: ReactNode; 
         maxWidth: 1350,
         width: '100%',
         height: 'auto',
-        pt: 12,
+        pt: 10,
         ...sx,
       }}
     >

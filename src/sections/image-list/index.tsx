@@ -38,7 +38,7 @@ export default function ImageSection() {
           flexDirection: 'column',
           justifyContent: 'space-between',
           height: '100%',
-          gap: 2,
+          gap: 5,
         }}
       >
         <SimpleImage image="/assets/images/lazertur/maceio.png" />
@@ -62,6 +62,7 @@ export default function ImageSection() {
         flexDirection: 'column',
         justifyContent: 'space-between',
         pr: 3,
+        gap: 2,
         height: '100%',
       }}
     >

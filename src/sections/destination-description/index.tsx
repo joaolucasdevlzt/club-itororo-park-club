@@ -1,4 +1,3 @@
-
 import { Box, Typography } from '@mui/material';
 
 import StyledButton from 'src/components/button';
@@ -16,7 +15,7 @@ export default function DestinationDescription() {
             color: (t) => t.palette.secondary.main,
           }}
         >
-          Tiro de Janeiro
+          Rio de Janeiro
         </Typography>
         <Typography
           sx={{

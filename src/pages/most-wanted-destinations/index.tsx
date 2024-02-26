@@ -17,7 +17,7 @@ export default function MostWantedDestinationsPage() {
         <title> Lazertur</title>
       </Helmet>
       <SectionWrapper>
-        <Grid  container sx={{ display: 'flex' }}>
+        <Grid container sx={{ display: 'flex' }}>
           <Grid item xs={12} lg={7.5}>
             <Typography
               variant="h2"
@@ -28,13 +28,13 @@ export default function MostWantedDestinationsPage() {
                 color: (t) => t.palette.secondary.main,
               }}
             >
-              Tiro de Janeiro
+              Rio de Janeiro
             </Typography>
           </Grid>
           <Grid item xs={12} lg={7.5}>
             <ImageSection />
           </Grid>
-          <Grid item xs={12} lg={4.5} >
+          <Grid item xs={12} lg={4.5}>
             <DestinationDescription />
           </Grid>
         </Grid>

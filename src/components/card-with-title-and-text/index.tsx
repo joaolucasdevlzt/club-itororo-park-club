@@ -13,14 +13,15 @@ export default function CardWithTitleAndText({ image, title, text }: CardWithTit
         flexDirection: 'column',
         justifyContent: 'center',
         gap: 2,
+        minWidth: { xs: 300, sm: 400 },
         width: '100%',
-        aspectRatio: '10/7.2',
+        aspectRatio: { xs: '10/8.2', lg: '10/7.2' },
         borderRadius: 2,
         backgroundImage: `url(/assets/cards/${image}.png)`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         pl: 5,
-        pr: 15,
+        pr: { xs: 5, lg: 15 },
       }}
     >
       <Typography

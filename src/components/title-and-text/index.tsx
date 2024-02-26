@@ -15,7 +15,7 @@ export default function TitleAndTexts({ title, texts }: titleAndTextsProps) {
           color: (t) => t.palette.secondary.main,
         }}
       >
-        Quem somos
+        {title}
       </Typography>
 
       {Array.isArray(texts) &&

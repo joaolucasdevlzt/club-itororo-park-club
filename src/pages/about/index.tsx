@@ -13,7 +13,7 @@ export default function AboutPage() {
       <Banner images="/assets/images/lazertur/about/about_banner.svg" />
       <SectionWrapper>
         <TitleAndTexts
-          title=""
+          title="Quem somos"
           texts={[
             `A Lazertur Viagens integra o Grupo LZT, um ecossistema dedicado ao setor do turismo e        viagens, acumulando mais de três décadas de experiência no ramo. Nosso propósito vai além de proporcionar viagens; buscamos transformar cada experiência em um conjunto de memórias únicas e inesquecíveis.`,
             `A qualidade de nossos serviços é um pilar fundamental da nossa cultura, onde nos dedicamos

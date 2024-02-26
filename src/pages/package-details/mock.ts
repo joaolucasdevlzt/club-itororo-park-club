@@ -11,10 +11,10 @@ export const packageDescriptionMock: PackageDescriptionProps[] = [
       { icon: 'coffee', text: 'Café da manhã incluso' },
       { icon: 'bell_concierge', text: 'Hotel Pousada Azzurra' },
     ],
-    price: 1590.90,
-    oldPrice: 2000.00,
+    price: 1590.9,
+    oldPrice: 2000.0,
     split: '10x',
-    splitValue: 489.90,
+    splitValue: 489.9,
     descriptionText: 'Valor por pessoa',
     upfront: 'Entrada de duzentão',
     items: [

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Grid } from '@mui/material';
+import { Box } from '@mui/material';
 
 import CardWithTitleAndText from 'src/components/card-with-title-and-text';
 

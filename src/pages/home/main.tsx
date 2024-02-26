@@ -10,6 +10,7 @@ import StayInTouch from 'src/sections/stay-in-touch';
 import GroupCompanies from 'src/sections/group-companies';
 import HighlightPackageSection from 'src/sections/highlight-package';
 import MostWantedDestinations from 'src/sections/most-wanted-destinations';
+import HomepageDescriptionCardsSection from 'src/sections/homepage-description-cards';
 
 import { packaListMock } from './mock';
 
@@ -22,6 +23,9 @@ export default function HomePage() {
         <title> Lazertur</title>
       </Helmet>
       <Banner images="/assets/images/contact/banner_topo.jpg" />
+      <SectionWrapper>
+        <HomepageDescriptionCardsSection />
+      </SectionWrapper>
       <SectionWrapper>
         <HighlightPackageSection sectionTitle="Pacote em destaque" packageList={packaListMock} />
       </SectionWrapper>

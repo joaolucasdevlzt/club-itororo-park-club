@@ -1,4 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material';
+import { useNavigate } from 'react-router';
+
 
 import HighlightCard from 'src/components/hightlight-card';
 
@@ -11,6 +13,7 @@ export default function HighlightPackageSection({
   sectionTitle?: string;
   packageList: HighlightPackagesProps[];
 }) {
+  const navigate = useNavigate()
   if (!Array.isArray(packageList) || !packageList.length) {
     return <Box />;
   }
@@ -57,6 +60,7 @@ export default function HighlightPackageSection({
       >
         {packageList.map((item, index) => (
           <HighlightCard
+            fn={() => navigate("/pacotes/detalhes/1")}
             key={item.title + index}
             width={310}
             image={item.image}

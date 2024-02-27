@@ -26,7 +26,7 @@ export default function StyledButton({ text, callback, sx }: StyledButtonProps) 
           borderColor: '#E33149',
           border: 1,
         },
-        ...sx
+        ...sx,
       }}
     >
       {text}

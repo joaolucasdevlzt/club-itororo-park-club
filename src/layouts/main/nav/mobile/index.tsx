@@ -39,7 +39,7 @@ export default function NavMobile({ data }: NavProps) {
   return (
     <>
       <IconButton onClick={handleOpenMenu} sx={{ ml: 1 }}>
-        <Iconify height={28} width={28} icon="mingcute:menu-fill"/>
+        <Iconify height={28} width={28} icon="mingcute:menu-fill" />
       </IconButton>
 
       <Drawer
@@ -69,50 +69,53 @@ export default function NavMobile({ data }: NavProps) {
             }}
           >
             <Link
-                sx={{
-                  fontSize: '1rem',
-                  fontFamily: 'Kanit-Regular',
-                  fontWeight: theme.typography.fontWeightSemiBold,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 1,
-                  color: (t) => t.palette.secondary.main,
-                }}
-                href="/"
-              >
-             
-                Home
-              </Link>
+              sx={{
+                fontSize: '1rem',
+                fontFamily: 'Kanit-Regular',
+                fontWeight: theme.typography.fontWeightSemiBold,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+                color: (t) => t.palette.secondary.main,
+              }}
+              href="/"
+            >
+              Home
+            </Link>
             <Link
-                sx={{
-                  fontSize: '1rem',
-                  fontFamily: 'Kanit-Regular',
-                  fontWeight: theme.typography.fontWeightSemiBold,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 1,
-                  color: (t) => t.palette.secondary.main,
-                }}
-                href="/sobre"
-              >
-            
-                Sobre nós
-              </Link>
+              sx={{
+                fontSize: '1rem',
+                fontFamily: 'Kanit-Regular',
+                fontWeight: theme.typography.fontWeightSemiBold,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+                color: (t) => t.palette.secondary.main,
+              }}
+              href="/sobre"
+            >
+              Sobre nós
+            </Link>
             <Box
-                sx={{
-                  fontSize: '1rem',
-                  fontFamily: 'Kanit-Regular',
-                  fontWeight: theme.typography.fontWeightSemiBold,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 1,
-                  color: (t) => t.palette.secondary.main,
-                }}
-                onClick={()=>window.open('https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0', '_blank')}
-              >
-                <Box component="img" src="/assets/icons/lazertur/headset.svg" />
-                Fale com um consultor
-              </Box>
+              sx={{
+                fontSize: '1rem',
+                fontFamily: 'Kanit-Regular',
+                fontWeight: theme.typography.fontWeightSemiBold,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+                color: (t) => t.palette.secondary.main,
+              }}
+              onClick={() =>
+                window.open(
+                  'https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0',
+                  '_blank'
+                )
+              }
+            >
+              <Box component="img" src="/assets/icons/lazertur/headset.svg" />
+              Fale com um consultor
+            </Box>
           </Box>
         </Scrollbar>
       </Drawer>

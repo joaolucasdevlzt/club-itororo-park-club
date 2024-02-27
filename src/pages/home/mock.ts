@@ -19,7 +19,6 @@ export const packaListMock: HighlightPackagesProps[] = [
     title: 'Porto de Galinhas',
     subtitle: 'Pernambuco',
     content: [
-    
       { icon: 'sun', text: '8 dias' },
       { icon: 'calendar', text: 'De 06/06/24 à 15/06/24' },
       { icon: 'coffee', text: 'Café da manhã incluso' },

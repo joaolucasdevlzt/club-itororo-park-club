@@ -6,6 +6,7 @@ import CompanyRedirectCard from 'src/components/company-redirect-card';
 export default function GroupCompanies() {
   return (
     <Grid container sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
+
       <Grid item  xs={6} md={2.7} display="flex" justifyContent="center">
         <CompanyRedirectCard company="ferias_facil" url=""  />
       </Grid>

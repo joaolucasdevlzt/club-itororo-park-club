@@ -9,7 +9,6 @@ export const navConfig = [
   //   title: 'Bloqueios',
   //   path: '#bloqueios',
   // },
-
   // {
   //   title: 'Destinos',
   //   path: '#destinations',
@@ -105,7 +104,6 @@ export const navConfig = [
   //     },
   //   ],
   // },
-
   // {
   //   title: 'Quem somos',
   //   path: '/about',

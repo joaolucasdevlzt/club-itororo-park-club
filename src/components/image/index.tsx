@@ -50,7 +50,9 @@ export default function Image({
         }}
       />
       <Box sx={{ position: 'absolute', ...titlePositions[titlePosition] }}>
-        <Typography sx={{ color: 'white', fontFamily: 'Prompt-Medium', fontSize:{xs:16,sm:26, md:32,} }}>
+        <Typography
+          sx={{ color: 'white', fontFamily: 'Prompt-Medium', fontSize: { xs: 16, sm: 26, md: 32 } }}
+        >
           {title}
         </Typography>
       </Box>

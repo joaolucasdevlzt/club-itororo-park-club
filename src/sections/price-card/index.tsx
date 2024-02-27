@@ -82,7 +82,12 @@ export default function PriceCard({ data }: { data: PriceCardProps }) {
         <StyledButton
           sx={{ fontSize: { xs: 13, sm: 16 } }}
           text="Adquira este pacote com um atendente"
-          callback={() => console.log('Adquira este pacote com um atendente')}
+          callback={() =>
+            window.open(
+              'https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0',
+              '_blank'
+            )
+          }
         />
       </Box>
     </Box>

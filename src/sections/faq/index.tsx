@@ -127,7 +127,16 @@ export default function FAQ() {
           >
             Sua resposta não foi encontrada acima?
           </Typography>
-          <StyledButton sx={{ width: '90%' }} text="Entre em contato conosco" callback={() => ''} />
+          <StyledButton
+            sx={{ width: '90%' }}
+            text="Entre em contato conosco"
+            callback={() =>
+              window.open(
+                'https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0',
+                '_blank'
+              )
+            }
+          />
         </Box>
       </Box>
     );
@@ -183,7 +192,15 @@ export default function FAQ() {
           </Typography>
         </Grid>
         <Grid item xs={12} md={3.3} paddingTop={5}>
-          <StyledButton text="Entre em contato conosco" callback={() => ''} />
+          <StyledButton
+            text="Entre em contato conosco"
+            callback={() =>
+              window.open(
+                'https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0',
+                '_blank'
+              )
+            }
+          />
         </Grid>
       </Grid>
     </Grid>

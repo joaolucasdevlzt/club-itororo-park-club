@@ -1,9 +1,12 @@
-import { Timeline, timelineItemClasses } from '@mui/lab';
-import { Grid, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
+
+import { Timeline, timelineItemClasses } from '@mui/lab';
+import { Grid, useTheme, useMediaQuery } from '@mui/material';
+
+import { firstTimelineItems, secondTimelineItems } from 'src/pages/about/mock';
+
 import SimpleImage from 'src/components/simple-image';
 import TimelineCustomItem from 'src/components/timeline-item';
-import { firstTimelineItems, secondTimelineItems } from 'src/pages/about/mock';
 
 export default function TimelineSection() {
   const theme = useTheme();
@@ -15,7 +18,7 @@ export default function TimelineSection() {
     >
       <Grid item xs={12} lg={6}>
         <SimpleImage
-          sx={{ backgroundPosition: 'bottom', ml: { xs: 2, lg: 0 } }}
+          sx={{ backgroundPosition: 'bottom', ml: { xs: 1, lg: 0 } }}
           aspectRatio={downLg ? '10/5' : '10/7.5'}
           image="/assets/images/lazertur/about/lazertur_plane.svg"
         />
@@ -39,7 +42,7 @@ export default function TimelineSection() {
       <Grid container item sx={{ pt: { xs: 5, md: 10 }, flexDirection: { lg: 'row-reverse' } }}>
         <Grid item xs={12} lg={6}>
           <SimpleImage
-            sx={{ backgroundPosition: 'top', ml: { xs: 2, lg: 0 } }}
+            sx={{ backgroundPosition: 'top', ml: { xs: 1, lg: 0 } }}
             aspectRatio={downLg ? '10/7' : '10/7.5'}
             image="/assets/images/lazertur/about/nilson-lucas.svg"
           />

@@ -51,7 +51,7 @@ export default function Header() {
         }}
       >
         <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
-          <Logo sx={{ height: 30 }} />
+          <Logo sx={{ marginLeft: { lg: -12 }, height: 50, width: 200 }} />
 
           <Box sx={{ flexGrow: 1 }} />
 
@@ -125,6 +125,7 @@ export default function Header() {
                     sx={{
                       position: 'absolute',
                       bottom: 0,
+                      marginLeft: -2,
                       width: 110,
                       border: 2,
                       borderTopLeftRadius: 6,

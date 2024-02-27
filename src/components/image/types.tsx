@@ -3,4 +3,5 @@ export interface ImageInterface {
   image: string;
   title?: string;
   aspectRatio?: string;
+  fn?: () => void;
 }

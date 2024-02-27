@@ -28,7 +28,7 @@ export default function Footer() {
             <Grid container item xs={12} mb={12} sx={{ display: { xs: 'flex', md: 'none' } }}>
               <Box width={180} component="img" src="/logo/lazertur_viagens_logo.svg" />
             </Grid>
-            <Grid
+            {/* <Grid
               container
               item
               xs={12}
@@ -91,12 +91,12 @@ export default function Footer() {
                   </Typography>
                 </Link>
               </Grid>
-            </Grid>
+            </Grid> */}
             <Grid
               container
               item
               xs={12}
-              md={3}
+              md={4}
               sx={{ display: 'flex', flexDirection: 'column', gap: 1, pb: { xs: 12, sm: 6 } }}
             >
               <Grid item>
@@ -139,8 +139,8 @@ export default function Footer() {
               container
               item
               xs={12}
-              md={3}
-              sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
+              md={4}
+              sx={{pl:15, display: 'flex', flexDirection: 'column', gap: 2 }}
             >
               <Grid item>
                 <Typography
@@ -201,7 +201,7 @@ export default function Footer() {
                 <Box component="img" src="/assets/icons/lazertur/linkedin.svg" />
               </Grid>
             </Grid>
-            <Grid container item xs={4} md={3} sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Grid container item xs={4} md={4} sx={{ display: { xs: 'none', md: 'flex' } }}>
               <Grid
                 item
                 md={12}

@@ -64,7 +64,12 @@ export default function DestinationDescription() {
         <StyledButton
           sx={{ width: 'fit-content', maxWidth: 500, pl: 5, pr: 5 }}
           text="Planeje sua viagem agora mesmo"
-          callback={() => console.log('Planeje sua viagem agora mesmo')}
+          callback={() =>
+            window.open(
+              'https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0',
+              '_blank'
+            )
+          }
         />
       </Box>
     </Box>

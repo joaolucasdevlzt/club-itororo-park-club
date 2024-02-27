@@ -1,10 +1,12 @@
 import React from 'react';
 
-import { Grid } from '@mui/material';
+import { Grid, useMediaQuery, useTheme } from '@mui/material';
 
 import CTACard from 'src/components/cta-card';
 
 export default function ContactsSection() {
+  const theme = useTheme();
+  const downMd = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <Grid
       container
@@ -12,7 +14,7 @@ export default function ContactsSection() {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        gap: { xs: 3, sm: 0 },
+        gap: { xs: 3, md: 0 },
       }}
     >
       <Grid item xs={12} md={5.9}>
@@ -41,8 +43,12 @@ export default function ContactsSection() {
             )
           }
           icon="headset-cta"
-          text="Prefere conversar pelo telefone? Estamos aguardando sua ligação"
-          buttonText="Ligue para nós"
+          text={
+            downMd
+              ? 'Prefere conversar pelo telefone? Estamos aguardando sua ligação'
+              : 'Prefere conversar pelo telefone? Estamos aguardando sua ligação: (34) 3237.2515'
+          }
+          buttonText={downMd?"Ligue para nós":""}
           buttonProps={{
             color: '#28327F',
             '&:hover': { backgroundColor: '#28327F', color: 'white' },

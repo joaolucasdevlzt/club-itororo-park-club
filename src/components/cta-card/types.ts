@@ -6,6 +6,6 @@ export interface CTACardInterface {
   iconProps?: SxProps;
   text: String;
   cardProps?: SxProps;
-  buttonText: string;
+  buttonText?: string;
   buttonProps?: SxProps;
 }

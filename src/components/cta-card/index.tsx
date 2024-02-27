@@ -1,4 +1,4 @@
-import { Box, Grid, Button, Typography } from '@mui/material';
+import { Box, Grid, Button, Typography, useTheme, useMediaQuery } from '@mui/material';
 
 import { CTACardInterface } from './types';
 
@@ -11,11 +11,14 @@ export default function CTACard({
   cardProps,
   buttonProps,
 }: CTACardInterface) {
+  const theme = useTheme();
+  const downSm = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <Grid
       onClick={() => fn()}
       container
       sx={{
+        height: '100%',
         borderRadius: 2,
         padding: 4,
         backgroundColor: '#E5E6EE',
@@ -47,7 +50,7 @@ export default function CTACard({
           gap: { xs: 2, md: 1, lg: 0 },
         }}
       >
-        <Grid item xs={12} sm={6} md={12} lg={6}>
+        <Grid item xs={12} sm={6} md={12} lg={buttonText?.length ? 6 : 8}>
           <Typography
             sx={{
               color: (t) => t.palette.secondary.main,
@@ -59,30 +62,32 @@ export default function CTACard({
             {text}
           </Typography>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={5}
-          md={12}
-          lg={6}
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: { sm: 'flex-end', md: 'flex-start', lg: 'flex-end' },
-          }}
-        >
-          <Button
+        {buttonText && (
+          <Grid
+            item
+            xs={12}
+            sm={5}
+            md={12}
+            lg={6}
             sx={{
-              pl: 3,
-              pr: 3,
-              color: (t) => t.palette.secondary.main,
-              border: 1,
-              ...buttonProps,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: { sm: 'flex-end', md: 'flex-start', lg: 'flex-end' },
             }}
           >
-            {buttonText}
-          </Button>
-        </Grid>
+            <Button
+              sx={{
+                pl: 3,
+                pr: 3,
+                color: (t) => t.palette.secondary.main,
+                border: 1,
+                ...buttonProps,
+              }}
+            >
+              {buttonText}
+            </Button>
+          </Grid>
+        )}
       </Grid>
     </Grid>
   );

@@ -1,4 +1,4 @@
-import { Box, Grid } from '@mui/material';
+import { Box } from '@mui/material';
 
 interface CompanyRedirectCardProps {
   company: string;

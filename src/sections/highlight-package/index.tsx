@@ -1,6 +1,6 @@
-import { Box, Grid, Typography } from '@mui/material';
 import { useNavigate } from 'react-router';
 
+import { Box, Grid, Typography } from '@mui/material';
 
 import HighlightCard from 'src/components/hightlight-card';
 

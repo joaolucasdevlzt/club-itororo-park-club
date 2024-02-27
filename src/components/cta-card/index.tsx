@@ -1,4 +1,4 @@
-import { Box, Grid, Button, Typography, useTheme, useMediaQuery } from '@mui/material';
+import { Box, Grid, Button, Typography } from '@mui/material';
 
 import { CTACardInterface } from './types';
 
@@ -11,8 +11,6 @@ export default function CTACard({
   cardProps,
   buttonProps,
 }: CTACardInterface) {
-  const theme = useTheme();
-  const downSm = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <Grid
       onClick={() => fn()}

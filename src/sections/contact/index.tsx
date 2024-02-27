@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid, useMediaQuery, useTheme } from '@mui/material';
+import { Grid, useTheme, useMediaQuery } from '@mui/material';
 
 import CTACard from 'src/components/cta-card';
 

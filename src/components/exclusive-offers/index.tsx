@@ -30,7 +30,10 @@ export default function ExclusiveOffers() {
       >
         Participe do nosso grupo VIP no WhatsApp e seja o primeiro a saber das melhores ofertas.
       </Typography>
-      <StyledButton text="Clique aqui para participar" callback={() => ''} />
+      <StyledButton
+        text="Clique aqui para participar"
+        callback={() => window.open('https://chat.whatsapp.com/Iux6c5E21nW10cHA2R2jAv', '-_blank')}
+      />
       <Typography
         sx={{
           fontFamily: 'Kanit-ExtraLight',

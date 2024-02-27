@@ -1,8 +1,10 @@
 import { Box, Grid, Typography } from '@mui/material';
+import { useNavigate } from 'react-router';
 
 import Image from 'src/components/image';
 
 export default function MostWantedDestinations() {
+  const navigate = useNavigate();
   return (
     <Box>
       <Typography
@@ -25,21 +27,40 @@ export default function MostWantedDestinations() {
         }}
       >
         <Grid item xs={12} md={5.9}>
-          <Image image="maceio" title="Maceió" />
+          <Image fn={() => navigate('destinos-mais-procurados/1')} image="maceio" title="Maceió" />
         </Grid>
         <Grid item xs={12} md={5.9}>
-          <Image image="rio" title="Rio de Janeiro" />
+          <Image
+            fn={() => navigate('destinos-mais-procurados/1')}
+            image="rio"
+            title="Rio de Janeiro"
+          />
         </Grid>
       </Grid>
       <Grid container sx={{ display: 'flex', justifyContent: 'space-between', marginTop: 3 }}>
         <Grid item xs={3.9}>
-          <Image image="gramado" title="Gramado" aspectRatio="4/4" />
+          <Image
+            fn={() => navigate('destinos-mais-procurados/1')}
+            image="gramado"
+            title="Gramado"
+            aspectRatio="4/4"
+          />
         </Grid>
         <Grid item xs={3.9}>
-          <Image image="orlando" title="Orlando" aspectRatio="4/4" />
+          <Image
+            fn={() => navigate('destinos-mais-procurados/1')}
+            image="orlando"
+            title="Orlando"
+            aspectRatio="4/4"
+          />
         </Grid>
         <Grid item xs={3.9}>
-          <Image image="bariloche" title="Bariloche" aspectRatio="4/4" />
+          <Image
+            fn={() => navigate('destinos-mais-procurados/1')}
+            image="bariloche"
+            title="Bariloche"
+            aspectRatio="4/4"
+          />
         </Grid>
       </Grid>
     </Box>

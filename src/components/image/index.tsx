@@ -9,6 +9,7 @@ export default function Image({
   title,
   titlePosition = 'bottom-left',
   aspectRatio = '16/9',
+  fn,
 }: ImageInterface) {
   const [hover, setHover] = useState<boolean>(false);
   const titlePositions = {
@@ -22,6 +23,7 @@ export default function Image({
   };
   return (
     <Box
+      onClick={fn}
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
       sx={{

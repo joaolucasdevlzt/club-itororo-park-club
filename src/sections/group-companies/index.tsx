@@ -1,9 +1,11 @@
 import { Grid } from '@mui/material';
+import { useNavigate } from 'react-router';
 
 import StyledButton from 'src/components/button';
 import CompanyRedirectCard from 'src/components/company-redirect-card';
 
 export default function GroupCompanies() {
+  const navigate = useNavigate()
   return (
     <Grid container sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
 
@@ -30,7 +32,7 @@ export default function GroupCompanies() {
       </Grid>
       <Grid container item xs={12} display="flex" justifyContent="center" pt={5}>
         <Grid item xs={10} sm={5} md={3.3}>
-          <StyledButton text="Saiba mais sobre o grupo LZT" callback={() => ''} />
+          <StyledButton text="Saiba mais sobre o grupo LZT" callback={() => navigate('/sobre')} />
         </Grid>
       </Grid>
     </Grid>

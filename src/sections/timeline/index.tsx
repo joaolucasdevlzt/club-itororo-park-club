@@ -1,9 +1,12 @@
-import { Timeline, timelineItemClasses } from '@mui/lab';
-import { Grid, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
+
+import { Timeline, timelineItemClasses } from '@mui/lab';
+import { Grid, useTheme, useMediaQuery } from '@mui/material';
+
+import { firstTimelineItems, secondTimelineItems } from 'src/pages/about/mock';
+
 import SimpleImage from 'src/components/simple-image';
 import TimelineCustomItem from 'src/components/timeline-item';
-import { firstTimelineItems, secondTimelineItems } from 'src/pages/about/mock';
 
 export default function TimelineSection() {
   const theme = useTheme();

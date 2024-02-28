@@ -1,4 +1,3 @@
-
 import { initializeApp } from 'firebase/app';
 import { getStorage } from 'firebase/storage';
 import { getFirestore } from 'firebase/firestore';
@@ -128,8 +127,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
       try {
         const response = await httpRequest(`/users/${user.uid}`, undefined, 'get');
         const userData: IUserModel = response;
-        console.log('auth', userData);
-
         if (userData && userData.role === AppRoles.CLIENT) {
           dispatch({
             type: Types.INITIAL,

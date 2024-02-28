@@ -10,10 +10,12 @@ import { useScrollToTop } from 'src/hooks/use-scroll-to-top';
 import ThemeProvider from 'src/theme';
 
 import ProgressBar from 'src/components/progress-bar';
+import { PersistGate } from 'redux-persist/integration/react';
 import { MotionLazy } from 'src/components/animate/motion-lazy';
 import { SettingsDrawer, SettingsProvider } from 'src/components/settings';
-
+import { Provider as ReduxProvider } from 'react-redux';
 import { AuthProvider } from './context/FirebaseContext';
+import { store, persistor } from './redux/store';
 
 // ----------------------------------------------------------------------
 
@@ -33,24 +35,28 @@ export default function App() {
 
   return (
     <AuthProvider>
-      <SettingsProvider
-        defaultSettings={{
-          themeMode: 'light', // 'light' | 'dark'
-          themeDirection: 'ltr', //  'rtl' | 'ltr'
-          themeContrast: 'default', // 'default' | 'bold'
-          themeLayout: 'vertical', // 'vertical' | 'horizontal' | 'mini'
-          themeColorPresets: 'default', // 'default' | 'cyan' | 'purple' | 'blue' | 'orange' | 'red'
-          themeStretch: false,
-        }}
-      >
-        <ThemeProvider>
-          <MotionLazy>
-            <SettingsDrawer />
-            <ProgressBar />
-            <Router />
-          </MotionLazy>
-        </ThemeProvider>
-      </SettingsProvider>
+      <ReduxProvider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <SettingsProvider
+            defaultSettings={{
+              themeMode: 'light', // 'light' | 'dark'
+              themeDirection: 'ltr', //  'rtl' | 'ltr'
+              themeContrast: 'default', // 'default' | 'bold'
+              themeLayout: 'vertical', // 'vertical' | 'horizontal' | 'mini'
+              themeColorPresets: 'default', // 'default' | 'cyan' | 'purple' | 'blue' | 'orange' | 'red'
+              themeStretch: false,
+            }}
+          >
+            <ThemeProvider>
+              <MotionLazy>
+                <SettingsDrawer />
+                <ProgressBar />
+                <Router />
+              </MotionLazy>
+            </ThemeProvider>
+          </SettingsProvider>
+        </PersistGate>
+      </ReduxProvider>
     </AuthProvider>
   );
 }

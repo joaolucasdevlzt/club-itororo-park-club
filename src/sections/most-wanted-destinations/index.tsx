@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router';
 
 import { Box, Grid, Typography } from '@mui/material';
 
-import Image from 'src/components/image';
+import Image from 'src/components/hover-image';
 
 export default function MostWantedDestinations() {
   const navigate = useNavigate();

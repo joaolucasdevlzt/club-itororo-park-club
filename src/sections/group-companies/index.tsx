@@ -1,5 +1,6 @@
-import { Grid } from '@mui/material';
 import { useNavigate } from 'react-router';
+
+import { Grid } from '@mui/material';
 
 import StyledButton from 'src/components/button';
 import CompanyRedirectCard from 'src/components/company-redirect-card';

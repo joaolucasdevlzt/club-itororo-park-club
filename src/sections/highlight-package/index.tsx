@@ -4,7 +4,7 @@ import { Box, Grid, Typography } from '@mui/material';
 
 import HighlightCard from 'src/components/hightlight-card';
 
-import {  PackageDescriptionProps } from 'src/types/external/api';
+import { PackageDescriptionProps } from 'src/types/external/api';
 
 export default function HighlightPackageSection({
   sectionTitle,
@@ -13,7 +13,7 @@ export default function HighlightPackageSection({
   sectionTitle?: string;
   packageList: PackageDescriptionProps[];
 }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   if (!Array.isArray(packageList) || !packageList.length) {
     return <Box />;
   }
@@ -60,7 +60,7 @@ export default function HighlightPackageSection({
       >
         {packageList.map((item, index) => (
           <HighlightCard
-            fn={() => navigate("/pacotes/detalhes/1")}
+            fn={() => navigate(`/pacotes/detalhes/${index}`)}
             key={item.title + index}
             width={310}
             image={item.image[0]}
@@ -68,7 +68,7 @@ export default function HighlightPackageSection({
             title={item.title}
             subtitle={item.subtitle}
             semiboldText={item.split}
-            boldBottomText={item.splitValue}
+            boldBottomText={item.splitValue || null}
             bottomText={item.upfront}
           />
         ))}

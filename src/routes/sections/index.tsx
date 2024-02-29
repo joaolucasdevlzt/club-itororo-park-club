@@ -5,7 +5,6 @@ import MainLayout from 'src/layouts/main';
 import HomePage from 'src/pages/home/main';
 
 import { mainRoutes } from './main';
-import { authRoutes } from './auth';
 import { dashboardRoutes } from './dashboard';
 
 const MostWantedDestinationsPage = lazy(() => import('src/pages/most-wanted-destinations'));
@@ -83,7 +82,6 @@ export default function Router() {
       ],
     },
     // Auth routes
-    ...authRoutes,
 
     // Dashboard routes
     ...dashboardRoutes,

@@ -10,12 +10,9 @@ import { useScrollToTop } from 'src/hooks/use-scroll-to-top';
 import ThemeProvider from 'src/theme';
 
 import ProgressBar from 'src/components/progress-bar';
-import { PersistGate } from 'redux-persist/integration/react';
 import { MotionLazy } from 'src/components/animate/motion-lazy';
 import { SettingsDrawer, SettingsProvider } from 'src/components/settings';
-import { Provider as ReduxProvider } from 'react-redux';
-import { AuthProvider } from './context/FirebaseContext';
-import { store, persistor } from './redux/store';
+
 
 // ----------------------------------------------------------------------
 
@@ -34,9 +31,6 @@ export default function App() {
   useScrollToTop();
 
   return (
-    <AuthProvider>
-      <ReduxProvider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
           <SettingsProvider
             defaultSettings={{
               themeMode: 'light', // 'light' | 'dark'
@@ -55,8 +49,5 @@ export default function App() {
               </MotionLazy>
             </ThemeProvider>
           </SettingsProvider>
-        </PersistGate>
-      </ReduxProvider>
-    </AuthProvider>
   );
 }

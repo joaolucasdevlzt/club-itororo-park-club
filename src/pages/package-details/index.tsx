@@ -7,6 +7,7 @@ import CompletePackageInfo from 'src/sections/complete-package-info';
 import HighlightPackageSection from 'src/sections/highlight-package';
 
 import { packaListMock } from '../home/mock';
+import { packageDescriptionMock } from './mock';
 
 export default function PackageDetails() {
   // const params = useParams();
@@ -23,7 +24,7 @@ export default function PackageDetails() {
       <SectionWrapper>
         <HighlightPackageSection
           sectionTitle="Outros pacotes em destaque"
-          packageList={packaListMock}
+          packageList={packageDescriptionMock}
         />
       </SectionWrapper>
     </>

@@ -32,7 +32,7 @@ export default function CompletePackageInfo() {
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>
-        <ImageSection />
+        <ImageSection images={['/assets/images/lazertur/rio.png']}  />
       </Grid>
       <Grid
         item

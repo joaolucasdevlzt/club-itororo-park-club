@@ -112,7 +112,7 @@ export default function HighlightCard({
             variant="h3"
             sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Regular' }}
           >
-            {boldBottomText}
+            R$ {boldBottomText?.toFixed(2).replace('.', ',')}
           </Typography>
         </Grid>
         {bottomText && (
@@ -122,6 +122,12 @@ export default function HighlightCard({
               sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Light' }}
             >
               {bottomText}
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Light' }}
+            >
+              valor por pessoa
             </Typography>
           </Grid>
         )}

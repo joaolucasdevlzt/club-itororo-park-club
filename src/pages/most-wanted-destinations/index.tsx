@@ -32,7 +32,7 @@ export default function MostWantedDestinationsPage() {
             </Typography>
           </Grid>
           <Grid item xs={12} lg={7.5}>
-            <ImageSection />
+            <ImageSection images={[]} />
           </Grid>
           <Grid item xs={12} lg={4.5}>
             <DestinationDescription />

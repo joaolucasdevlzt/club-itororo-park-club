@@ -11,7 +11,7 @@ import PriceCard from '../price-card';
 import ImageSection from '../image-list';
 import PackageDescription from '../package-description';
 
-export default function CompletePackageInfo() {
+export default function CompletePackageInfo({ id }: { id: number }) {
   const navigate = useNavigate();
   return (
     <Grid
@@ -32,7 +32,7 @@ export default function CompletePackageInfo() {
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>
-        <ImageSection images={['/assets/images/lazertur/rio.png']}  />
+        <ImageSection images={packageDescriptionMock[id].image} />
       </Grid>
       <Grid
         item
@@ -46,8 +46,8 @@ export default function CompletePackageInfo() {
           alignItems: { xs: 'center', sm: 'flex-start' },
         }}
       >
-        <PackageDescription data={packageDescriptionMock[0]} />
-        <PriceCard data={packageDescriptionMock[0]} />
+        <PackageDescription data={packageDescriptionMock[id]} />
+        <PriceCard data={packageDescriptionMock[id]} />
       </Grid>
     </Grid>
   );

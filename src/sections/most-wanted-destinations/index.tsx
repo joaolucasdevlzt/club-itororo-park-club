@@ -28,7 +28,7 @@ export default function MostWantedDestinations() {
         }}
       >
         <Grid item xs={12} md={5.9}>
-          <Image fn={() => navigate('destinos-mais-procurados/1')} image="maceio" title="Maceió" />
+          <Image fn={() => navigate('destinos-mais-procurados/0')} image="maceio" title="Maceió" />
         </Grid>
         <Grid item xs={12} md={5.9}>
           <Image
@@ -41,7 +41,7 @@ export default function MostWantedDestinations() {
       <Grid container sx={{ display: 'flex', justifyContent: 'space-between', marginTop: 3 }}>
         <Grid item xs={3.9}>
           <Image
-            fn={() => navigate('destinos-mais-procurados/1')}
+            fn={() => navigate('destinos-mais-procurados/2')}
             image="gramado"
             title="Gramado"
             aspectRatio="4/4"
@@ -49,7 +49,7 @@ export default function MostWantedDestinations() {
         </Grid>
         <Grid item xs={3.9}>
           <Image
-            fn={() => navigate('destinos-mais-procurados/1')}
+            fn={() => navigate('destinos-mais-procurados/3')}
             image="orlando"
             title="Orlando"
             aspectRatio="4/4"
@@ -57,7 +57,7 @@ export default function MostWantedDestinations() {
         </Grid>
         <Grid item xs={3.9}>
           <Image
-            fn={() => navigate('destinos-mais-procurados/1')}
+            fn={() => navigate('destinos-mais-procurados/4')}
             image="bariloche"
             title="Bariloche"
             aspectRatio="4/4"

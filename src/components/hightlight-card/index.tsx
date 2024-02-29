@@ -49,7 +49,7 @@ export default function HighlightCard({
       >
         <Box
           sx={{
-            backgroundSize: 'contain',
+            backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundImage: `url(${image})`,
             aspectRatio,

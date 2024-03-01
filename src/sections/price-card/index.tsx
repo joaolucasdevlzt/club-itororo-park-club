@@ -80,7 +80,7 @@ export default function PriceCard({ data }: { data: PriceCardProps }) {
       )}
       <Box>
         <StyledButton
-          sx={{ fontSize: { xs: 13, sm: 16 } }}
+          sx={{ fontSize: { xs: 13, sm: 16 }, pl:3, pr:3 }}
           text="Adquira este pacote com um atendente"
           callback={() =>
             window.open(

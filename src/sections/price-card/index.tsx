@@ -7,10 +7,10 @@ import { PriceCardProps } from 'src/types/external/api';
 export default function PriceCard({ data }: { data: PriceCardProps }) {
   const {
     price,
-    oldPrice = 0,
+    oldPrice = null,
     descriptionText = '',
     upfront = '',
-    split = 0,
+    split = null,
     splitValue = 0,
   } = data;
   return (
@@ -53,7 +53,7 @@ export default function PriceCard({ data }: { data: PriceCardProps }) {
           </Typography>
         )}
       </Box>
-      {split && (
+      {split && splitValue && (
         <Box>
           <Typography
             variant="h5"

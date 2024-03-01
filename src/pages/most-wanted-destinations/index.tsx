@@ -1,4 +1,5 @@
 // import { useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { Helmet } from 'react-helmet-async';
 
 import { Grid, Typography } from '@mui/material';
@@ -8,9 +9,13 @@ import SectionWrapper from 'src/components/section-wrapper';
 import ImageSection from 'src/sections/image-list';
 import DestinationDescription from 'src/sections/destination-description';
 
+import { mostWantedMock } from './mock';
+
 export default function MostWantedDestinationsPage() {
-  // const params = useParams();
-  // // const { id } = params;
+  const params = useParams();
+  const { id = 0 } = params;
+  const mostWantedId = Number(id);
+
   return (
     <>
       <Helmet>
@@ -28,14 +33,17 @@ export default function MostWantedDestinationsPage() {
                 color: (t) => t.palette.secondary.main,
               }}
             >
-              Rio de Janeiro
+              {mostWantedMock[mostWantedId].title}
             </Typography>
           </Grid>
-          <Grid item xs={12} lg={7.5}>
-            <ImageSection />
+          <Grid item xs={12} lg={6}>
+            <ImageSection images={mostWantedMock[mostWantedId].images} />
           </Grid>
-          <Grid item xs={12} lg={4.5}>
-            <DestinationDescription />
+          <Grid item xs={12} lg={6}>
+            <DestinationDescription
+              title={mostWantedMock[mostWantedId].title}
+              texts={mostWantedMock[mostWantedId].texts}
+            />
           </Grid>
         </Grid>
       </SectionWrapper>

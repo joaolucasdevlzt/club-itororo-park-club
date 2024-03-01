@@ -12,7 +12,7 @@ import HighlightPackageSection from 'src/sections/highlight-package';
 import MostWantedDestinations from 'src/sections/most-wanted-destinations';
 import HomepageDescriptionCardsSection from 'src/sections/homepage-description-cards';
 
-import { packaListMock } from './mock';
+import { packageDescriptionMock } from '../package-details/mock';
 
 // ----------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ export default function HomePage() {
         <HomepageDescriptionCardsSection />
       </SectionWrapper>
       <SectionWrapper>
-        <HighlightPackageSection sectionTitle="Pacote em destaque" packageList={packaListMock} />
+        <HighlightPackageSection sectionTitle="Pacote em destaque" packageList={packageDescriptionMock} />
       </SectionWrapper>
       <SectionWrapper>
         <ContactsSection />

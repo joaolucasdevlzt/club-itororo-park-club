@@ -4,7 +4,7 @@ import { Box, useTheme, useMediaQuery } from '@mui/material';
 
 import SimpleImage from 'src/components/simple-image';
 
-export default function ImageSection() {
+export default function ImageSection({ images }: { images: string[] }) {
   const theme = useTheme();
   const isSmallerThanMd = useMediaQuery(theme.breakpoints.down('md'));
   const [widths, setWidth] = useState<number>(1400);
@@ -41,16 +41,16 @@ export default function ImageSection() {
           gap: 5,
         }}
       >
-        <SimpleImage image="/assets/images/lazertur/maceio.png" />
+        <SimpleImage image={images[0] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'} />
         <Box sx={{ display: 'flex', gap: 2 }}>
-          <SimpleImage image="/assets/images/lazertur/maceio.png" />
-          <SimpleImage image="/assets/images/lazertur/maceio.png" />
+          <SimpleImage image={images[1] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'} />
+          <SimpleImage image={images[2] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'} />
         </Box>
         <Box sx={{ display: 'flex', gap: 2 }}>
-          <SimpleImage image="/assets/images/lazertur/maceio.png" />
-          <SimpleImage image="/assets/images/lazertur/maceio.png" />
-          <SimpleImage image="/assets/images/lazertur/maceio.png" />
-          <SimpleImage image="/assets/images/lazertur/maceio.png" />
+          <SimpleImage image={images[3] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'} />
+          <SimpleImage image={images[4] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'} />
+          <SimpleImage image={images[5] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'} />
+          <SimpleImage image={images[6] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'} />
         </Box>
       </Box>
     );
@@ -68,34 +68,34 @@ export default function ImageSection() {
     >
       <SimpleImage
         aspectRatio={`16/${handleImageWidth()}`}
-        image="/assets/images/lazertur/maceio.png"
+        image={images[0] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
       />
       <Box sx={{ display: 'flex', gap: 2 }}>
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image="/assets/images/lazertur/maceio.png"
+          image={images[1] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
         />
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image="/assets/images/lazertur/maceio.png"
+          image={images[2] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
         />
       </Box>
       <Box sx={{ display: 'flex', gap: 2 }}>
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image="/assets/images/lazertur/maceio.png"
+          image={images[3] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
         />
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image="/assets/images/lazertur/maceio.png"
+          image={images[4] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
         />
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image="/assets/images/lazertur/maceio.png"
+          image={images[5] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
         />
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image="/assets/images/lazertur/maceio.png"
+          image={images[6] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
         />
       </Box>
     </Box>

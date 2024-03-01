@@ -24,11 +24,11 @@ export default function CompanyRedirectCard({ company, url }: CompanyRedirectCar
       <Box
         sx={{
           width: '100%',
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundImage: `url(/assets/images/lazertur/companies/${company}.svg)`,
-          aspectRatio: '16/6',
+          aspectRatio: '16/4',
         }}
       />
     </Box>

@@ -6,6 +6,7 @@ export default function ExclusiveOffers() {
   return (
     <Box
       sx={{
+        maxWidth: { md: 410 },
         backgroundSize: { xs: 'cover' },
         backgroundPosition: { xs: 'right', md: 'center' },
         backgroundRepeat: 'no-repeat',

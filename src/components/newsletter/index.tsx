@@ -7,12 +7,17 @@ import {
   Box,
   Grid,
   Button,
+  Dialog,
   Checkbox,
   TextField,
   Typography,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
   FormHelperText,
   FormControlLabel,
   CircularProgress,
+  DialogContentText,
 } from '@mui/material';
 
 import { request } from 'src/utils/fetch';
@@ -43,6 +48,7 @@ const newsLetterSchema = Yup.object().shape({
 
 export default function Newsletter() {
   const [acknowledged, setAcknowledged] = useState(false);
+  const [modal, setModal] = useState(false);
   const methods = useForm<FormValuesProps>({
     defaultValues: {
       name: '',
@@ -58,7 +64,10 @@ export default function Newsletter() {
   } = methods;
 
   const onSubmit = async (data: FormValuesProps) => {
-    await request.post('/newsletter', data);
+    const response: { id: string } = await request.post('/newsletter', data);
+    if (response?.id) {
+      setModal(true);
+    }
   };
 
   const disableBtn = isSubmitting || !acknowledged;
@@ -117,10 +126,38 @@ export default function Newsletter() {
             }
           />
           <Button disabled={disableBtn} type="submit" sx={buttonStyles}>
-            {isSubmitting ? <CircularProgress size={16} color="secondary" /> : 'Enviar'}
+            {isSubmitting ? <CircularProgress size={32} color="secondary" /> : 'Enviar'}
           </Button>
         </Box>
       </Box>
+      <Dialog open={modal}>
+        <DialogTitle sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}>
+          Seu email foi cadastrado com sucesso
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText
+            sx={{
+              fontFamily: 'Kanit-Regular',
+              color: (t) => t.palette.secondary.main,
+              textAlign: 'center',
+            }}
+          >
+            Em breve você receberá nossa newsletter
+          </DialogContentText>
+          <DialogActions sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Button
+              sx={{
+                fontFamily: 'Kanit-Regular',
+                backgroundColor: (t) => t.palette.primary.main,
+                color: 'white',
+              }}
+              onClick={() => setModal(false)}
+            >
+              Ok
+            </Button>
+          </DialogActions>
+        </DialogContent>
+      </Dialog>
     </FormProvider>
   );
 }

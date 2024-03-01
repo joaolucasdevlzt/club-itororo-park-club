@@ -143,6 +143,11 @@ export default function Header() {
                   alignItems: 'center',
                   gap: 2.5,
                   color: (t) => t.palette.secondary.main,
+                  '&:hover': {
+                    cursor: 'pointer',
+                    textDecoration: 'none',
+                    color: '#E33149',
+                  },
                 }}
                 onClick={() =>
                   window.open(

@@ -7,7 +7,11 @@ interface CompanyRedirectCardProps {
 export default function CompanyRedirectCard({ company, url }: CompanyRedirectCardProps) {
   return (
     <Box
-      onClick={() => window.open(url, 'blank')}
+      onClick={() => {
+        if (url.length) {
+          window.open(url, 'blank');
+        }
+      }}
       sx={{
         width: '100%',
         padding: 2,

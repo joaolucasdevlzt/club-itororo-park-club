@@ -43,7 +43,7 @@ export default function TimelineSection() {
         <Grid item xs={12} lg={6}>
           <SimpleImage
             sx={{ backgroundPosition: 'top', ml: { xs: 1, lg: 0 } }}
-            aspectRatio={downLg ? '10/7' : '10/7.5'}
+            aspectRatio={downLg ? '10/7' : '10/8.5'}
             image="/assets/images/lazertur/about/nilson-lucas.svg"
           />
         </Grid>

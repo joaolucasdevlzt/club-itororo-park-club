@@ -44,7 +44,7 @@ export default function MostWantedDestinations() {
             fn={() => navigate('destinos-mais-procurados/2')}
             image="gramado"
             title="Gramado"
-            aspectRatio="4/4"
+            aspectRatio="4/3"
           />
         </Grid>
         <Grid item xs={3.9}>
@@ -52,7 +52,7 @@ export default function MostWantedDestinations() {
             fn={() => navigate('destinos-mais-procurados/3')}
             image="orlando"
             title="Orlando"
-            aspectRatio="4/4"
+            aspectRatio="4/3"
           />
         </Grid>
         <Grid item xs={3.9}>
@@ -60,7 +60,7 @@ export default function MostWantedDestinations() {
             fn={() => navigate('destinos-mais-procurados/4')}
             image="bariloche"
             title="Bariloche"
-            aspectRatio="4/4"
+            aspectRatio="4/3"
           />
         </Grid>
       </Grid>

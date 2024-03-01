@@ -7,7 +7,11 @@ interface CompanyRedirectCardProps {
 export default function CompanyRedirectCard({ company, url }: CompanyRedirectCardProps) {
   return (
     <Box
-      onClick={() => window.open(url, 'blank')}
+      onClick={() => {
+        if (url.length) {
+          window.open(url, 'blank');
+        }
+      }}
       sx={{
         width: '100%',
         padding: 2,
@@ -24,11 +28,11 @@ export default function CompanyRedirectCard({ company, url }: CompanyRedirectCar
       <Box
         sx={{
           width: '100%',
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundImage: `url(/assets/images/lazertur/companies/${company}.svg)`,
-          aspectRatio: '16/6',
+          aspectRatio: '16/4',
         }}
       />
     </Box>

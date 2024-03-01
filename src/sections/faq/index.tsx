@@ -163,9 +163,13 @@ export default function FAQ() {
           Dúvidas frequentes
         </Typography>
       </Grid>
-      {questions.map((question) => (
+      {questions.map((question, index) => (
         <Grid key={question.title} item sm={5.8} lg={2.9}>
-          <FAQCard title={question.title} text={question.text} />
+          <FAQCard
+            title={question.title}
+            text={question.text}
+            link={index === questions.length - 1}
+          />
         </Grid>
       ))}
       <Grid

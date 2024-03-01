@@ -29,7 +29,7 @@ export default function Newsletter() {
         sx={{
           px: { xs: 3, lg: 15 },
           py: { xs: 5, lg: 15 },
-          maxWidth: 800,
+          maxWidth: 900,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',

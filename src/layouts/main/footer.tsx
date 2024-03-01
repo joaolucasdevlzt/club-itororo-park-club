@@ -1,5 +1,3 @@
-
-
 import { Box, Grid, Typography } from '@mui/material';
 
 import SectionWrapper from 'src/components/section-wrapper';
@@ -126,21 +124,21 @@ export default function Footer() {
                   Av. Rondon Pacheco, 1756 Uberlândia, MG
                 </Typography>
               </Grid>
-              <Grid item sx={{ display: 'flex', gap: 2 }}>
+              {/* <Grid item sx={{ display: 'flex', gap: 2 }}>
                 <Box component="img" src="/assets/icons/lazertur/help.svg" />
                 <Typography
                   sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
                 >
                   Ajuda
                 </Typography>
-              </Grid>
+              </Grid> */}
             </Grid>
             <Grid
               container
               item
               xs={12}
               md={4}
-              sx={{pl:15, display: 'flex', flexDirection: 'column', gap: 2 }}
+              sx={{ pl: 15, display: 'flex', flexDirection: 'column', gap: 2 }}
             >
               <Grid item>
                 <Typography
@@ -220,21 +218,57 @@ export default function Footer() {
                   xs={1}
                   sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
                 >
-                  <Box component="img" src="/assets/icons/lazertur/instagram.svg" />
+                  <Box
+                    sx={{
+                      '&:hover': {
+                        cursor: 'pointer',
+                      },
+                    }}
+                    onClick={() => {
+                      window.open('https://www.instagram.com/lazerturviagens/', 'blank');
+                    }}
+                    component="img"
+                    src="/assets/icons/lazertur/instagram.svg"
+                  />
                 </Grid>
                 <Grid
                   item
                   xs={1}
                   sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
                 >
-                  <Box component="img" src="/assets/icons/lazertur/facebook.svg" />
+                  <Box
+                    sx={{
+                      '&:hover': {
+                        cursor: 'pointer',
+                      },
+                    }}
+                    onClick={() => {
+                      window.open('https://www.facebook.com/lazertur/', 'blank');
+                    }}
+                    component="img"
+                    src="/assets/icons/lazertur/facebook.svg"
+                  />
                 </Grid>
                 <Grid
                   item
                   xs={1}
                   sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
                 >
-                  <Box component="img" src="/assets/icons/lazertur/linkedin.svg" />
+                  <Box
+                    sx={{
+                      '&:hover': {
+                        cursor: 'pointer',
+                      },
+                    }}
+                    onClick={() => {
+                      window.open(
+                        'https://www.linkedin.com/company/lazertur/?originalSubdomain=br',
+                        'blank'
+                      );
+                    }}
+                    component="img"
+                    src="/assets/icons/lazertur/linkedin.svg"
+                  />
                 </Grid>
               </Grid>
             </Grid>

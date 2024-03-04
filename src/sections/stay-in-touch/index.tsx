@@ -13,7 +13,7 @@ export default function StayInTouch() {
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
         justifyContent: 'space-between',
-        gap: 3,
+        gap: 4,
       }}
     >
       <ExclusiveOffers />

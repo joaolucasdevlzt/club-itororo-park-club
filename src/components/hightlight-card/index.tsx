@@ -49,7 +49,7 @@ export default function HighlightCard({
       >
         <Box
           sx={{
-            backgroundSize: 'contain',
+            backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundImage: `url(${image})`,
             aspectRatio,
@@ -60,18 +60,22 @@ export default function HighlightCard({
         />
         <Grid container item>
           <Grid item xs={12} sx={{ p: '25px 0px 0px 25px' }}>
-            <Typography variant="h4" sx={{ color: '#E33149', fontFamily: 'Kanit-Regular' }}>
+            <Typography variant="h3" sx={{fontSize:28, color: '#E33149', fontFamily: 'Kanit-Regular' }}>
               {title}
             </Typography>
           </Grid>
 
           <Grid item xs={12} sx={{ p: '0px 0px 15px 25px' }}>
-            <Typography variant="body1" sx={{ color: '#28327F', fontFamily: 'Kanit-Light' }}>
+            <Typography
+              variant="body1"
+              sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Light' }}
+            >
               {subtitle}
             </Typography>
           </Grid>
           {content.map((item, index) => (
             <Grid
+              key={item.text}
               item
               xs={12}
               sx={{
@@ -79,12 +83,15 @@ export default function HighlightCard({
                 display: 'flex',
                 alignItems: 'center',
                 gap: 1,
-                color: '#28327F',
+                color: (t) => t.palette.secondary.main,
                 fontFamily: 'Kanit-Light',
               }}
             >
               <Box component="img" src={`/assets/icons/lazertur/${item.icon}.svg`} />
-              <Typography variant="body1" sx={{ color: '#28327F', fontFamily: 'Kanit-Light' }}>
+              <Typography
+                variant="body1"
+                sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Light' }}
+              >
                 {item.text}
               </Typography>
             </Grid>
@@ -93,19 +100,34 @@ export default function HighlightCard({
       </Box>
       <Grid container item>
         <Grid item xs={12} sx={{ p: '25px 0px 0px 25px' }}>
-          <Typography variant="subtitle1" sx={{ color: '#28327F', fontFamily: 'Kanit-Regular' }}>
+          <Typography
+            
+            sx={{ fontWeight:700, color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Regular' }}
+          >
             {semiboldText}
           </Typography>
         </Grid>
         <Grid item xs={12} sx={{ p: '0px 0px 0px 25px' }}>
-          <Typography variant="h3" sx={{ color: '#28327F', fontFamily: 'Kanit-Regular' }}>
-            {boldBottomText}
+          <Typography
+            
+            sx={{fontSize:32, fontWeight:700, color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Regular' }}
+          >
+            R$ {boldBottomText?.toFixed(2).replace('.', ',')}
           </Typography>
         </Grid>
         {bottomText && (
           <Grid item xs={12} sx={{ p: '10px 0px 0px 25px' }}>
-            <Typography variant="body1" sx={{ color: '#28327F', fontFamily: 'Kanit-Light' }}>
+            <Typography
+              variant="body1"
+              sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Light' }}
+            >
               {bottomText}
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Light' }}
+            >
+              valor por pessoa
             </Typography>
           </Grid>
         )}

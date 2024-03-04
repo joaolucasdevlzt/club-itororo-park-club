@@ -20,7 +20,7 @@ export default function AboutUsSection() {
               fontSize: { xs: 30, sm: 40 },
               fontFamily: 'Prompt-Medium',
               fontWeight: '600',
-              color: '#28327F',
+              color: (t) => t.palette.secondary.main,
             }}
           >
             Sobre o Grupo LZT
@@ -40,13 +40,23 @@ export default function AboutUsSection() {
             </Box>
           )}
           <Typography
-            sx={{ fontFamily: 'Kanit-Regular', fontSize: 20, textAlign: 'left', color: '#28327F' }}
+            sx={{
+              fontFamily: 'Kanit-Regular',
+              fontSize: 20,
+              textAlign: 'left',
+              color: (t) => t.palette.secondary.main,
+            }}
           >
             Um conglomerado de empresas com presença nacional, o Grupo LZT atua há mais de 30 anos
             sendo referência em serviços de viagens e segmentos agregados.
           </Typography>
           <Typography
-            sx={{ fontFamily: 'Kanit-Regular', fontSize: 20, textAlign: 'left', color: '#28327F' }}
+            sx={{
+              fontFamily: 'Kanit-Regular',
+              fontSize: 20,
+              textAlign: 'left',
+              color: (t) => t.palette.secondary.main,
+            }}
           >
             Nosso objetivo é encantar nossos clientes, servir com excelência e proporcionar
             experiências incríveis aos nossos viajantes, e proporcionamos um leque de serviços para
@@ -58,7 +68,7 @@ export default function AboutUsSection() {
               fontWeight: '700',
               fontSize: 20,
               textAlign: 'left',
-              color: '#28327F',
+              color: (t) => t.palette.secondary.main,
             }}
           >
             Conheça as outras empresas que compõem nosso grupo:

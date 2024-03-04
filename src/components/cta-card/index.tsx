@@ -16,6 +16,7 @@ export default function CTACard({
       onClick={() => fn()}
       container
       sx={{
+        height: '100%',
         borderRadius: 2,
         padding: 4,
         backgroundColor: '#E5E6EE',
@@ -42,16 +43,20 @@ export default function CTACard({
         lg={10}
         sx={{
           display: 'flex',
-          justifyContent: { xs: 'flex-start', md: 'space-evenly' },
+          justifyContent: {
+            xs: 'flex-start',
+            md: 'space-evenly',
+            lg: `${buttonText?.length ? 'space-evenly' : 'flex-start'}`,
+          },
           alignItems: 'center',
           gap: { xs: 2, md: 1, lg: 0 },
         }}
       >
-        <Grid item xs={12} sm={6} md={12} lg={6}>
+        <Grid item xs={12} sm={6} md={12} lg={buttonText?.length ? 7 : 8}>
           <Typography
             sx={{
-              color: '#28327F',
-              fontSize: 14,
+              color: (t) => t.palette.secondary.main,
+              fontSize: 16,
               fontFamily: 'Prompt-Regular',
               fontWeight: 600,
             }}
@@ -59,30 +64,33 @@ export default function CTACard({
             {text}
           </Typography>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={5}
-          md={12}
-          lg={6}
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: { sm: 'flex-end', md: 'flex-start', lg: 'flex-end' },
-          }}
-        >
-          <Button
+        {buttonText && (
+          <Grid
+            item
+            xs={12}
+            sm={5}
+            md={12}
+            lg={5}
             sx={{
-              pl: 3,
-              pr: 3,
-              color: '#28327F',
-              border: 1,
-              ...buttonProps,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: { sm: 'flex-end', md: 'flex-start', lg: 'flex-end' },
             }}
           >
-            {buttonText}
-          </Button>
-        </Grid>
+            <Button
+              sx={{
+                pl: 3,
+                pr: 3,
+                color: (t) => t.palette.secondary.main,
+                border: 1,
+                ...buttonProps,
+              }}
+              title={buttonText}
+            >
+              {buttonText}
+            </Button>
+          </Grid>
+        )}
       </Grid>
     </Grid>
   );

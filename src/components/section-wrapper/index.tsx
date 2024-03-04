@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
-import { Box } from '@mui/material';
+import { Box, SxProps } from '@mui/material';
 
-export default function SectionWrapper({ children }: { children: ReactNode }) {
+export default function SectionWrapper({ children, sx }: { children: ReactNode; sx?: SxProps }) {
   return (
     <Box
       sx={{
@@ -11,7 +11,8 @@ export default function SectionWrapper({ children }: { children: ReactNode }) {
         maxWidth: 1350,
         width: '100%',
         height: 'auto',
-        pt: 12,
+        pt: 10,
+        ...sx,
       }}
     >
       {children}

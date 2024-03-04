@@ -51,7 +51,7 @@ export default function Header() {
         }}
       >
         <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
-          <Logo sx={{ height: 30 }} />
+          <Logo sx={{ marginLeft: { lg: -12 }, height: 50, width: 150 }} />
 
           <Box sx={{ flexGrow: 1 }} />
 
@@ -70,7 +70,7 @@ export default function Header() {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 1,
-                  color: '#28327F',
+                  color: (t) => t.palette.secondary.main,
                   ...(home ? { color: '#E33149' } : {}),
                   '&:hover': {
                     textDecoration: 'none',
@@ -100,7 +100,7 @@ export default function Header() {
                   fontWeight: theme.typography.fontWeightSemiBold,
                   marginRight: 1,
                   display: 'flex',
-                  color: '#28327F',
+                  color: (t) => t.palette.secondary.main,
                   alignItems: 'flex-start',
                   gap: 1,
                   ...(about ? { color: '#E33149' } : {}),
@@ -125,6 +125,7 @@ export default function Header() {
                     sx={{
                       position: 'absolute',
                       bottom: 0,
+                      marginLeft: -2,
                       width: 110,
                       border: 2,
                       borderTopLeftRadius: 6,
@@ -141,7 +142,12 @@ export default function Header() {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 2.5,
-                  color: '#28327F',
+                  color: (t) => t.palette.secondary.main,
+                  '&:hover': {
+                    cursor: 'pointer',
+                    textDecoration: 'none',
+                    color: '#E33149',
+                  },
                 }}
                 onClick={() =>
                   window.open(

@@ -15,6 +15,23 @@ export interface HighlightPackagesProps {
   subtitle?: string;
   content?: ContentProps[];
   semiboldText?: string;
-  boldBottomText?: string;
+  boldBottomText?: number | null;
   bottomText?: string;
+}
+
+export interface PriceCardProps {
+  price: number;
+  oldPrice?: number | null;
+  upfront?: string;
+  split?: string;
+  splitValue?: number | null;
+  descriptionText?: string;
+}
+export interface PackageDescriptionProps extends PriceCardProps {
+  image: string[];
+  sx?: SxProps;
+  title: string;
+  subtitle?: string;
+  content?: ContentProps[];
+  items?: string[];
 }

@@ -11,7 +11,7 @@ export const packaListMock: HighlightPackagesProps[] = [
       { icon: 'coffee', text: 'Café da manhã incluso' },
     ],
     semiboldText: 'a partir de',
-    boldBottomText: 'R$ 350,90',
+    boldBottomText: 359.59,
     bottomText: 'Parcela única',
   },
   {
@@ -19,13 +19,12 @@ export const packaListMock: HighlightPackagesProps[] = [
     title: 'Porto de Galinhas',
     subtitle: 'Pernambuco',
     content: [
-    
       { icon: 'sun', text: '8 dias' },
       { icon: 'calendar', text: 'De 06/06/24 à 15/06/24' },
       { icon: 'coffee', text: 'Café da manhã incluso' },
     ],
     semiboldText: '10x de',
-    boldBottomText: 'R$ 859,90',
+    boldBottomText: 785.59,
     bottomText: 'Sem entrada',
   },
   {
@@ -38,7 +37,7 @@ export const packaListMock: HighlightPackagesProps[] = [
       { icon: 'all_inclusive', text: 'All inclusive' },
     ],
     semiboldText: '10x de',
-    boldBottomText: 'R$ 1090,90',
+    boldBottomText: 1359.59,
     bottomText: 'Sem entrada',
   },
   {
@@ -51,7 +50,7 @@ export const packaListMock: HighlightPackagesProps[] = [
       { icon: 'all_inclusive', text: 'All inclusive' },
     ],
     semiboldText: '10x de',
-    boldBottomText: 'R$ 569,90',
+    boldBottomText: 559.59,
     bottomText: 'Sem entrada',
   },
 ];

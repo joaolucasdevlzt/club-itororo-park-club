@@ -1,31 +1,39 @@
+import { useNavigate } from 'react-router';
+
 import { Box, Grid, Typography } from '@mui/material';
 
 import HighlightCard from 'src/components/hightlight-card';
 
-import { HighlightPackagesProps } from 'src/types/external/api';
+import { PackageDescriptionProps } from 'src/types/external/api';
 
 export default function HighlightPackageSection({
+  sectionTitle,
   packageList,
 }: {
-  packageList: HighlightPackagesProps[];
+  sectionTitle?: string;
+  packageList: PackageDescriptionProps[];
 }) {
+  const navigate = useNavigate();
   if (!Array.isArray(packageList) || !packageList.length) {
     return <Box />;
   }
   return (
     <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
-      <Grid item xs={12}>
-        <Typography
-          sx={{
-            fontSize: { xs: 30, sm: 40 },
-            fontFamily: 'Prompt-Medium',
-            fontWeight: '600',
-            color: '#28327F',
-          }}
-        >
-          Pacote em destaque
-        </Typography>
-      </Grid>
+      {sectionTitle && (
+        <Grid item xs={12}>
+          <Typography
+          variant='h2'
+            sx={{
+              fontSize: { xs: 30, sm: 40 },
+              fontFamily: 'Prompt-Medium',
+              fontWeight: '600',
+              color: (t) => t.palette.secondary.main,
+            }}
+          >
+            {sectionTitle}
+          </Typography>
+        </Grid>
+      )}
       <Box
         sx={{
           width: '100%',
@@ -53,15 +61,16 @@ export default function HighlightPackageSection({
       >
         {packageList.map((item, index) => (
           <HighlightCard
+            fn={() => navigate(`/pacotes/detalhes/${index}`)}
             key={item.title + index}
             width={310}
-            image={item.image}
+            image={item.image[0]}
             content={item.content}
             title={item.title}
             subtitle={item.subtitle}
-            semiboldText={item.semiboldText}
-            boldBottomText={item.boldBottomText}
-            bottomText={item.bottomText}
+            semiboldText={item.split}
+            boldBottomText={item.splitValue || null}
+            bottomText={item.upfront}
           />
         ))}
       </Box>

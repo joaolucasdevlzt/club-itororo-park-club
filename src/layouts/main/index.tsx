@@ -31,6 +31,9 @@ export default function MainLayout({ children }: Props) {
           }),
         }}
       >
+        {/* FOR SEO PURPOSES */}
+        <h1 style={{ fontSize: 0 }}>Lazertur viagens</h1>
+        <h2 style={{ fontSize: 0 }}>Um sonho de viagem</h2>
         {children}
       </Box>
       <Footer />

@@ -22,6 +22,7 @@ export default function HighlightPackageSection({
       {sectionTitle && (
         <Grid item xs={12}>
           <Typography
+          variant='h2'
             sx={{
               fontSize: { xs: 30, sm: 40 },
               fontFamily: 'Prompt-Medium',

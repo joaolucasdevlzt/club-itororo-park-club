@@ -38,7 +38,7 @@ export default function MostWantedDestinationsPage() {
           </Grid>
           <Grid item xs={12} lg={7.5}>
             <Typography
-              variant="h2"
+              variant="h1"
               sx={{
                 mb: 5,
                 display: { xs: 'block', lg: 'none' },

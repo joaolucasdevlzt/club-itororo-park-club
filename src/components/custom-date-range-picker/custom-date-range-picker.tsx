@@ -105,7 +105,7 @@ export default function CustomDateRangePicker({
       </DialogContent>
 
       <DialogActions>
-        <Button variant="outlined" color="inherit" onClick={onClose}>
+        <Button  variant="outlined" color="inherit" onClick={onClose}>
           Cancel
         </Button>
 

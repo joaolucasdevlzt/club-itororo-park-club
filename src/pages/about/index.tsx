@@ -34,6 +34,7 @@ export default function AboutPage() {
       <SectionWrapper>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <Typography
+          variant='h2'
             sx={{
               fontSize: '26px',
               lineHeight: 1.3,

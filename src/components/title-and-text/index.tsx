@@ -8,6 +8,7 @@ export default function TitleAndTexts({ title, texts }: titleAndTextsProps) {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
       <Typography
+        variant="h1"
         sx={{
           fontSize: '26px',
           lineHeight: 1.3,

@@ -5,10 +5,14 @@ import TitleAndTexts from 'src/components/title-and-text';
 import SectionWrapper from 'src/components/section-wrapper';
 
 import TimelineSection from 'src/sections/timeline';
+import { Helmet } from 'react-helmet-async';
 
 export default function AboutPage() {
   return (
     <>
+      <Helmet>
+        <title>Lazertur - Nossa história</title>
+      </Helmet>
       <Banner images="/assets/images/lazertur/about/about_banner.svg" />
       <SectionWrapper>
         <TitleAndTexts
@@ -29,7 +33,7 @@ export default function AboutPage() {
       <SectionWrapper>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <Typography
-          variant='h2'
+            variant="h2"
             sx={{
               fontSize: '26px',
               lineHeight: 1.3,

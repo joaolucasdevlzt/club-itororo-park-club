@@ -1,5 +1,3 @@
-import { Helmet } from 'react-helmet-async';
-
 import { Box, Typography } from '@mui/material';
 
 import Banner from 'src/components/banner';
@@ -11,9 +9,6 @@ import TimelineSection from 'src/sections/timeline';
 export default function AboutPage() {
   return (
     <>
-      <Helmet>
-        <title> Lazertur</title>
-      </Helmet>
       <Banner images="/assets/images/lazertur/about/about_banner.svg" />
       <SectionWrapper>
         <TitleAndTexts
@@ -34,6 +29,7 @@ export default function AboutPage() {
       <SectionWrapper>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
           <Typography
+          variant='h2'
             sx={{
               fontSize: '26px',
               lineHeight: 1.3,

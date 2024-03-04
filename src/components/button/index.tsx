@@ -28,6 +28,7 @@ export default function StyledButton({ text, callback, sx }: StyledButtonProps) 
         },
         ...sx,
       }}
+      title={text}
     >
       {text}
     </Button>

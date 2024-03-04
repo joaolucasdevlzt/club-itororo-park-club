@@ -125,7 +125,7 @@ export default function Newsletter() {
               </Typography>
             }
           />
-          <Button disabled={disableBtn} type="submit" sx={buttonStyles}>
+          <Button title="Enviar" disabled={disableBtn} type="submit" sx={buttonStyles}>
             {isSubmitting ? <CircularProgress size={32} color="secondary" /> : 'Enviar'}
           </Button>
         </Box>
@@ -146,6 +146,7 @@ export default function Newsletter() {
           </DialogContentText>
           <DialogActions sx={{ display: 'flex', justifyContent: 'center' }}>
             <Button
+            title="Ok"
               sx={{
                 fontFamily: 'Kanit-Regular',
                 backgroundColor: (t) => t.palette.primary.main,

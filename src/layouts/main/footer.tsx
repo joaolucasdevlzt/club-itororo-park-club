@@ -24,7 +24,12 @@ export default function Footer() {
             }}
           >
             <Grid container item xs={12} mb={12} sx={{ display: { xs: 'flex', md: 'none' } }}>
-              <Box width={180} component="img" src="/logo/lazertur_viagens_logo.svg" />
+              <Box
+                alt="Logo da Lazertur Viagens"
+                width={180}
+                component="img"
+                src="/logo/lazertur_viagens_logo.svg"
+              />
             </Grid>
             {/* <Grid
               container
@@ -109,7 +114,11 @@ export default function Footer() {
                 </Typography>
               </Grid>
               <Grid item sx={{ display: 'flex', gap: 2 }}>
-                <Box component="img" src="/assets/icons/lazertur/whatsapp.svg" />
+                <Box
+                  alt="Whatsapp icon"
+                  component="img"
+                  src="/assets/icons/lazertur/whatsapp.svg"
+                />
                 <Typography
                   sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
                 >
@@ -117,7 +126,11 @@ export default function Footer() {
                 </Typography>
               </Grid>
               <Grid item sx={{ display: 'flex', gap: 2, pr: { xs: 2, lg: 4 } }}>
-                <Box component="img" src="/assets/icons/lazertur/location.svg" />
+                <Box
+                  alt="location icon"
+                  component="img"
+                  src="/assets/icons/lazertur/location.svg"
+                />
                 <Typography
                   sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
                 >
@@ -138,7 +151,7 @@ export default function Footer() {
               item
               xs={12}
               md={4}
-              sx={{ pl: 15, display: 'flex', flexDirection: 'column', gap: 2 }}
+              sx={{ pl: { md: 15 }, display: 'flex', flexDirection: 'column', gap: 2 }}
             >
               <Grid item>
                 <Typography
@@ -190,13 +203,37 @@ export default function Footer() {
             </Grid>
             <Grid container item xs={12} mt={12} sx={{ display: { xs: 'flex', md: 'none' } }}>
               <Grid item xs={1.5}>
-                <Box component="img" src="/assets/icons/lazertur/instagram.svg" />
+                <Box
+                  onClick={() => {
+                    window.open('https://www.instagram.com/lazerturviagens/', 'blank');
+                  }}
+                  alt="instagram icon"
+                  component="img"
+                  src="/assets/icons/lazertur/instagram.svg"
+                />
               </Grid>
               <Grid item xs={1.5}>
-                <Box component="img" src="/assets/icons/lazertur/facebook.svg" />
+                <Box
+                  onClick={() => {
+                    window.open('https://www.facebook.com/lazertur/', 'blank');
+                  }}
+                  alt="Facebook icon"
+                  component="img"
+                  src="/assets/icons/lazertur/facebook.svg"
+                />
               </Grid>
               <Grid item xs={1.5}>
-                <Box component="img" src="/assets/icons/lazertur/linkedin.svg" />
+                <Box
+                  onClick={() => {
+                    window.open(
+                      'https://www.linkedin.com/company/lazertur/?originalSubdomain=br',
+                      'blank'
+                    );
+                  }}
+                  alt="Linkedin icon"
+                  component="img"
+                  src="/assets/icons/lazertur/linkedin.svg"
+                />
               </Grid>
             </Grid>
             <Grid container item xs={4} md={4} sx={{ display: { xs: 'none', md: 'flex' } }}>
@@ -205,7 +242,12 @@ export default function Footer() {
                 md={12}
                 sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
               >
-                <Box width={180} component="img" src="/logo/lazertur_viagens_logo.svg" />
+                <Box
+                  alt="Lazertur Viagens logo"
+                  width={180}
+                  component="img"
+                  src="/logo/lazertur_viagens_logo.svg"
+                />
               </Grid>
               <Grid
                 container
@@ -237,6 +279,7 @@ export default function Footer() {
                   sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
                 >
                   <Box
+                    alt="Facebook icon"
                     sx={{
                       '&:hover': {
                         cursor: 'pointer',
@@ -255,6 +298,7 @@ export default function Footer() {
                   sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
                 >
                   <Box
+                    alt="Linkedin icon"
                     sx={{
                       '&:hover': {
                         cursor: 'pointer',

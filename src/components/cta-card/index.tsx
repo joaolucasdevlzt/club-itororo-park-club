@@ -85,6 +85,7 @@ export default function CTACard({
                 border: 1,
                 ...buttonProps,
               }}
+              title={buttonText}
             >
               {buttonText}
             </Button>

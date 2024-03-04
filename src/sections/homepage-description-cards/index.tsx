@@ -30,16 +30,19 @@ export default function HomepageDescriptionCardsSection() {
       }}
     >
       <CardWithTitleAndText
+        key={1}
         image="beach"
         title="Trabalhando há 15 anos no ramo de turismo"
         text="Desde 2009 atendendo viajantes em Uberlândia."
       />
       <CardWithTitleAndText
+        key={2}
         image="geisha"
         title="Agentes especializados"
         text="Nossa equipe está pronta para te auxiliar tanto durante a compra quanto em alterações na viagem"
       />
       <CardWithTitleAndText
+        key={3}
         image="disney"
         title="Pacotes, passagens, hotéis e muito mais"
         text="Monte sua viagem personalizada e tenha assistência em seguros, aluguéis e ingressos."

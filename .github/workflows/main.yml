@@ -25,10 +25,18 @@ jobs:
       - name: Build React App for Dev environment
         if: github.ref == 'refs/heads/dev'
         run: node -v && yarn -v && yarn && yarn build
+        env:
+          VITE_APP_BASE_URL_CLOUD: ${{ secrets.VITE_APP_BASE_URL_CLOUD_DEV }}
+          VITE_APP_GOOGLE_API_KEY: ${{ secrets.VITE_APP_GOOGLE_API_KEY_DEV }}
+          VITE_APP_GOOGLE_API_TOKEN: ${{ secrets.VITE_APP_GOOGLE_API_TOKEN_DEV }}
 
       - name: Build React App for Prod environment
         if: github.ref == 'refs/heads/main'
         run: node -v && yarn -v && yarn && yarn build
+        env:
+          VITE_APP_BASE_URL_CLOUD: ${{ secrets.VITE_APP_BASE_URL_CLOUD }}
+          VITE_APP_GOOGLE_API_KEY: ${{ secrets.VITE_APP_GOOGLE_API_KEY }}
+          VITE_APP_GOOGLE_API_TOKEN: ${{ secrets.VITE_APP_GOOGLE_API_TOKEN }}
 
       - name: Cache node_modules
         uses: actions/cache@v2

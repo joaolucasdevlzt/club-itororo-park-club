@@ -27,7 +27,10 @@ export default function HomePage() {
         <HomepageDescriptionCardsSection />
       </SectionWrapper>
       <SectionWrapper>
-        <HighlightPackageSection sectionTitle="Pacotes em destaque" packageList={packageDescriptionMock} />
+        <HighlightPackageSection
+          sectionTitle="Pacotes em destaque"
+          packageList={packageDescriptionMock}
+        />
       </SectionWrapper>
       <SectionWrapper>
         <ContactsSection />

@@ -48,7 +48,7 @@ export default function ContactsSection() {
               ? 'Prefere conversar pelo telefone? Estamos aguardando sua ligação'
               : 'Prefere conversar pelo telefone? Estamos aguardando sua ligação: (34) 3237.2515'
           }
-          buttonText={downMd?"Ligue para nós":""}
+          buttonText={downMd ? 'Ligue para nós' : ''}
           buttonProps={{
             color: '#28327F',
             '&:hover': { backgroundColor: '#28327F', color: 'white' },

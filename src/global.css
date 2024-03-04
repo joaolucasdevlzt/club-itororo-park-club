@@ -1,52 +1,51 @@
 /* scrollbar */
 @import 'simplebar-react/dist/simplebar.min.css';
 
-
 @font-face {
-    font-family: 'Kanit-Regular';
-    src: url('/fonts/Kanit-Regular.ttf');
-  }
+  font-family: 'Kanit-Regular';
+  src: url('/fonts/Kanit-Regular.ttf');
+}
 @font-face {
-    font-family: 'Kanit-Thin';
-    src: url('/fonts/Kanit-Thin.ttf');
-  }
+  font-family: 'Kanit-Thin';
+  src: url('/fonts/Kanit-Thin.ttf');
+}
 @font-face {
-    font-family: 'Kanit-Black';
-    src: url('/fonts/Kanit-Black.ttf');
-  }
+  font-family: 'Kanit-Black';
+  src: url('/fonts/Kanit-Black.ttf');
+}
 @font-face {
-    font-family: 'Kanit-Medium';
-    src: url('/fonts/Kanit-Medium.ttf');
-  }
+  font-family: 'Kanit-Medium';
+  src: url('/fonts/Kanit-Medium.ttf');
+}
 @font-face {
-    font-family: 'Kanit-Light';
-    src: url('/fonts/Kanit-Light.ttf');
-  }
+  font-family: 'Kanit-Light';
+  src: url('/fonts/Kanit-Light.ttf');
+}
 @font-face {
-    font-family: 'Kanit-ExtraLight';
-    src: url('/fonts/Kanit-ExtraLight.ttf');
-  }
+  font-family: 'Kanit-ExtraLight';
+  src: url('/fonts/Kanit-ExtraLight.ttf');
+}
 @font-face {
-    font-family: 'Kanit-SemiBold';
-    src: url('/fonts/Kanit-SemiBold.ttf');
-  }
+  font-family: 'Kanit-SemiBold';
+  src: url('/fonts/Kanit-SemiBold.ttf');
+}
 @font-face {
-    font-family: 'Prompt-Black';
-    src: url('/fonts/Prompt-Black.ttf');
-  }
+  font-family: 'Prompt-Black';
+  src: url('/fonts/Prompt-Black.ttf');
+}
 @font-face {
-    font-family: 'Prompt-Thin';
-    src: url('/fonts/Prompt-Thin.ttf');
-  }
+  font-family: 'Prompt-Thin';
+  src: url('/fonts/Prompt-Thin.ttf');
+}
 @font-face {
-    font-family: 'Prompt-Regular';
-    src: url('/fonts/Prompt-Regular.ttf');
-  }
+  font-family: 'Prompt-Regular';
+  src: url('/fonts/Prompt-Regular.ttf');
+}
 @font-face {
-    font-family: 'Prompt-Medium';
-    src: url('/fonts/Prompt-Medium.ttf');
-  }
+  font-family: 'Prompt-Medium';
+  src: url('/fonts/Prompt-Medium.ttf');
+}
 @font-face {
-    font-family: 'Prompt-SemiBold';
-    src: url('/fonts/Prompt-SemiBold.ttf');
-  }
+  font-family: 'Prompt-SemiBold';
+  src: url('/fonts/Prompt-SemiBold.ttf');
+}

@@ -50,7 +50,6 @@ export default function FileManagerNewFolderDialog({
   const [files, setFiles] = useState<(File | string)[]>([]);
   const [loading, setIsLoading] = useState(false); // eslint-disable-line
 
-
   const { enqueueSnackbar } = useSnackbar();
   useEffect(() => {
     if (!open) {

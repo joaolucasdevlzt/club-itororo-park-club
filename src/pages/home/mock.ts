@@ -24,7 +24,7 @@ export const packaListMock: HighlightPackagesProps[] = [
       { icon: 'coffee', text: 'Café da manhã incluso' },
     ],
     semiboldText: '10x de',
-    boldBottomText:  785.59,
+    boldBottomText: 785.59,
     bottomText: 'Sem entrada',
   },
   {
@@ -50,7 +50,7 @@ export const packaListMock: HighlightPackagesProps[] = [
       { icon: 'all_inclusive', text: 'All inclusive' },
     ],
     semiboldText: '10x de',
-    boldBottomText:  559.59,
+    boldBottomText: 559.59,
     bottomText: 'Sem entrada',
   },
 ];

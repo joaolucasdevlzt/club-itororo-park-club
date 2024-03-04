@@ -1,4 +1,3 @@
-
 import { useRef } from 'react';
 import { closeSnackbar, SnackbarProvider as NotistackProvider } from 'notistack';
 

@@ -8,7 +8,6 @@ import SectionWrapper from 'src/components/section-wrapper';
 
 import TimelineSection from 'src/sections/timeline';
 
-
 export default function AboutPage() {
   return (
     <>

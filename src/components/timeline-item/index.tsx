@@ -10,7 +10,7 @@ export default function TimelineCustomItem({ time, text }: TimelineCustomItemPro
   return (
     <TimelineItem>
       <TimelineSeparator>
-        <TimelineDot sx={{ backgroundColor: (t) => t.palette.primary.main, m: 0,p:.3 }} />
+        <TimelineDot sx={{ backgroundColor: (t) => t.palette.primary.main, m: 0, p: 0.3 }} />
         <TimelineConnector sx={{ backgroundColor: (t) => t.palette.primary.main }} />
       </TimelineSeparator>
       <TimelineContent sx={{ mt: -2 }}>

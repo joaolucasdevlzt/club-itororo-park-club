@@ -25,7 +25,7 @@ export default function HomePage() {
         )}
         <title>Lazertur - Homepage</title>
       </Helmet>
-      <Banner images="/assets/images/contact/banner_topo.jpg" />
+      <Banner images="/assets/images/lazertur/banner_home.jpg" />
       <SectionWrapper>
         <HomepageDescriptionCardsSection />
       </SectionWrapper>

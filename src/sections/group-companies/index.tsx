@@ -28,7 +28,7 @@ export default function GroupCompanies() {
         />
       </Grid>
       <Grid item xs={6} md={2.7} display="flex" justifyContent="center">
-        <CompanyRedirectCard company="travel" url="" />
+        <CompanyRedirectCard company="travel" url="https://www.instagram.com/travelmarketinglzt?igsh=MTdxZ213bjZqZzk1ZQ==" />
       </Grid>
       <Grid item xs={6} md={2.7} display="flex" justifyContent="center">
         <CompanyRedirectCard company="azul_udi" url="https://www.instagram.com/azulviagensudi/" />

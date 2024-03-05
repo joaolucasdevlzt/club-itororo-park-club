@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet-async';
+
 import Banner from 'src/components/banner';
 import SectionWrapper from 'src/components/section-wrapper';
 
@@ -17,6 +19,12 @@ import { packageDescriptionMock } from '../package-details/mock';
 export default function HomePage() {
   return (
     <>
+      <Helmet>
+        {process.env.NODE_ENV === 'development' && (
+          <meta name="robots" content="noindex, nofollow" />
+        )}
+        <title>Lazertur - Homepage</title>
+      </Helmet>
       <Banner images="/assets/images/contact/banner_topo.jpg" />
       <SectionWrapper>
         <HomepageDescriptionCardsSection />

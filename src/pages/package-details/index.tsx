@@ -16,6 +16,10 @@ export default function PackageDetails() {
   return (
     <>
       <Helmet>
+        {process.env.NODE_ENV === 'development' && (
+          <meta name="robots" content="noindex, nofollow" />
+        )}
+
         <title>Lazertur - Detalhes de pacotes</title>
       </Helmet>
       <SectionWrapper sx={{ paddingTop: 5 }}>

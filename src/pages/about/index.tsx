@@ -11,6 +11,9 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
+        {process.env.NODE_ENV === 'development' && (
+          <meta name="robots" content="noindex, nofollow" />
+        )}
         <title>Lazertur - Nossa história</title>
       </Helmet>
       <Banner images="/assets/images/lazertur/about/about_banner.svg" />

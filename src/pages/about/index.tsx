@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet-async';
+
 import { Box, Typography } from '@mui/material';
 
 import Banner from 'src/components/banner';
@@ -5,7 +7,6 @@ import TitleAndTexts from 'src/components/title-and-text';
 import SectionWrapper from 'src/components/section-wrapper';
 
 import TimelineSection from 'src/sections/timeline';
-import { Helmet } from 'react-helmet-async';
 
 export default function AboutPage() {
   return (

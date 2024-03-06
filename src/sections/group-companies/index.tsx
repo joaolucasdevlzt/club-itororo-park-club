@@ -47,7 +47,7 @@ export default function GroupCompanies() {
       </Grid>
       <Grid container item xs={12} display="flex" justifyContent="center" pt={5}>
         <Grid item xs={10} sm={5} md={3.3}>
-          <StyledButton text="Saiba mais sobre o grupo LZT" callback={() => navigate('/sobre')} />
+          <StyledButton text="Saiba mais sobre o Grupo LZT" callback={() => navigate('/sobre')} />
         </Grid>
       </Grid>
     </Grid>

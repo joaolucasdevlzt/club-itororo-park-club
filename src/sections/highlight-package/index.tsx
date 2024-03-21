@@ -22,7 +22,7 @@ export default function HighlightPackageSection({
       {sectionTitle && (
         <Grid item xs={12}>
           <Typography
-          variant='h2'
+            variant="h2"
             sx={{
               fontSize: { xs: 30, sm: 40 },
               fontFamily: 'Prompt-Medium',
@@ -64,7 +64,7 @@ export default function HighlightPackageSection({
             fn={() => navigate(`/pacotes/detalhes/${index}`)}
             key={item.title + index}
             width={310}
-            image={item.image[0]}
+            image={item.image[0].publicUrl}
             content={item.content}
             title={item.title}
             subtitle={item.subtitle}

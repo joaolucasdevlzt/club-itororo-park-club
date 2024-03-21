@@ -1,6 +1,3 @@
-import React from 'react';
-import { useNavigate } from 'react-router';
-
 import { Box, Grid } from '@mui/material';
 
 import { packageDescriptionMock } from 'src/pages/package-details/mock';
@@ -12,7 +9,6 @@ import ImageSection from '../image-list';
 import PackageDescription from '../package-description';
 
 export default function CompletePackageInfo({ id }: { id: number }) {
-  const navigate = useNavigate();
   return (
     <Grid
       container
@@ -24,7 +20,7 @@ export default function CompletePackageInfo({ id }: { id: number }) {
         <Box sx={{ marginBottom: { xs: 0, md: 5 } }}>
           <IconButton
             iconSx={{ color: (t: any) => t.palette.secondary.main }}
-            callback={() => navigate('/')}
+            callback={() => window.history.back()}
             icon="gravity-ui:chevron-left"
             text="Voltar para home"
             direction="left"

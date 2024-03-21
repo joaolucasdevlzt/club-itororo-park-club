@@ -3,14 +3,14 @@ import { PackageDescriptionProps } from 'src/types/external/api';
 export const packageDescriptionMock: PackageDescriptionProps[] = [
   {
     image: [
-      'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_1.jpg',
-      'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_2.jpg',
-      'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_3.jpg',
-      'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_4.jpg',
-      'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_5.jpg',
-      'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_6.jpg',
-      'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_7.jpg',
-      'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_8.jpg',
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_1.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_2.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_3.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_4.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_5.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_6.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_7.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/fortaleza/fortaleza_8.jpg' },
     ],
     title: 'Fortaleza',
     subtitle: 'Ibis Budget Praia de Iracema',
@@ -37,13 +37,34 @@ export const packageDescriptionMock: PackageDescriptionProps[] = [
   },
   {
     image: [
-      'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_1.png',
-      'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_2.jpg',
-      'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_3.jpg',
-      'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_4.jpg',
-      'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_5.png',
-      'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_6.png',
-      'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_7.png',
+      {
+        name: '',
+        publicUrl: 'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_1.png',
+      },
+      {
+        name: '',
+        publicUrl: 'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_2.jpg',
+      },
+      {
+        name: '',
+        publicUrl: 'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_3.jpg',
+      },
+      {
+        name: '',
+        publicUrl: 'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_4.jpg',
+      },
+      {
+        name: '',
+        publicUrl: 'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_5.png',
+      },
+      {
+        name: '',
+        publicUrl: 'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_6.png',
+      },
+      {
+        name: '',
+        publicUrl: 'https://storage.googleapis.com/lazertur/porto_galinhas/porto_galinhas_7.png',
+      },
     ],
     title: 'Porto de Galinhas',
     subtitle: 'Pousada Capitães de Areia',
@@ -70,13 +91,13 @@ export const packageDescriptionMock: PackageDescriptionProps[] = [
 
   {
     image: [
-      'https://storage.googleapis.com/lazertur/ilheus/ilheus_1.jpg',
-      'https://storage.googleapis.com/lazertur/ilheus/ilheus_2.webp',
-      'https://storage.googleapis.com/lazertur/ilheus/ilheus_3.jpg',
-      'https://storage.googleapis.com/lazertur/ilheus/ilheus_4.jpg',
-      'https://storage.googleapis.com/lazertur/ilheus/ilheus_5.jpg',
-      'https://storage.googleapis.com/lazertur/ilheus/ilheus_6.jpg',
-      'https://storage.googleapis.com/lazertur/ilheus/ilheus_7.jpeg',
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/ilheus/ilheus_1.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/ilheus/ilheus_2.webp' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/ilheus/ilheus_3.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/ilheus/ilheus_4.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/ilheus/ilheus_5.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/ilheus/ilheus_6.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/ilheus/ilheus_7.jpeg' },
     ],
     title: 'Ilhéus - BA',
     subtitle: 'Indaiá Eco Village',
@@ -102,13 +123,13 @@ export const packageDescriptionMock: PackageDescriptionProps[] = [
   },
   {
     image: [
-      'https://storage.googleapis.com/lazertur/bonito/bonito_1.webp',
-      'https://storage.googleapis.com/lazertur/bonito/bonito_2.jpg',
-      'https://storage.googleapis.com/lazertur/bonito/bonito_3.jpg',
-      'https://storage.googleapis.com/lazertur/bonito/bonito_4.jpg',
-      'https://storage.googleapis.com/lazertur/bonito/bonito_5.webp',
-      'https://storage.googleapis.com/lazertur/bonito/bonito_6.jpg',
-      'https://storage.googleapis.com/lazertur/bonito/bonito_7.jpg',
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/bonito/bonito_1.webp' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/bonito/bonito_2.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/bonito/bonito_3.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/bonito/bonito_4.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/bonito/bonito_5.webp' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/bonito/bonito_6.jpg' },
+      { name: '', publicUrl: 'https://storage.googleapis.com/lazertur/bonito/bonito_7.jpg' },
     ],
     title: 'Bonito - MS',
     subtitle: 'Pousada Muito bonito',

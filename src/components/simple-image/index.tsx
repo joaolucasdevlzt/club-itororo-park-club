@@ -3,7 +3,6 @@ import { Box } from '@mui/material';
 import { ImageInterface } from './types';
 
 export default function SimpleImage({ image, aspectRatio = '16/9', sx }: ImageInterface) {
-  console.log(image);
   return (
     <Box
       sx={{

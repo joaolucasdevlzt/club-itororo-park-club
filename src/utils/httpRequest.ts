@@ -16,9 +16,6 @@ export default (path: string, data?: unknown, method: MethodsProps = 'post') => 
     data,
   };
   return axios(requestOptions)
-    .then((response) => {
-      console.log(response);
-      return response.data;
-    })
+    .then((response) => response.data)
     .catch((error) => error.response.data);
 };

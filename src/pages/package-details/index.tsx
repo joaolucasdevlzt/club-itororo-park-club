@@ -64,10 +64,12 @@ export default function PackageDetails() {
         {typeof data !== 'string' && <CompletePackageInfo data={data} />}
       </SectionWrapper>
       <SectionWrapper>
-        <HighlightPackageSection
-          sectionTitle="Outros pacotes em destaque"
-          packageList={packageDescriptionMock}
-        />
+        {!!allHighlightPackages.length && (
+          <HighlightPackageSection
+            sectionTitle="Outros pacotes em destaque"
+            packageList={allHighlightPackages}
+          />
+        )}
       </SectionWrapper>
     </>
   );

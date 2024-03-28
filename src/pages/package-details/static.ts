@@ -16,6 +16,7 @@ export const HighlightFormInitialValues = {
 };
 
 export interface HighlightPackagesInterface {
+  id?: string;
   international: boolean;
   destination: string;
   location: string;

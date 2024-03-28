@@ -1,7 +1,7 @@
 // import { useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useParams, useNavigate } from 'react-router';
 
 import { Box, Grid, Typography } from '@mui/material';
 
@@ -18,7 +18,6 @@ const getDestinations = async (id: string, setData: (info: []) => void) => {
   setData(data);
 };
 export default function MostWantedDestinationsPage() {
-  const navigate = useNavigate();
   const params = useParams();
   const { id = '' } = params;
   const [destination, setDestination] = useState<any>({
@@ -56,7 +55,7 @@ export default function MostWantedDestinationsPage() {
             <Box sx={{ marginBottom: { xs: 0, md: 5 } }}>
               <IconButton
                 iconSx={{ color: (t: any) => t.palette.secondary.main }}
-                callback={() => navigate('/')}
+                callback={() => window.history.back()}
                 icon="gravity-ui:chevron-left"
                 text="Voltar para home"
                 direction="left"

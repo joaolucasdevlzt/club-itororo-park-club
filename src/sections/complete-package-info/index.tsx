@@ -1,6 +1,6 @@
 import { Box, Grid } from '@mui/material';
 
-import { packageDescriptionMock } from 'src/pages/package-details/mock';
+import { HighlightPackagesInterface } from 'src/pages/package-details/static';
 
 import IconButton from 'src/components/icon-button';
 
@@ -8,7 +8,9 @@ import PriceCard from '../price-card';
 import ImageSection from '../image-list';
 import PackageDescription from '../package-description';
 
-export default function CompletePackageInfo({ id }: { id: number }) {
+export default function CompletePackageInfo({ data }: { data: HighlightPackagesInterface }) {
+
+  
   return (
     <Grid
       container
@@ -28,7 +30,7 @@ export default function CompletePackageInfo({ id }: { id: number }) {
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>
-        <ImageSection images={packageDescriptionMock[id].image} />
+        {data?.folder?.length && <ImageSection images={data.folder} />}
       </Grid>
       <Grid
         item
@@ -42,8 +44,17 @@ export default function CompletePackageInfo({ id }: { id: number }) {
           alignItems: { xs: 'center', sm: 'flex-start' },
         }}
       >
-        <PackageDescription data={packageDescriptionMock[id]} />
-        <PriceCard data={packageDescriptionMock[id]} />
+        <PackageDescription data={data} />
+        <PriceCard
+          data={{
+            price: parseFloat(data.price),
+            oldPrice: parseFloat(data.oldPrice),
+            descriptionText: 'Valor por pessoa',
+            upfront: data.upfront,
+            split: data.split,
+            splitValue: parseFloat(data.price) - parseFloat(data.upfront),
+          }}
+        />
       </Grid>
     </Grid>
   );

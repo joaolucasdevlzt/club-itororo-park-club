@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Dispatch, useState, useEffect, SetStateAction } from 'react';
+
+import httpRequest from 'src/utils/httpRequest';
 
 import { request } from 'src/utils/fetch';
 
 import SectionWrapper from 'src/components/section-wrapper';
+import { LoadingScreen } from 'src/components/loading-screen';
 
 import FAQ from 'src/sections/faq';
 import ContactsSection from 'src/sections/contact';
@@ -15,7 +19,7 @@ import HighlightPackageSection from 'src/sections/highlight-package';
 import MostWantedDestinations from 'src/sections/most-wanted-destinations';
 import HomepageDescriptionCardsSection from 'src/sections/homepage-description-cards';
 
-import { packageDescriptionMock } from '../package-details/mock';
+import { HighlightPackagesInterface } from '../package-details/static';
 
 export interface BucketData {
   url: string;
@@ -23,9 +27,27 @@ export interface BucketData {
   timeCreated: string;
 }
 
+const getAllHighlightPackage = async (
+  setData: (info: HighlightPackagesInterface[]) => void,
+  setLoading: Dispatch<SetStateAction<boolean>>
+) => {
+  setLoading(true);
+  const data = await httpRequest(`/lazertur/highlight-packages`, {}, 'get');
+  setData(data);
+  setLoading(false);
+};
+
 export default function HomePage() {
+  const [allHighlightPackages, setAll] = useState<HighlightPackagesInterface[]>([]);
   const [isLoading, setLoading] = useState(true);
   const [rows, setRows] = useState<string[]>([]);
+  useEffect(() => {
+    fetchImages();
+    getAllHighlightPackage(setAll, setLoading);
+  }, []);
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
 
   const fetchImages = async () => {
     setLoading(true);
@@ -35,10 +57,6 @@ export default function HomePage() {
     setLoading(false);
     console.log('requests', requests);
   };
-
-  useEffect(() => {
-    fetchImages();
-  }, []);
 
   return (
     <>
@@ -52,12 +70,14 @@ export default function HomePage() {
       <SectionWrapper>
         <HomepageDescriptionCardsSection />
       </SectionWrapper>
-      <SectionWrapper>
-        <HighlightPackageSection
-          sectionTitle="Pacotes em destaque"
-          packageList={packageDescriptionMock}
-        />
-      </SectionWrapper>
+      {!!allHighlightPackages.length && (
+        <SectionWrapper>
+          <HighlightPackageSection
+            sectionTitle="Pacotes em destaque"
+            packageList={allHighlightPackages}
+          />
+        </SectionWrapper>
+      )}
       <SectionWrapper>
         <ContactsSection />
       </SectionWrapper>

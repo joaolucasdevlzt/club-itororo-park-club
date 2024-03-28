@@ -5,10 +5,11 @@ import { Box, useTheme, useMediaQuery } from '@mui/material';
 import SimpleImage from 'src/components/simple-image';
 
 export default function ImageSection({
-  images,
+  images, 
 }: {
   images: { name: string; publicUrl: string }[];
 }) {
+  console.log(images)
   const theme = useTheme();
   const isSmallerThanMd = useMediaQuery(theme.breakpoints.down('md'));
   const [widths, setWidth] = useState<number>(1400);

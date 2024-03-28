@@ -1,11 +1,26 @@
 import { Box, Grid, Typography } from '@mui/material';
 
+import { HighlightPackagesInterface } from 'src/pages/package-details/static';
+
 import IconButton from 'src/components/icon-button';
+import { differenceInDays, format } from 'date-fns';
 
-import { PackageDescriptionProps } from 'src/types/external/api';
+export default function PackageDescription({ data }: { data: HighlightPackagesInterface }) {
+  const duration = differenceInDays(new Date(data.returning), new Date(data.departure));
+  const formatedDeparture = new Date(data.departure || '2000/01/01');
+  const formatedReturning = new Date(data.returning || '2000/01/02');
+  console.log(`${format(formatedDeparture, 'dd/MM')} à ${format(formatedReturning, 'dd/MM')}`);
+  const content = [
+    { icon: 'sun', text: `${duration + 1} ${duration === 0 ? 'dia' : 'dias'}` },
 
-export default function PackageDescription({ data }: { data: PackageDescriptionProps }) {
-  const { items } = data;
+    { icon: 'plane', text: data.flight },
+    {
+      icon: 'calendar',
+      text: `De ${format(formatedDeparture, 'dd/MM')} à ${format(formatedReturning, 'dd/MM')}`,
+    },
+    { icon: 'coffee', text: 'Café da manhã incluso' },
+    { icon: 'bell_concierge', text: data.accomodation },
+  ];
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
@@ -13,22 +28,22 @@ export default function PackageDescription({ data }: { data: PackageDescriptionP
           variant="h2"
           sx={{ fontFamily: 'Prompt-Regular', color: (t) => t.palette.secondary.main }}
         >
-          {data.title}
+          {data.location}
         </Typography>
         <Typography
           variant="h4"
           sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
         >
-          {data.subtitle}
+          {data.destination}
         </Typography>
       </Box>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-        {data.content?.map((content, index) => (
+        {content?.map((item, index) => (
           <IconButton
             textSx={{ fontFamily: 'Kanit-Light' }}
-            key={content.icon + index}
-            icon={<Box component="img" src={`/assets/icons/lazertur/${content.icon}.svg`} />}
-            text={content.text}
+            key={item.icon + index}
+            icon={<Box component="img" src={`/assets/icons/lazertur/${item.icon}.svg`} />}
+            text={item.text}
           />
         ))}
       </Box>
@@ -42,7 +57,7 @@ export default function PackageDescription({ data }: { data: PackageDescriptionP
           width: 'auto',
         }}
       >
-        {items?.length &&
+        {/* {items?.length &&
           items?.map((item: string, index) => (
             <Grid
               item
@@ -74,7 +89,7 @@ export default function PackageDescription({ data }: { data: PackageDescriptionP
                 {item}
               </Typography>
             </Grid>
-          ))}
+          ))} */}
       </Grid>
     </Box>
   );

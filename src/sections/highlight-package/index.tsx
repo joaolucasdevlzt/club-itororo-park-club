@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router';
+import { format, differenceInDays } from 'date-fns';
 
 import { Box, Grid, Typography } from '@mui/material';
 
+import { HighlightPackagesInterface } from 'src/pages/package-details/static';
+
 import HighlightCard from 'src/components/hightlight-card';
 
-import { PackageDescriptionProps } from 'src/types/external/api';
-import { HighlightPackagesInterface } from 'src/pages/package-details/static';
-import { differenceInDays, format } from 'date-fns';
 
 export default function HighlightPackageSection({
   sectionTitle,

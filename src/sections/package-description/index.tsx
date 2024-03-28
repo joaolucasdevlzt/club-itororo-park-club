@@ -19,6 +19,7 @@ export default function PackageDescription({ data }: { data: HighlightPackagesIn
       text: `De ${format(formatedDeparture, 'dd/MM')} à ${format(formatedReturning, 'dd/MM')}`,
     },
     { icon: 'coffee', text: 'Café da manhã incluso' },
+    { icon: 'bell_concierge', text: data.accomodation },
   ];
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
@@ -33,7 +34,7 @@ export default function PackageDescription({ data }: { data: HighlightPackagesIn
           variant="h4"
           sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
         >
-          {data.accomodation}
+          {data.destination}
         </Typography>
       </Box>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>

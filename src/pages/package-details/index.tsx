@@ -41,10 +41,11 @@ export default function PackageDetails() {
   const [isLoading, setLoading] = useState<boolean>(false);
   console.log('data', data);
   const params = useParams();
+  const { id = '0' } = params;
   useEffect(() => {
-    getHighlightPackage('5a4f6fe3-b6f6-40e0-9256-03c17cb8ca5d', setData, setLoading);
+    getHighlightPackage(id, setData, setLoading);
     getAllHighlightPackage(setAll, setLoading);
-  }, []);
+  }, [id]);
   if (isLoading) {
     return <LoadingScreen />;
   }

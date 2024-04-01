@@ -39,13 +39,6 @@ export default function HomePage() {
   const [allHighlightPackages, setAll] = useState<HighlightPackagesInterface[]>([]);
   const [isLoading, setLoading] = useState(true);
   const [rows, setRows] = useState<string[]>([]);
-  useEffect(() => {
-    fetchImages();
-    getAllHighlightPackage(setAll, setLoading);
-  }, []);
-  if (isLoading) {
-    return <LoadingScreen />;
-  }
 
   const fetchImages = async () => {
     setLoading(true);
@@ -55,7 +48,13 @@ export default function HomePage() {
     setLoading(false);
     console.log('requests', requests);
   };
-
+  useEffect(() => {
+    fetchImages();
+    getAllHighlightPackage(setAll, setLoading);
+  }, []);
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
   return (
     <>
       <Helmet>

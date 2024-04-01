@@ -7,7 +7,6 @@ import { HighlightPackagesInterface } from 'src/pages/package-details/static';
 
 import HighlightCard from 'src/components/hightlight-card';
 
-
 export default function HighlightPackageSection({
   sectionTitle,
   packageList,
@@ -88,7 +87,7 @@ export default function HighlightPackageSection({
               title={item.location}
               subtitle={item.accomodation}
               semiboldText={item.split}
-              boldBottomText={parseFloat(item.price) / 10 || null}
+              boldBottomText={(parseFloat(item.price) - parseFloat(item.upfront)) / 10 || null}
               bottomText={item.upfront}
             />
           );

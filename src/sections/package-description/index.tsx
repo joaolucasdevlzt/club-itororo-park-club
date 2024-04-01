@@ -1,9 +1,10 @@
+import { format, differenceInDays } from 'date-fns';
+
 import { Box, Grid, Typography } from '@mui/material';
 
 import { HighlightPackagesInterface } from 'src/pages/package-details/static';
 
 import IconButton from 'src/components/icon-button';
-import { differenceInDays, format } from 'date-fns';
 
 export default function PackageDescription({ data }: { data: HighlightPackagesInterface }) {
   const duration = differenceInDays(new Date(data.returning), new Date(data.departure));

@@ -1,10 +1,8 @@
-import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Dispatch, useState, useEffect, SetStateAction } from 'react';
-
-import httpRequest from 'src/utils/httpRequest';
+import { useState, Dispatch, useEffect, SetStateAction } from 'react';
 
 import { request } from 'src/utils/fetch';
+import httpRequest from 'src/utils/httpRequest';
 
 import SectionWrapper from 'src/components/section-wrapper';
 import { LoadingScreen } from 'src/components/loading-screen';

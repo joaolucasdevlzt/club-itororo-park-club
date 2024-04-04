@@ -117,7 +117,7 @@ export default function Footer() {
                 <Box
                   alt="Whatsapp icon"
                   component="img"
-                  src="/assets/icons/lazertur/whatsapp.svg"
+                  src="/assets/icons/lazertur/phone.svg"
                 />
                 <Typography
                   sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
@@ -129,7 +129,7 @@ export default function Footer() {
                 <Box
                   alt="Whatsapp icon"
                   component="img"
-                  src="/assets/icons/lazertur/whatsapp.svg"
+                  src="/assets/icons/lazertur/headset_2.svg"
                 />
                 <Typography
                   sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}

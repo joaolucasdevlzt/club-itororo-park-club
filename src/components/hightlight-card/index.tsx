@@ -60,10 +60,7 @@ export default function HighlightCard({
         />
         <Grid container item>
           <Grid item xs={12} sx={{ p: '25px 0px 0px 25px' }}>
-            <Typography
-              variant="h4"
-              sx={{  color: '#E33149', fontFamily: 'Kanit-Regular' }}
-            >
+            <Typography variant="h4" sx={{ color: '#E33149', fontFamily: 'Kanit-Regular' }}>
               {title}
             </Typography>
           </Grid>

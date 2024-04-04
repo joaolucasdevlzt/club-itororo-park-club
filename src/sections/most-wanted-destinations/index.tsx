@@ -21,10 +21,9 @@ export default function MostWantedDestinations() {
   useEffect(() => {
     getDestinations(setDestinations);
   }, []);
-  if (destinations.length < 5) {
+  if (destinations.length < 5 || !!destinations) {
     return <Box sx={{ height: 0 }} />;
   }
-  console.log('destinations');
   const normalizedData = ((): Destinations[] => {
     const normalized = destinations.map((item) => {
       const htmls = document.createElement('div');
@@ -36,7 +35,6 @@ export default function MostWantedDestinations() {
     });
     return normalized;
   })();
-  console.log('norm', normalizedData);
   if (normalizedData.length < 5) return <Box />;
   return (
     <Box>

@@ -9,23 +9,28 @@ import Image from 'src/components/hover-image';
 
 import { Destinations } from './types';
 
+interface htmlType {
+  id: string;
+  content: string;
+  folder: [];
+  h1: string;
+}
+
 const getDestinations = async (setDetinations: (info: []) => void) => {
-  const data = await httpRequest('/lazertur/destinations', {}, 'get');
+  const data:[] = await httpRequest('/lazertur/destinations', {}, 'get');
   setDetinations(data);
 };
 export default function MostWantedDestinations() {
   const navigate = useNavigate();
-  const [destinations, setDestinations] = useState<
-    { id: string; content: string; folder: []; h1: string }[] | []
-  >([]);
+  const [destinations, setDestinations] = useState<any[] | []>([]);
   useEffect(() => {
     getDestinations(setDestinations);
   }, []);
   if (destinations.length < 5 || !!destinations) {
     return <Box sx={{ height: 0 }} />;
   }
-  const normalizedData = ((): Destinations[] => {
-    const normalized = destinations.map((item) => {
+  const normalizedData = ((): Destinations[] | [] => {
+    const normalized = (destinations as []).map((item: any) => {
       const htmls = document.createElement('div');
       htmls.innerHTML = item.content;
       const h1 = htmls.getElementsByTagName('h1').length

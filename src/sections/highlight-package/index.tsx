@@ -64,9 +64,6 @@ export default function HighlightPackageSection({
           const duration = differenceInDays(new Date(item.returning), new Date(item.departure));
           const formatedDeparture = new Date(item.departure || '2000/01/01');
           const formatedReturning = new Date(item.returning || '2000/01/02');
-          console.log(
-            `${format(formatedDeparture, 'dd/MM')} à ${format(formatedReturning, 'dd/MM')}`
-          );
           const content = [
             { icon: 'sun', text: `${duration + 1} ${duration === 0 ? 'dia' : 'dias'}` },
 

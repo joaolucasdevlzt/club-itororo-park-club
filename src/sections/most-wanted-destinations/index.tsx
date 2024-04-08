@@ -9,15 +9,8 @@ import Image from 'src/components/hover-image';
 
 import { Destinations } from './types';
 
-interface htmlType {
-  id: string;
-  content: string;
-  folder: [];
-  h1: string;
-}
-
 const getDestinations = async (setDetinations: (info: []) => void) => {
-  const data:[] = await httpRequest('/lazertur/destinations', {}, 'get');
+  const data: [] = await httpRequest('/lazertur/destinations', {}, 'get');
   setDetinations(data);
 };
 export default function MostWantedDestinations() {
@@ -26,7 +19,8 @@ export default function MostWantedDestinations() {
   useEffect(() => {
     getDestinations(setDestinations);
   }, []);
-  if (destinations.length < 5 || !!destinations) {
+
+  if (destinations.length < 5) {
     return <Box sx={{ height: 0 }} />;
   }
   const normalizedData = ((): Destinations[] | [] => {
@@ -40,6 +34,7 @@ export default function MostWantedDestinations() {
     });
     return normalized;
   })();
+
   if (normalizedData.length < 5) return <Box />;
   return (
     <Box>

@@ -5,7 +5,6 @@ import { request } from 'src/utils/fetch';
 import httpRequest from 'src/utils/httpRequest';
 
 import SectionWrapper from 'src/components/section-wrapper';
-import { LoadingScreen } from 'src/components/loading-screen';
 
 import FAQ from 'src/sections/faq';
 import ContactsSection from 'src/sections/contact';
@@ -46,15 +45,12 @@ export default function HomePage() {
     const images = requests.map((item) => item.url);
     setRows(images);
     setLoading(false);
-    console.log('requests', requests);
   };
   useEffect(() => {
     fetchImages();
     getAllHighlightPackage(setAll, setLoading);
   }, []);
-  if (isLoading) {
-    return <LoadingScreen />;
-  }
+ 
   return (
     <>
       <Helmet>

@@ -23,6 +23,8 @@ export default function Header() {
   const path = usePathname();
   const about = path === '/sobre';
   const home = path === '/';
+  const services = path === encodeURI('/serviços');
+  console.log(services)
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -83,6 +85,42 @@ export default function Header() {
                   Home
                 </Box>
                 {home && (
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      bottom: 0,
+                      width: 90,
+                      border: 2,
+                      borderTopLeftRadius: 6,
+                      borderTopRightRadius: 6,
+                    }}
+                  />
+                )}
+              </Link>
+              <Link
+                sx={{
+                  width: 'fit-content',
+                  fontSize: '1rem',
+                  fontFamily: 'Kanit-Regular',
+                  fontWeight: theme.typography.fontWeightSemiBold,
+                  marginRight: 1,
+                  flexDirection: 'column',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  color: (t) => t.palette.secondary.main,
+                  ...(services ? { color: '#E33149' } : {}),
+                  '&:hover': {
+                    textDecoration: 'none',
+                    color: '#E33149',
+                  },
+                }}
+                href="/serviços"
+              >
+                <Box sx={{ marginRight: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
+                  Serviços
+                </Box>
+                {services && (
                   <Box
                     sx={{
                       position: 'absolute',

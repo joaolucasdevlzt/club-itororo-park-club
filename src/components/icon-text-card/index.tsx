@@ -8,14 +8,13 @@ export default function IconTextCard() {
       gap={2}
       container
       sx={{
+        pl:{md:8},pr:{md:8},
         display: 'flex',
-
         justifyContent: 'space-between',
       }}
     >
       {data.map((item, index) => (
         <Grid
-        
           item
           xs={5.6}
           md={2.5}

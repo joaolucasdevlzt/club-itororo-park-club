@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import Banner from 'src/components/banner';
 import IconTextCard from 'src/components/icon-text-card';
 import SectionWrapper from 'src/components/section-wrapper';
-import OtherServicesSection from 'src/sections/services';
 
+import OtherServicesSection from 'src/sections/services';
 import TitleTextAndCTA from 'src/sections/title-text-cta';
 
 export default function Services() {

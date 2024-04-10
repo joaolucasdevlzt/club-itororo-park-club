@@ -8,6 +8,7 @@ export default function TitleTextAndCTA({ title, text }: { title: string; text: 
   return (
     <Box
       sx={{
+        backgroundColor: 'white',
         flexDirection: { xs: 'column', md: 'row' },
         display: 'flex',
         border: '1px solid #E5E6EE',
@@ -41,6 +42,7 @@ export default function TitleTextAndCTA({ title, text }: { title: string; text: 
             display: 'flex',
             flexDirection: 'column',
             gap: 3,
+            
             mt: 3,
             mb: 3,
             alignItems: 'flex-start',

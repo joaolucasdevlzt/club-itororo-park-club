@@ -8,7 +8,8 @@ export default function IconTextCard() {
       gap={2}
       container
       sx={{
-        pl:{md:8},pr:{md:8},
+        pl: { md: 8 },
+        pr: { md: 8 },
         display: 'flex',
         justifyContent: 'space-between',
       }}
@@ -17,18 +18,20 @@ export default function IconTextCard() {
         <Grid
           item
           xs={5.6}
-          md={2.5}
+          md={2.7}
           key={index}
           sx={{
-            mb:{xs:2,sm:0},
-            boxShadow: 2,
-            border: 1,
-            borderColor: '#E5E6EE',
+            mb: { xs: 2, sm: 0 },
+            backgroundColor: 'white',
+            border: '1px solid #E5E6EE',
+
             borderRadius: '15px',
-            height: '277px',
+
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center',
+            alignItems: 'flex-start',
+            pt: 5,
+            pb: 2,
           }}
         >
           <Grid container direction="column" alignItems="center" spacing={0}>
@@ -41,6 +44,7 @@ export default function IconTextCard() {
                   fontFamily: 'Kanit-Light',
                   color: '#28327F',
                   fontSize: { xs: '14px', sm: '18px', md: '18px' },
+                  mt: 2,
                   padding: 2,
                   whiteSpace: 'pre-line',
                 }}

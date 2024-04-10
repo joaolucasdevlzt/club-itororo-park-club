@@ -4,6 +4,7 @@ export default function Card({ title, text }: { title: string; text: string }) {
   return (
     <Box
       sx={{
+        backgroundColor: 'white',
         display: 'flex',
         flexDirection: 'column',
         gap: 3,

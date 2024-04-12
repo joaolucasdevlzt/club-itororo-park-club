@@ -35,12 +35,13 @@ export default function HelpPage() {
                 marginTop: 5,
                 display: 'flex',
                 justifyContent: 'space-between',
-                gap: { xs: 2, md:0 },
+                gap: { xs: 2, md: 0 },
               }}
             >
               {categories.map((item, index) => (
                 <Grid
                   onClick={() => {
+                    window.scrollTo(0, 0);
                     setShow(false);
                     setTopics(index);
                   }}

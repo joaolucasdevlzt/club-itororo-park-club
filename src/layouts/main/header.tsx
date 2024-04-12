@@ -53,14 +53,14 @@ export default function Header() {
         }}
       >
         <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
-          <Logo sx={{ marginLeft: { lg: -12 }, height: 50, width: 150 }} />
+          <Logo sx={{  height: 50, width: 150 }} />
 
           <Box sx={{ flexGrow: 1 }} />
 
           {mdUp && <NavDesktop data={navConfig} />}
 
           {mdUp && (
-            <Stack alignItems="flex-start" justifyContent="center" direction="row" gap={4}>
+            <Stack alignItems="flex-start" justifyContent="center" direction="row" gap={3}>
               <Link
                 sx={{
                   width: 'fit-content',

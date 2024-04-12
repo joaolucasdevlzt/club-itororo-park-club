@@ -24,7 +24,6 @@ export default function Header() {
   const about = path === '/sobre';
   const home = path === '/';
   const services = path === encodeURI('/serviços');
-  console.log(services)
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -53,7 +52,7 @@ export default function Header() {
         }}
       >
         <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
-          <Logo sx={{  height: 50, width: 150 }} />
+          <Logo sx={{ height: 50, width: 150 }} />
 
           <Box sx={{ flexGrow: 1 }} />
 

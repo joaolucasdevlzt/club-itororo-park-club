@@ -97,42 +97,7 @@ export default function Header() {
                   />
                 )}
               </Link>
-              <Link
-                sx={{
-                  width: 'fit-content',
-                  fontSize: '1rem',
-                  fontFamily: 'Kanit-Regular',
-                  fontWeight: theme.typography.fontWeightSemiBold,
-                  marginRight: 1,
-                  flexDirection: 'column',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 1,
-                  color: (t) => t.palette.secondary.main,
-                  ...(help ? { color: '#E33149' } : {}),
-                  '&:hover': {
-                    textDecoration: 'none',
-                    color: '#E33149',
-                  },
-                }}
-                href="/ajuda"
-              >
-                <Box sx={{ marginRight: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
-                  Ajuda
-                </Box>
-                {help && (
-                  <Box
-                    sx={{
-                      position: 'absolute',
-                      bottom: 0,
-                      width: 90,
-                      border: 2,
-                      borderTopLeftRadius: 6,
-                      borderTopRightRadius: 6,
-                    }}
-                  />
-                )}
-              </Link>
+
               <Link
                 sx={{
                   width: 'fit-content',
@@ -201,6 +166,42 @@ export default function Header() {
                       bottom: 0,
                       marginLeft: -2,
                       width: 110,
+                      border: 2,
+                      borderTopLeftRadius: 6,
+                      borderTopRightRadius: 6,
+                    }}
+                  />
+                )}
+              </Link>
+              <Link
+                sx={{
+                  width: 'fit-content',
+                  fontSize: '1rem',
+                  fontFamily: 'Kanit-Regular',
+                  fontWeight: theme.typography.fontWeightSemiBold,
+                  marginRight: 1,
+                  flexDirection: 'column',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  color: (t) => t.palette.secondary.main,
+                  ...(help ? { color: '#E33149' } : {}),
+                  '&:hover': {
+                    textDecoration: 'none',
+                    color: '#E33149',
+                  },
+                }}
+                href="/ajuda"
+              >
+                <Box sx={{ marginRight: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
+                  Ajuda
+                </Box>
+                {help && (
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      bottom: 0,
+                      width: 90,
                       border: 2,
                       borderTopLeftRadius: 6,
                       borderTopRightRadius: 6,

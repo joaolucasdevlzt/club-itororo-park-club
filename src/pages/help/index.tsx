@@ -1,7 +1,11 @@
-import { Box, Grid, Typography } from '@mui/material';
 import { useState } from 'react';
+
+import { Box, Grid, Typography } from '@mui/material';
+
 import SectionWrapper from 'src/components/section-wrapper';
+
 import FAQ from 'src/sections/faq';
+
 import FaqDisplay from './faq-display';
 
 const categories = [

@@ -145,6 +145,7 @@ export default function FAQ() {
     <Grid
       container
       sx={{
+
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -153,8 +154,9 @@ export default function FAQ() {
     >
       <Grid item xs={12} pb={5}>
         <Typography
+          variant='h3'
           sx={{
-            fontSize: { xs: 30, sm: 40 },
+            
             fontFamily: 'Prompt-Medium',
             fontWeight: '600',
             color: (t) => t.palette.secondary.main,

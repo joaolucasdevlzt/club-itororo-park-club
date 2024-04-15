@@ -1,5 +1,6 @@
-import { Box } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
+
+import { Box } from '@mui/material';
 
 import Banner from 'src/components/banner';
 import IconTextCard from 'src/components/icon-text-card';

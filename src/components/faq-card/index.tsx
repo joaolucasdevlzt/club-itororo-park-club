@@ -10,7 +10,7 @@ export default function FAQCard({ link = false, title, text, sx }: FAQCardProps)
   return (
     <Box
       sx={{
-        minWidth: 310,
+        
         width: '100%',
         height: '100%',
         p: 5,

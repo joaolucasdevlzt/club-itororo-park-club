@@ -1,39 +1,23 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import HTMLReactParser from 'html-react-parser';
+
 import { Box, Typography } from '@mui/material';
 
 import StyledButton from 'src/components/button';
 
-export default function DestinationDescription({
-  title,
-  texts,
-}: {
-  title: string;
-  texts: string[];
-}) {
+export default function DestinationDescription({ title, texts }: { title: string; texts: string }) {
   return (
     <Box sx={{ mt: { xs: 5, lg: 0 }, display: 'flex', flexDirection: 'column', gap: 3 }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, pr: 5, pl: { md: 3 } }}>
         <Typography
-          variant="h2"
           sx={{
-            padding: 0,
-            display: { xs: 'none', lg: 'block' },
-            fontFamily: 'Prompt-Regular',
+            lineBreak: 'strict',
+            fontFamily: 'Kanit-Light',
             color: (t) => t.palette.secondary.main,
           }}
         >
-          {title}
+          {HTMLReactParser(texts)}
         </Typography>
-        {texts.map((text) => (
-          <Typography
-            sx={{
-              lineBreak: 'strict',
-              fontFamily: 'Kanit-Light',
-              color: (t) => t.palette.secondary.main,
-            }}
-          >
-            {text}
-          </Typography>
-        ))}
       </Box>
       <Box
         sx={{

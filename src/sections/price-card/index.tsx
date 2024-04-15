@@ -29,7 +29,7 @@ export default function PriceCard({ data }: { data: PriceCardProps }) {
       }}
     >
       <Box>
-        {oldPrice && (
+        {!!oldPrice && (
           <Typography
             variant="h4"
             sx={{
@@ -69,11 +69,11 @@ export default function PriceCard({ data }: { data: PriceCardProps }) {
             variant="h3"
             sx={{ fontFamily: 'Kanit-regular', color: (t) => t.palette.primary.main }}
           >
-            R$ {splitValue.toFixed(2)}
+            R$ {(splitValue / 10).toFixed(2)}
           </Typography>
           {upfront && (
             <Typography sx={{ fontFamily: 'Kanit-Light', color: (t) => t.palette.secondary.main }}>
-              {upfront}
+              Entrada de R$ {upfront}
             </Typography>
           )}
         </Box>

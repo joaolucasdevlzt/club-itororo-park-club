@@ -4,7 +4,12 @@ import { Box, useTheme, useMediaQuery } from '@mui/material';
 
 import SimpleImage from 'src/components/simple-image';
 
-export default function ImageSection({ images }: { images: string[] }) {
+export default function ImageSection({
+  images, 
+}: {
+  images: { name: string; publicUrl: string }[];
+}) {
+  console.log(images)
   const theme = useTheme();
   const isSmallerThanMd = useMediaQuery(theme.breakpoints.down('md'));
   const [widths, setWidth] = useState<number>(1400);
@@ -42,28 +47,38 @@ export default function ImageSection({ images }: { images: string[] }) {
         }}
       >
         <SimpleImage
-          image={images[0] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+          image={
+            images[0]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+          }
         />
         <Box sx={{ display: 'flex', gap: 2 }}>
           <SimpleImage
-            image={images[1] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+            image={
+              images[1]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+            }
           />
           <SimpleImage
-            image={images[2] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+            image={
+              images[2]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+            }
           />
         </Box>
         <Box sx={{ display: 'flex', gap: 2 }}>
           <SimpleImage
-            image={images[3] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+            image={
+              images[3]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+            }
           />
           <SimpleImage
-            image={images[4] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+            image={
+              images[4]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+            }
           />
+          <SimpleImage image={images[5]?.publicUrl} />
           <SimpleImage
-            image={images[5] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
-          />
-          <SimpleImage
-            image={images[6] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+            image={
+              images[6]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+            }
           />
         </Box>
       </Box>
@@ -82,34 +97,48 @@ export default function ImageSection({ images }: { images: string[] }) {
     >
       <SimpleImage
         aspectRatio={`16/${handleImageWidth()}`}
-        image={images[0] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+        image={
+          images[0]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+        }
       />
       <Box sx={{ display: 'flex', gap: 2 }}>
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image={images[1] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+          image={
+            images[1]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+          }
         />
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image={images[2] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+          image={
+            images[2]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+          }
         />
       </Box>
       <Box sx={{ display: 'flex', gap: 2 }}>
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image={images[3] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+          image={
+            images[3]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+          }
         />
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image={images[4] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+          image={
+            images[4]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+          }
         />
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image={images[5] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+          image={
+            images[5]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+          }
         />
         <SimpleImage
           aspectRatio={`16/${handleImageWidth()}`}
-          image={images[6] || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'}
+          image={
+            images[6]?.publicUrl || '/assets/images/highlight-packages/fortaleza/fortaleza_8.png'
+          }
         />
       </Box>
     </Box>

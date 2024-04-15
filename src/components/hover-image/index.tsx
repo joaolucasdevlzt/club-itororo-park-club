@@ -38,8 +38,9 @@ export default function Image({
           width: '100%',
           aspectRatio,
           borderRadius: 2,
-          backgroundImage: `url(/assets/images/lazertur/${image}.png)`,
+          backgroundImage: `url(${encodeURI(image)})`,
           backgroundSize: 'cover',
+          backgroundPosition:"center",
           backgroundRepeat: 'no-repeat',
           ...(hover && {
             transform: 'scale(1.2)',

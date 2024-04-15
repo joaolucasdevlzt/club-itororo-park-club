@@ -117,12 +117,24 @@ export default function Footer() {
                 <Box
                   alt="Whatsapp icon"
                   component="img"
-                  src="/assets/icons/lazertur/whatsapp.svg"
+                  src="/assets/icons/lazertur/phone.svg"
                 />
                 <Typography
                   sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
                 >
                   (34) 3237.2515
+                </Typography>
+              </Grid>
+              <Grid item sx={{ display: 'flex', gap: 2 }}>
+                <Box
+                  alt="Whatsapp icon"
+                  component="img"
+                  src="/assets/icons/lazertur/headset_2.svg"
+                />
+                <Typography
+                  sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
+                >
+                  0800 940 7777
                 </Typography>
               </Grid>
               <Grid item sx={{ display: 'flex', gap: 2, pr: { xs: 2, lg: 4 } }}>

@@ -9,7 +9,7 @@ export default function SimpleImage({ image, aspectRatio = '16/9', sx }: ImageIn
         width: '100%',
         aspectRatio,
         borderRadius: 1,
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(${encodeURI(image)})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

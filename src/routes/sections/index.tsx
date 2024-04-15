@@ -11,6 +11,8 @@ const MostWantedDestinationsPage = lazy(() => import('src/pages/most-wanted-dest
 const PackageDetails = lazy(() => import('src/pages/package-details'));
 const SplashScreen = lazy(() => import('src/components/loading-screen/splash-screen'));
 const AboutPage = lazy(() => import('src/pages/about'));
+const ServicesPage = lazy(() => import('src/pages/services'));
+const HelpPage = lazy(() => import('src/pages/help'));
 
 // ----------------------------------------------------------------------
 
@@ -59,6 +61,36 @@ export default function Router() {
             <MainLayout>
               <Suspense fallback={<SplashScreen />}>
                 <MostWantedDestinationsPage />
+              </Suspense>
+            </MainLayout>
+          ),
+          index: true,
+        },
+      ],
+    },
+    {
+      path: 'serviços',
+      children: [
+        {
+          element: (
+            <MainLayout>
+              <Suspense fallback={<SplashScreen />}>
+                <ServicesPage />
+              </Suspense>
+            </MainLayout>
+          ),
+          index: true,
+        },
+      ],
+    },
+    {
+      path: 'ajuda',
+      children: [
+        {
+          element: (
+            <MainLayout>
+              <Suspense fallback={<SplashScreen />}>
+                <HelpPage />
               </Suspense>
             </MainLayout>
           ),

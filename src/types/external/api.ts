@@ -28,7 +28,7 @@ export interface PriceCardProps {
   descriptionText?: string;
 }
 export interface PackageDescriptionProps extends PriceCardProps {
-  image: string[];
+  image: any[];
   sx?: SxProps;
   title: string;
   subtitle?: string;

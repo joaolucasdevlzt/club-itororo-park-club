@@ -60,7 +60,7 @@ export default function HighlightCard({
         />
         <Grid container item>
           <Grid item xs={12} sx={{ p: '25px 0px 0px 25px' }}>
-            <Typography variant="h3" sx={{fontSize:28, color: '#E33149', fontFamily: 'Kanit-Regular' }}>
+            <Typography variant="h4" sx={{ color: '#E33149', fontFamily: 'Kanit-Regular' }}>
               {title}
             </Typography>
           </Grid>
@@ -101,16 +101,23 @@ export default function HighlightCard({
       <Grid container item>
         <Grid item xs={12} sx={{ p: '25px 0px 0px 25px' }}>
           <Typography
-            
-            sx={{ fontWeight:700, color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Regular' }}
+            sx={{
+              fontWeight: 700,
+              color: (t) => t.palette.secondary.main,
+              fontFamily: 'Kanit-Regular',
+            }}
           >
             {semiboldText}
           </Typography>
         </Grid>
         <Grid item xs={12} sx={{ p: '0px 0px 0px 25px' }}>
           <Typography
-            
-            sx={{fontSize:32, fontWeight:700, color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Regular' }}
+            sx={{
+              fontSize: 32,
+              fontWeight: 700,
+              color: (t) => t.palette.secondary.main,
+              fontFamily: 'Kanit-Regular',
+            }}
           >
             R$ {boldBottomText?.toFixed(2).replace('.', ',')}
           </Typography>
@@ -121,7 +128,7 @@ export default function HighlightCard({
               variant="body1"
               sx={{ color: (t) => t.palette.secondary.main, fontFamily: 'Kanit-Light' }}
             >
-              {bottomText}
+              Entrada de R${bottomText}
             </Typography>
             <Typography
               variant="body1"

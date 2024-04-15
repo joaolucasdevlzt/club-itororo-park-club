@@ -1,17 +1,18 @@
 import { useNavigate } from 'react-router';
+import { format, differenceInDays } from 'date-fns';
 
 import { Box, Grid, Typography } from '@mui/material';
 
-import HighlightCard from 'src/components/hightlight-card';
+import { HighlightPackagesInterface } from 'src/pages/package-details/static';
 
-import { PackageDescriptionProps } from 'src/types/external/api';
+import HighlightCard from 'src/components/hightlight-card';
 
 export default function HighlightPackageSection({
   sectionTitle,
   packageList,
 }: {
   sectionTitle?: string;
-  packageList: PackageDescriptionProps[];
+  packageList: HighlightPackagesInterface[];
 }) {
   const navigate = useNavigate();
   if (!Array.isArray(packageList) || !packageList.length) {
@@ -22,7 +23,7 @@ export default function HighlightPackageSection({
       {sectionTitle && (
         <Grid item xs={12}>
           <Typography
-          variant='h2'
+            variant="h2"
             sx={{
               fontSize: { xs: 30, sm: 40 },
               fontFamily: 'Prompt-Medium',
@@ -59,20 +60,35 @@ export default function HighlightPackageSection({
           },
         }}
       >
-        {packageList.map((item, index) => (
-          <HighlightCard
-            fn={() => navigate(`/pacotes/detalhes/${index}`)}
-            key={item.title + index}
-            width={310}
-            image={item.image[0]}
-            content={item.content}
-            title={item.title}
-            subtitle={item.subtitle}
-            semiboldText={item.split}
-            boldBottomText={item.splitValue || null}
-            bottomText={item.upfront}
-          />
-        ))}
+        {packageList.map((item, index) => {
+          const duration = differenceInDays(new Date(item.returning), new Date(item.departure));
+          const formatedDeparture = new Date(item.departure || '2000/01/01');
+          const formatedReturning = new Date(item.returning || '2000/01/02');
+          const content = [
+            { icon: 'sun', text: `${duration + 1} ${duration === 0 ? 'dia' : 'dias'}` },
+
+            { icon: 'plane', text: item.flight },
+            {
+              icon: 'calendar',
+              text: `De ${format(formatedDeparture, 'dd/MM')} à ${format(formatedReturning, 'dd/MM')}`,
+            },
+            { icon: 'coffee', text: 'Café da manhã incluso' },
+          ];
+          return (
+            <HighlightCard
+              fn={() => navigate(`/pacotes/detalhes/${item.id}`)}
+              key={item.accomodation}
+              width={310}
+              image={item.folder[0].publicUrl}
+              content={content}
+              title={item.location}
+              subtitle={item.accomodation}
+              semiboldText={item.split}
+              boldBottomText={(parseFloat(item.price) - parseFloat(item.upfront)) / 10 || null}
+              bottomText={item.upfront}
+            />
+          );
+        })}
       </Box>
     </Grid>
   );

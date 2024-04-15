@@ -1,30 +1,37 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 
 import { data } from './data';
 
 export default function IconTextCard() {
   return (
-    <Box
+    <Grid
+      gap={2}
+      container
       sx={{
+        pl: { md: 8 },
+        pr: { md: 8 },
         display: 'flex',
-        padding: '50px',
-        flexDirection: { xs: 'column', sm: 'column', md: 'row' },
-        gap: '50px',
+        justifyContent: 'space-between',
       }}
     >
       {data.map((item, index) => (
-        <Box
+        <Grid
+          item
+          xs={5.6}
+          md={2.7}
           key={index}
           sx={{
-            width: '100%',
-            boxShadow: 2,
-            border: 1,
-            borderColor: '#E5E6EE',
+            mb: { xs: 2, sm: 0 },
+            backgroundColor: 'white',
+            border: '1px solid #E5E6EE',
+
             borderRadius: '15px',
-            height: '277px',
+
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center',
+            alignItems: 'flex-start',
+            pt: 5,
+            pb: 2,
           }}
         >
           <Grid container direction="column" alignItems="center" spacing={0}>
@@ -37,6 +44,7 @@ export default function IconTextCard() {
                   fontFamily: 'Kanit-Light',
                   color: '#28327F',
                   fontSize: { xs: '14px', sm: '18px', md: '18px' },
+                  mt: 2,
                   padding: 2,
                   whiteSpace: 'pre-line',
                 }}
@@ -46,8 +54,8 @@ export default function IconTextCard() {
               </Typography>
             </Grid>
           </Grid>
-        </Box>
+        </Grid>
       ))}
-    </Box>
+    </Grid>
   );
 }

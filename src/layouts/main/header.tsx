@@ -23,6 +23,8 @@ export default function Header() {
   const path = usePathname();
   const about = path === '/sobre';
   const home = path === '/';
+  const services = path === encodeURI('/serviços');
+  const help = path === encodeURI('/ajuda');
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -51,14 +53,14 @@ export default function Header() {
         }}
       >
         <Container sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
-          <Logo sx={{ marginLeft: { lg: -12 }, height: 50, width: 150 }} />
+          <Logo sx={{ height: 50, width: 150 }} />
 
           <Box sx={{ flexGrow: 1 }} />
 
           {mdUp && <NavDesktop data={navConfig} />}
 
           {mdUp && (
-            <Stack alignItems="flex-start" justifyContent="center" direction="row" gap={4}>
+            <Stack alignItems="flex-start" justifyContent="center" direction="row" gap={3}>
               <Link
                 sx={{
                   width: 'fit-content',
@@ -83,6 +85,43 @@ export default function Header() {
                   Home
                 </Box>
                 {home && (
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      bottom: 0,
+                      width: 90,
+                      border: 2,
+                      borderTopLeftRadius: 6,
+                      borderTopRightRadius: 6,
+                    }}
+                  />
+                )}
+              </Link>
+
+              <Link
+                sx={{
+                  width: 'fit-content',
+                  fontSize: '1rem',
+                  fontFamily: 'Kanit-Regular',
+                  fontWeight: theme.typography.fontWeightSemiBold,
+                  marginRight: 1,
+                  flexDirection: 'column',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  color: (t) => t.palette.secondary.main,
+                  ...(services ? { color: '#E33149' } : {}),
+                  '&:hover': {
+                    textDecoration: 'none',
+                    color: '#E33149',
+                  },
+                }}
+                href="/serviços"
+              >
+                <Box sx={{ marginRight: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
+                  Serviços
+                </Box>
+                {services && (
                   <Box
                     sx={{
                       position: 'absolute',
@@ -127,6 +166,42 @@ export default function Header() {
                       bottom: 0,
                       marginLeft: -2,
                       width: 110,
+                      border: 2,
+                      borderTopLeftRadius: 6,
+                      borderTopRightRadius: 6,
+                    }}
+                  />
+                )}
+              </Link>
+              <Link
+                sx={{
+                  width: 'fit-content',
+                  fontSize: '1rem',
+                  fontFamily: 'Kanit-Regular',
+                  fontWeight: theme.typography.fontWeightSemiBold,
+                  marginRight: 1,
+                  flexDirection: 'column',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  color: (t) => t.palette.secondary.main,
+                  ...(help ? { color: '#E33149' } : {}),
+                  '&:hover': {
+                    textDecoration: 'none',
+                    color: '#E33149',
+                  },
+                }}
+                href="/ajuda"
+              >
+                <Box sx={{ marginRight: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
+                  Ajuda
+                </Box>
+                {help && (
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      bottom: 0,
+                      width: 90,
                       border: 2,
                       borderTopLeftRadius: 6,
                       borderTopRightRadius: 6,

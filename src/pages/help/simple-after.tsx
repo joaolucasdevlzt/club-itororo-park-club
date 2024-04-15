@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 export default function SimpleAfter({ list }: { list: string[] }) {
   return (
     <Box>
-      {list.map((item, index) => (
+      {list.map((item) => (
         <Typography
           sx={{
             marginBottom: 2,

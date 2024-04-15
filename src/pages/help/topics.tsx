@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 export default function Topics({ list }: { list: any[] }) {
   return (
     <Box>
-      {list.map((item, index) => {
+      {list.map((item) => {
         const { bold, text } = item;
         return (
           <Box

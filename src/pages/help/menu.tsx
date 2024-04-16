@@ -41,7 +41,7 @@ export default function Menu({ tabNames, activeTab, setOpen }: IMenu) {
       >
         <Box
           sx={{
-            ml: '-2.5px',
+            ml: '-2.8px',
             position: 'absolute',
             transition: '.5s all',
             left: 0,
@@ -72,7 +72,7 @@ export default function Menu({ tabNames, activeTab, setOpen }: IMenu) {
     >
       <Box
         sx={{
-          mr: '-2.5px',
+          mr: '-2.7px',
           position: 'absolute',
           transition: '.5s all',
           right: 0,

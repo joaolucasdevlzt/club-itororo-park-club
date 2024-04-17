@@ -4,6 +4,8 @@ import { Navigate, useRoutes } from 'react-router-dom';
 import MainLayout from 'src/layouts/main';
 import HomePage from 'src/pages/home/main';
 
+import CorporateLayout from 'src/layouts/corporate';
+
 import { mainRoutes } from './main';
 import { dashboardRoutes } from './dashboard';
 
@@ -13,6 +15,7 @@ const SplashScreen = lazy(() => import('src/components/loading-screen/splash-scr
 const AboutPage = lazy(() => import('src/pages/about'));
 const ServicesPage = lazy(() => import('src/pages/services'));
 const HelpPage = lazy(() => import('src/pages/help'));
+const CorporatePage = lazy(() => import('src/pages/corporate'));
 
 // ----------------------------------------------------------------------
 
@@ -26,6 +29,16 @@ export default function Router() {
             <HomePage />
           </Suspense>
         </MainLayout>
+      ),
+    },
+    {
+      path: '/corporate',
+      element: (
+        <CorporateLayout>
+          <Suspense fallback={<SplashScreen />}>
+            <CorporatePage />
+          </Suspense>
+        </CorporateLayout>
       ),
     },
     {

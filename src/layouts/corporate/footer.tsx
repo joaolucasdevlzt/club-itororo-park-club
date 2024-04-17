@@ -1,0 +1,350 @@
+import { Box, Grid, Typography } from '@mui/material';
+
+import SectionWrapper from 'src/components/section-wrapper';
+
+export default function Footer() {
+  return (
+    <Box sx={{ width: '100%', backgroundColor: '#F9FAFA', pt: 12 }}>
+      <Box
+        sx={{
+          width: '100%',
+          backgroundColor: '#E5E6EE',
+          display: 'flex',
+          alignItems: 'flex-start',
+          justifyContent: 'center',
+          pb: 12,
+        }}
+      >
+        <SectionWrapper>
+          <Grid
+            container
+            sx={{
+              width: '100%',
+              height: 'auto',
+            }}
+          >
+            <Grid container item xs={12} mb={12} sx={{ display: { xs: 'flex', md: 'none' } }}>
+              <Box
+                alt="Logo da Lazertur Viagens"
+                width={180}
+                component="img"
+                src="/logo/lazertur_viagens_logo.svg"
+              />
+            </Grid>
+            {/* <Grid
+              container
+              item
+              xs={12}
+              md={3}
+              sx={{ display: 'flex', flexDirection: 'column', gap: 3, pb: { xs: 12, sm: 6 } }}
+            >
+              <Grid item>
+                <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Typography
+                    sx={{
+                      fontSize: 18,
+                      fontFamily: 'Kanit-SemiBold',
+                      color: (t) => t.palette.secondary.main,
+                      '&:hover': { textDecoration: 'underline' },
+                    }}
+                  >
+                    Passagens
+                  </Typography>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link to="/sobre" style={{ textDecoration: 'none' }}>
+                  <Typography
+                    sx={{
+                      fontSize: 18,
+                      fontFamily: 'Kanit-SemiBold',
+                      color: (t) => t.palette.secondary.main,
+                      '&:hover': { textDecoration: 'underline' },
+                    }}
+                  >
+                    Pacotes
+                  </Typography>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Typography
+                    sx={{
+                      fontSize: 18,
+                      fontFamily: 'Kanit-SemiBold',
+                      color: (t) => t.palette.secondary.main,
+                      '&:hover': { textDecoration: 'underline' },
+                    }}
+                  >
+                    Hospedagem
+                  </Typography>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link to="/" style={{ textDecoration: 'none' }}>
+                  <Typography
+                    sx={{
+                      fontSize: 18,
+                      fontFamily: 'Kanit-SemiBold',
+                      color: (t) => t.palette.secondary.main,
+                      '&:hover': { textDecoration: 'underline' },
+                    }}
+                  >
+                    Sobre nós
+                  </Typography>
+                </Link>
+              </Grid>
+            </Grid> */}
+            <Grid
+              container
+              item
+              xs={12}
+              md={4}
+              sx={{ display: 'flex', flexDirection: 'column', gap: 1, pb: { xs: 12, sm: 6 } }}
+            >
+              <Grid item>
+                <Typography
+                  sx={{
+                    fontSize: 18,
+                    fontFamily: 'Kanit-SemiBold',
+                    color: (t) => t.palette.secondary.main,
+                  }}
+                >
+                  Contato
+                </Typography>
+              </Grid>
+              <Grid item sx={{ display: 'flex', gap: 2 }}>
+                <Box
+                  alt="Whatsapp icon"
+                  component="img"
+                  src="/assets/icons/lazertur/phone.svg"
+                />
+                <Typography
+                  sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
+                >
+                  (34) 3237.2515
+                </Typography>
+              </Grid>
+              <Grid item sx={{ display: 'flex', gap: 2 }}>
+                <Box
+                  alt="Whatsapp icon"
+                  component="img"
+                  src="/assets/icons/lazertur/headset_2.svg"
+                />
+                <Typography
+                  sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
+                >
+                  0800 940 7777
+                </Typography>
+              </Grid>
+              <Grid item sx={{ display: 'flex', gap: 2, pr: { xs: 2, lg: 4 } }}>
+                <Box
+                  alt="location icon"
+                  component="img"
+                  src="/assets/icons/lazertur/location.svg"
+                />
+                <Typography
+                  sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
+                >
+                  Av. Rondon Pacheco, 1756 Uberlândia, MG
+                </Typography>
+              </Grid>
+              {/* <Grid item sx={{ display: 'flex', gap: 2 }}>
+                <Box component="img" src="/assets/icons/lazertur/help.svg" />
+                <Typography
+                  sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
+                >
+                  Ajuda
+                </Typography>
+              </Grid> */}
+            </Grid>
+            <Grid
+              container
+              item
+              xs={12}
+              md={4}
+              sx={{ pl: { md: 15 }, display: 'flex', flexDirection: 'column', gap: 2 }}
+            >
+              <Grid item>
+                <Typography
+                  sx={{
+                    fontSize: 18,
+                    fontFamily: 'Kanit-SemiBold',
+                    color: (t) => t.palette.secondary.main,
+                  }}
+                >
+                  Câmbio do dia
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: 18,
+                    fontFamily: 'Kanit-Regular',
+                    color: (t) => t.palette.secondary.main,
+                  }}
+                >
+                  {new Date().toLocaleDateString()}
+                </Typography>
+              </Grid>
+
+              <Grid container sx={{ display: 'flex', flexDirection: 'column' }}>
+                <Grid item sx={{ display: 'flex', gap: 1 }}>
+                  <Typography
+                    sx={{ fontFamily: 'Kanit-SemiBold', color: (t) => t.palette.secondary.main }}
+                  >
+                    Dólar
+                  </Typography>
+                  <Typography
+                    sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
+                  >
+                    (USD): R$5.06
+                  </Typography>
+                </Grid>
+                <Grid item sx={{ display: 'flex', gap: 1 }}>
+                  <Typography
+                    sx={{ fontFamily: 'Kanit-SemiBold', color: (t) => t.palette.secondary.main }}
+                  >
+                    Euro
+                  </Typography>
+                  <Typography
+                    sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
+                  >
+                    (EUR): R$5.54
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid container item xs={12} mt={12} sx={{ display: { xs: 'flex', md: 'none' } }}>
+              <Grid item xs={1.5}>
+                <Box
+                  onClick={() => {
+                    window.open('https://www.instagram.com/lazerturviagens/', 'blank');
+                  }}
+                  alt="instagram icon"
+                  component="img"
+                  src="/assets/icons/lazertur/instagram.svg"
+                />
+              </Grid>
+              <Grid item xs={1.5}>
+                <Box
+                  onClick={() => {
+                    window.open('https://www.facebook.com/lazertur/', 'blank');
+                  }}
+                  alt="Facebook icon"
+                  component="img"
+                  src="/assets/icons/lazertur/facebook.svg"
+                />
+              </Grid>
+              <Grid item xs={1.5}>
+                <Box
+                  onClick={() => {
+                    window.open(
+                      'https://www.linkedin.com/company/lazertur/?originalSubdomain=br',
+                      'blank'
+                    );
+                  }}
+                  alt="Linkedin icon"
+                  component="img"
+                  src="/assets/icons/lazertur/linkedin.svg"
+                />
+              </Grid>
+            </Grid>
+            <Grid container item xs={4} md={4} sx={{ display: { xs: 'none', md: 'flex' } }}>
+              <Grid
+                item
+                md={12}
+                sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
+              >
+                <Box
+                  alt="Lazertur Viagens logo"
+                  width={180}
+                  component="img"
+                  src="/logo/lazertur_viagens_logo.svg"
+                />
+              </Grid>
+              <Grid
+                container
+                item
+                md={12}
+                sx={{ display: 'flex', justifyContent: 'flex-end', gap: 3 }}
+              >
+                <Grid
+                  item
+                  xs={1}
+                  sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
+                >
+                  <Box
+                    sx={{
+                      '&:hover': {
+                        cursor: 'pointer',
+                      },
+                    }}
+                    onClick={() => {
+                      window.open('https://www.instagram.com/lazerturviagens/', 'blank');
+                    }}
+                    component="img"
+                    src="/assets/icons/lazertur/instagram.svg"
+                  />
+                </Grid>
+                <Grid
+                  item
+                  xs={1}
+                  sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
+                >
+                  <Box
+                    alt="Facebook icon"
+                    sx={{
+                      '&:hover': {
+                        cursor: 'pointer',
+                      },
+                    }}
+                    onClick={() => {
+                      window.open('https://www.facebook.com/lazertur/', 'blank');
+                    }}
+                    component="img"
+                    src="/assets/icons/lazertur/facebook.svg"
+                  />
+                </Grid>
+                <Grid
+                  item
+                  xs={1}
+                  sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
+                >
+                  <Box
+                    alt="Linkedin icon"
+                    sx={{
+                      '&:hover': {
+                        cursor: 'pointer',
+                      },
+                    }}
+                    onClick={() => {
+                      window.open(
+                        'https://www.linkedin.com/company/lazertur/?originalSubdomain=br',
+                        'blank'
+                      );
+                    }}
+                    component="img"
+                    src="/assets/icons/lazertur/linkedin.svg"
+                  />
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} sx={{ mt: { xs: 12, md: 0 } }}>
+              <Typography
+                sx={{
+                  fontSize: 12,
+                  fontFamily: 'Kanit-Regular',
+                  color: (t) => t.palette.secondary.main,
+                }}
+              >
+                LAZERTUR TURISMO LTDA | 38.575.072/0001-30 | AV RONDON PACHECO 1756 CEP 38408343-
+                UBERLÂNDIA - MINAS GERAIS - BRASIL | LAZERTUR VIAGENS. Para mais informações sobre
+                reembolsos, devoluções, cancelamentos, SAC e demais questões relacionadas ao
+                pagamento entrar em contato conosco.
+              </Typography>
+            </Grid>
+          </Grid>
+        </SectionWrapper>
+      </Box>
+    </Box>
+  );
+}

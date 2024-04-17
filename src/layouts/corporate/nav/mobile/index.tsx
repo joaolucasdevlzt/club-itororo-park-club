@@ -133,7 +133,7 @@ export default function NavMobile({ data }: NavProps) {
             }}
             onClick={() =>
               window.open(
-                'https://api.whatsapp.com/send/?phone=553432556831&text=Ol%C3%A1%2C+tenho+interesse+nessa+oferta+exclusiva%21&type=phone_number&app_absent=0',
+                'https://api.whatsapp.com/send/?phone=5534999482515&type=phone_number&app_absent=0',
                 '_blank'
               )
             }

@@ -1,10 +1,7 @@
 import Box from '@mui/material/Box';
 
-import { usePathname } from 'src/routes/hooks';
-
 import Header from './header';
 import Footer from './footer';
-import { HEADER } from '../config-layout';
 
 // ----------------------------------------------------------------------
 
@@ -13,8 +10,6 @@ type Props = {
 };
 
 export default function CorporateLayout({ children }: Props) {
-  const pathname = usePathname();
-  const homePage = pathname === '/home';
   return (
     <>
       <Header />
@@ -22,7 +17,7 @@ export default function CorporateLayout({ children }: Props) {
         component="main"
         sx={{
           display: 'flex',
-          backgroundColor: '#F9FAFA',
+          backgroundColor: '#F9FBFD',
           flexDirection: 'column',
           justifyContent: 'center',
         }}

@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import { Link, createTheme, useMediaQuery, useScrollTrigger } from '@mui/material';
-
-import { usePathname } from 'src/routes/hooks';
+import { Link, createTheme, useMediaQuery } from '@mui/material';
 
 import NavMobile from './nav/mobile';
 import { HEADER } from '../config-layout';
@@ -15,7 +13,7 @@ import { navConfig } from './config-navigation';
 export default function Header() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
-    const position = window.pageYOffset;
+    const position = window.scrollY;
     setScrollPosition(position);
   };
 
@@ -26,12 +24,7 @@ export default function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  console.log(scrollPosition);
-  const path = usePathname();
-  const about = path === '/sobre';
-  const home = path === '/';
-  const services = path === encodeURI('/serviços');
-  const help = path === encodeURI('/ajuda');
+
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -76,7 +69,7 @@ export default function Header() {
       {mdUp && (
         <Stack
           sx={{
-            gap:{xs:1, lg:2},
+            gap: { xs: 1, lg: 2 },
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
@@ -85,8 +78,8 @@ export default function Header() {
         >
           <Link
             sx={{
-              pl: {xs:1,lg:3},
-              pr: {xs:1,lg:3},
+              pl: { xs: 1, lg: 3 },
+              pr: { xs: 1, lg: 3 },
               pt: 1,
               pb: 1,
               width: 'fit-content',
@@ -104,8 +97,8 @@ export default function Header() {
           </Link>
           <Link
             sx={{
-              pl: {xs:1,lg:3},
-              pr: {xs:1,lg:3},
+              pl: { xs: 1, lg: 3 },
+              pr: { xs: 1, lg: 3 },
               pt: 1,
               pb: 1,
 
@@ -127,8 +120,8 @@ export default function Header() {
           </Link>
           <Link
             sx={{
-              pl: {xs:1,lg:3},
-              pr: {xs:1,lg:3},
+              pl: { xs: 1, lg: 3 },
+              pr: { xs: 1, lg: 3 },
               pt: 1,
               pb: 1,
 
@@ -150,8 +143,8 @@ export default function Header() {
           </Link>
           <Link
             sx={{
-              pl: {xs:1,lg:3},
-              pr: {xs:1,lg:3},
+              pl: { xs: 1, lg: 3 },
+              pr: { xs: 1, lg: 3 },
               pt: 1,
               pb: 1,
 
@@ -173,10 +166,10 @@ export default function Header() {
           <Box
             sx={{
               minWidth: '191px',
-              textAlign:'center',
+              textAlign: 'center',
               border: '1.5px solid white',
-              pl: {xs:1,lg:3},
-              pr: {xs:1,lg:3},
+              pl: { xs: 1, lg: 3 },
+              pr: { xs: 1, lg: 3 },
               pt: 1,
               pb: 1,
               borderRadius: 1,

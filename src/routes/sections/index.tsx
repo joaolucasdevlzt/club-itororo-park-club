@@ -3,7 +3,6 @@ import { Navigate, useRoutes } from 'react-router-dom';
 
 import MainLayout from 'src/layouts/main';
 import HomePage from 'src/pages/home/main';
-
 import CorporateLayout from 'src/layouts/corporate';
 
 import { mainRoutes } from './main';

@@ -40,6 +40,7 @@ export default function Header() {
   return (
     <Box
       sx={{
+        zIndex: 1000,
         width: '100%',
         position: { md: 'relative', lg: 'fixed' },
         top: 0,
@@ -91,7 +92,7 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            href="/"
+            href="/#clientes"
           >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>Sobre nós</Box>
           </Link>

@@ -4,6 +4,7 @@ import Benchmarking from './sections/benchmarking';
 import CardsSection from './sections/cards-section';
 import HistorySection from './sections/history-section';
 import OurSolutionsSection from './sections/our-solutions-section';
+import PartnershipSection from './sections/partnership-section';
 
 export default function CorporatePage() {
   return (
@@ -40,6 +41,7 @@ export default function CorporatePage() {
       <HistorySection />
       <OurSolutionsSection />
       <Benchmarking />
+      <PartnershipSection />
     </Box>
   );
 }

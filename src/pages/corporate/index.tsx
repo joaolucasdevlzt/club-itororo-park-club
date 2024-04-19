@@ -1,6 +1,9 @@
 import { Box } from '@mui/material';
 
-import CardsSection from './cards-section';
+import Benchmarking from './sections/benchmarking';
+import CardsSection from './sections/cards-section';
+import HistorySection from './sections/history-section';
+import OurSolutionsSection from './sections/our-solutions-section';
 
 export default function CorporatePage() {
   return (
@@ -15,9 +18,9 @@ export default function CorporatePage() {
       <Box
         sx={{
           width: '100%',
-          aspectRatio: {xs:'16/9.3', sm:'16/7.3'},
+          aspectRatio: { xs: '16/9.3', sm: '16/7.3' },
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: { xs: 'bottom', lg:'center' },
+          backgroundPosition: { xs: 'bottom', lg: 'center' },
           backgroundSize: { xs: '160%', sm: '130%' },
           backgroundImage: 'url(/assets/images/corporate/corporate_hero.png)',
         }}
@@ -34,6 +37,9 @@ export default function CorporatePage() {
         title="Com ferramentas de gestão e Business Inteligente"
         text="Sabemos quais as melhores épocas para comprar e onde comprar, pensando no destino que você deseja. Você terá uma gestão maior de suas viagens e dados que comprovam essa melhoria."
       />
+      <HistorySection />
+      <OurSolutionsSection />
+      <Benchmarking />
     </Box>
   );
 }

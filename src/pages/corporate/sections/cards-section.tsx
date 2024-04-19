@@ -10,12 +10,11 @@ export default function CardsSection({ image, title, text, direction = 'row' }: 
   return (
     <Box
       sx={{
-        pt: { xs: 10, sm: 15 },
+        mt: { xs: 10, sm: 15 },
         pl: { xs: 2, sm: 5, xl: 15 },
         pr: { xs: 2, sm: 5, xl: 15 },
-        maxWidth: '1920px',
+        maxWidth: '1520px',
         width: '100%',
-
         display: 'flex',
         flexDirection: direction,
         alignItems: 'center',
@@ -27,12 +26,12 @@ export default function CardsSection({ image, title, text, direction = 'row' }: 
           ...(direction === 'row'
             ? { marginRight: { xs: -2, sm: -4 } }
             : { marginLeft: { xs: -2, sm: -4 } }),
-          borderRadius: {xs:2, sm:3, md:4},
+          borderRadius: { xs: 2, sm: 3, md: 4 },
           width: '130%',
           height: { xs: 312, sm: 500, md: 600 },
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          backgroundSize: { xs: 'cover', sm: 'cover', md: 'cover', lg: 'contain' },
+          backgroundSize: 'cover',
           backgroundImage: `url(${image})`,
         }}
       />
@@ -42,13 +41,14 @@ export default function CardsSection({ image, title, text, direction = 'row' }: 
           flexDirection: 'column',
           justifyContent: 'center',
           padding: { xs: '15px', sm: '20px', md: '30px' },
-          borderRadius: {xs:2, sm:3, md:4},
+          borderRadius: { xs: 2, sm: 3, md: 4 },
           ...(direction === 'row'
             ? { marginLeft: { xs: -2, sm: -4 } }
             : { marginRight: { xs: -2, sm: -4 }, zIndex: 0 }),
           width: '100%',
-          height: { xs: 272, sm: 400, md: 430 },
+          height: { xs: 295, sm: 430, xl:520 },
           backgroundColor: 'white',
+          boxShadow:'0px 0px 15px 5px rgba(25, 32, 51, 0.05)'
         }}
       >
         <Typography

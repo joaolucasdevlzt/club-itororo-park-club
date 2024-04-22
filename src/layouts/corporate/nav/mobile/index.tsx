@@ -43,7 +43,7 @@ export default function NavMobile({ data }: NavProps) {
         onClose={handleCloseMenu}
         PaperProps={{
           sx: {
-            pb: 5,
+            height: '100%',
             width: 260,
           },
         }}
@@ -71,11 +71,10 @@ export default function NavMobile({ data }: NavProps) {
               backgroundImage: 'url(/logo/corporate_logo.svg)',
             }}
           />
-
           <Typography
             onClick={() => {
               handleCloseMenu();
-              window.scrollTo({ top: 300, behavior: 'smooth' });
+              window.document.getElementById('sobre-nós')?.scrollIntoView({ behavior: 'smooth' });
             }}
             sx={{
               width: 'fit-content',
@@ -86,6 +85,10 @@ export default function NavMobile({ data }: NavProps) {
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>Sobre nós</Box>
           </Typography>
           <Typography
+            onClick={() => {
+              handleCloseMenu();
+              window.document.getElementById('soluções')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             sx={{
               width: 'fit-content',
 
@@ -97,6 +100,12 @@ export default function NavMobile({ data }: NavProps) {
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>Soluções</Box>
           </Typography>
           <Typography
+            onClick={() => {
+              handleCloseMenu();
+              window.document
+                .getElementById('fornecedores')
+                ?.scrollIntoView({ behavior: 'smooth' });
+            }}
             sx={{
               width: 'fit-content',
 
@@ -105,9 +114,13 @@ export default function NavMobile({ data }: NavProps) {
               color: 'white',
             }}
           >
-            Fornecedores
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}> Fornecedores</Box>
           </Typography>
           <Typography
+            onClick={() => {
+              handleCloseMenu();
+              window.document.getElementById('clientes')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             sx={{
               width: 'fit-content',
 

@@ -44,8 +44,8 @@ export default function Header() {
         width: '100%',
         position: { md: 'relative', lg: 'fixed' },
         top: 0,
-        pl: { xs: 3, sm: 10, md: 15, lg:20, xl:30 },
-        pr: { xs: 3, sm: 10, md: 15, lg:20, xl:30 },
+        pl: { xs: 3, sm: 10, md: 15, lg: 20, xl: 30 },
+        pr: { xs: 3, sm: 10, md: 15, lg: 20, xl: 30 },
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -92,7 +92,7 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            href="/#clientes"
+            href="/corporate/#sobre-nós"
           >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>Sobre nós</Box>
           </Link>
@@ -115,7 +115,7 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            href="/"
+            href="/corporate/#soluções"
           >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>Soluções</Box>
           </Link>
@@ -138,7 +138,7 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            href="/"
+            href="/corporate/#fornecedores"
           >
             Fornecedores
           </Link>
@@ -160,7 +160,7 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            href="/"
+            href="/corporate/#clientes"
           >
             Clientes
           </Link>

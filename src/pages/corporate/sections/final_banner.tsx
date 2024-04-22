@@ -1,36 +1,24 @@
 import { Box, Button, Typography } from '@mui/material';
 
-export default function HistorySection() {
+export default function FinalBanner() {
   return (
     <Box
       sx={{
         position: 'relative',
         width: '100%',
-        display: 'flex',
-        maxWidth: '1520px',
-        justifyContent: 'flex-end',
         mt: { xs: 10, sm: 15 },
-        pl: { xs: 2, sm: 5, xl: 15 },
-        pr: { xs: 2, sm: 5, xl: 15 },
       }}
     >
       <Box
         sx={{
-          borderRadius: 3,
-          overflow: 'clip',
-          padding: { xs: 3, md: 3, lg: 8 },
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-evenly',
-          alignItems: 'flex-end',
           width: '100%',
           backdropFilter: '',
-          backgroundImage: 'url(/assets/images/corporate/history-section.png)',
+          backgroundImage: 'url(/assets/images/corporate/final_banner.png)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          filter: 'brightness(60%)',
+          filter: { xs: 'brightness(60%)', md: 'brightness(90%)' },
           backgroundSize: { xs: 'cover', md: '100%' },
-          aspectRatio: { xs: '10/7.5', sm: '10/6', md: '10/4.55' },
+          aspectRatio: { xs: '10/7.2', sm: '10/6', md: '10/3.8' },
         }}
       />
       <Box
@@ -38,10 +26,12 @@ export default function HistorySection() {
           pl: { xs: 2, sm: 5, xl: 15 },
           pr: { xs: 2, sm: 5, xl: 15 },
           position: 'absolute',
-          top: { xs: 10, sm: 15 },
+          top: { xs: 15, sm: 15 },
+          left: { xs: 10, sm: 15 },
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'space-evenly',
+          gap: 3,
+          justifyContent: 'center',
           alignItems: 'flex-start',
           width: { xs: '75%', sm: '70%', md: '50%' },
           height: '100%',
@@ -54,7 +44,7 @@ export default function HistorySection() {
             fontFamily: 'Kanit-Regular',
           }}
         >
-          Mais de 30 anos de atuação no mercado de viagens
+          Fale com nossos especialistas e faça sua empresa decolar
         </Typography>
         <Typography
           sx={{
@@ -64,13 +54,11 @@ export default function HistorySection() {
             fontFamily: 'Kanit-ExtraLight',
           }}
         >
-          Fundada em 1990 e com sede em Uberlândia, a Lazertur Viagens tem atuado no mercado de
-          turismo e posteriormente com a vertente do LZT Corporate, especializada no atendimento
-          para empresas e oferecendo a mesma qualidade de serviço adquirido em décadas de
-          experiência no ramo.
+          A LZT Corporate está pronta para te auxiliar no seu planejamento de viagens e encontrar as
+          melhores soluções para seu negócio. Economize, planeje-se e voe tranquilo sabendo que você
+          escolheu a melhor opção para sua viagem corporativa.
         </Typography>
         <Button
-          id="soluções"
           sx={{
             pl: 3,
             pr: 3,

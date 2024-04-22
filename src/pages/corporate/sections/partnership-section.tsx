@@ -35,6 +35,7 @@ export default function PartnershipSection() {
       }}
     >
       <Typography
+      
         sx={{
           color: '#0A35CD',
           fontSize: { xs: '20px', sm: '26px', lg: '38px', xl: '46px' },
@@ -45,12 +46,11 @@ export default function PartnershipSection() {
       </Typography>
 
       <Grid container sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        {partners.map((item, index) => (
-          <Grid item xs={6} sm={4} md={3} lg={2} sx={{ display: 'flex', justifyContent: 'center' }}>
+        {partners.map((item) => (
+          <Grid key={item} item xs={6} sm={4} md={3} lg={2} sx={{ display: 'flex', justifyContent: 'center' }}>
             <Box
               sx={{
                 width: '70%',
-
                 aspectRatio: '10/5',
                 backgroundSize: '100%',
                 backgroundRepeat: 'no-repeat',

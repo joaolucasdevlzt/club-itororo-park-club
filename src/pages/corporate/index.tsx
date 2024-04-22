@@ -1,10 +1,11 @@
 import { Box } from '@mui/material';
 
+import FinalBanner from './sections/final_banner';
 import Benchmarking from './sections/benchmarking';
 import CardsSection from './sections/cards-section';
 import HistorySection from './sections/history-section';
-import OurSolutionsSection from './sections/our-solutions-section';
 import PartnershipSection from './sections/partnership-section';
+import OurSolutionsSection from './sections/our-solutions-section';
 
 export default function CorporatePage() {
   return (
@@ -26,6 +27,7 @@ export default function CorporatePage() {
           backgroundImage: 'url(/assets/images/corporate/corporate_hero.png)',
         }}
       />
+      <Box id="sobre-nós" />
       <CardsSection
         direction="row"
         image="/assets/images/corporate/travel_section_1.png"
@@ -42,6 +44,7 @@ export default function CorporatePage() {
       <OurSolutionsSection />
       <Benchmarking />
       <PartnershipSection />
+      <FinalBanner />
     </Box>
   );
 }

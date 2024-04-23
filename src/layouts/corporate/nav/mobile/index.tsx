@@ -93,9 +93,7 @@ export default function NavMobile({ data }: NavProps) {
             }}
             sx={{
               width: 'fit-content',
-
               fontFamily: 'Kanit-ExtraLight',
-
               color: 'white',
             }}
           >
@@ -109,9 +107,7 @@ export default function NavMobile({ data }: NavProps) {
             }}
             sx={{
               width: 'fit-content',
-
               fontFamily: 'Kanit-ExtraLight',
-
               color: 'white',
             }}
           >
@@ -124,9 +120,7 @@ export default function NavMobile({ data }: NavProps) {
             }}
             sx={{
               width: 'fit-content',
-
               fontFamily: 'Kanit-ExtraLight',
-
               color: 'white',
             }}
           >

@@ -104,13 +104,9 @@ export default function Header() {
               pr: { xs: 1, lg: 3 },
               pt: 1,
               pb: 1,
-
               width: 'fit-content',
-
               fontFamily: 'Kanit-ExtraLight',
-
               color: 'white',
-
               '&:hover': {
                 backgroundColor: '#0A35CD80',
                 borderRadius: '6px',
@@ -127,11 +123,8 @@ export default function Header() {
               pr: { xs: 1, lg: 3 },
               pt: 1,
               pb: 1,
-
               width: 'fit-content',
-
               fontFamily: 'Kanit-ExtraLight',
-
               color: 'white',
               '&:hover': {
                 backgroundColor: '#0A35CD80',
@@ -149,13 +142,9 @@ export default function Header() {
               pr: { xs: 1, lg: 3 },
               pt: 1,
               pb: 1,
-
               width: 'fit-content',
-
               fontFamily: 'Kanit-ExtraLight',
-
               color: 'white',
-
               '&:hover': {
                 backgroundColor: '#0A35CD80',
                 borderRadius: '6px',

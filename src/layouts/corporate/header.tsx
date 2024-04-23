@@ -153,7 +153,7 @@ export default function Header() {
             }}
             onClick={()=>scrollToSection('fornecedores')}
           >
-            Fornecedores
+            Parceiros
           </Box>
 
           <Box

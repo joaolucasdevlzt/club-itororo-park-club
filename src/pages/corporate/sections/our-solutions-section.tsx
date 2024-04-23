@@ -5,6 +5,7 @@ export default function OurSolutionsSection() {
   const downMd = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <Box
+
       sx={{
         width: '100%',
         display: 'flex',
@@ -144,7 +145,7 @@ export default function OurSolutionsSection() {
               Gestão de despesas
             </Typography>
             <Typography
-              id="clientes"
+              
               sx={{
                 color: 'black',
                 fontSize: { xs: '12px', sm: '14px', md: '16px', lg: '20px', xl: '24px' },

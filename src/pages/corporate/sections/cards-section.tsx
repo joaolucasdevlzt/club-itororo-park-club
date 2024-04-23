@@ -62,6 +62,7 @@ export default function CardsSection({ image, title, text, direction = 'row' }: 
           {title}
         </Typography>
         <Typography
+      
           sx={{
             color: (t) => t.palette.secondary.main,
             fontSize: { xs: '12px', sm: '19px', md: '22px', lg: '24px' },

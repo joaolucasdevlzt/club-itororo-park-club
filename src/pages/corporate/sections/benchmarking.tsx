@@ -83,7 +83,7 @@ export default function Benchmarking() {
           Quer saber o que nossos clientes pensam sobre a LZT Corporate?
         </Typography>
         <Typography
-          id="fornecedores"
+      
           sx={{
             color: 'black',
             fontSize: { xs: '12px', sm: '14px', md: '16px', lg: '20px', xl: '24px' },

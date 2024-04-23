@@ -27,7 +27,7 @@ export default function CorporatePage() {
           backgroundImage: 'url(/assets/images/corporate/corporate_hero.png)',
         }}
       />
-      <Box id="sobre-nós" />
+
       <CardsSection
         direction="row"
         image="/assets/images/corporate/travel_section_1.png"
@@ -40,9 +40,13 @@ export default function CorporatePage() {
         title="Com ferramentas de gestão e Business Inteligente"
         text="Sabemos quais as melhores épocas para comprar e onde comprar, pensando no destino que você deseja. Você terá uma gestão maior de suas viagens e dados que comprovam essa melhoria."
       />
+      <Box id="sobre-nós" />
       <HistorySection />
+      <Box id="soluções" />
       <OurSolutionsSection />
+      <Box id="clientes" />
       <Benchmarking />
+      <Box id="fornecedores" />
       <PartnershipSection />
       <FinalBanner />
     </Box>

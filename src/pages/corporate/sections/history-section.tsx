@@ -77,7 +77,7 @@ export default function HistorySection() {
               '_blank'
             )
           }
-          id="soluções"
+        
           sx={{
             pl: 3,
             pr: 3,

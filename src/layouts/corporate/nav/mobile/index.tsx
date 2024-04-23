@@ -124,7 +124,7 @@ export default function NavMobile({ data }: NavProps) {
               color: 'white',
             }}
           >
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}> Fornecedores</Box>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}> Parceiros</Box>
           </Typography>
           <Box
             sx={{

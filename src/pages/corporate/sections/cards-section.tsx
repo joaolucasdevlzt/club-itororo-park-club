@@ -46,14 +46,14 @@ export default function CardsSection({ image, title, text, direction = 'row' }: 
             ? { marginLeft: { xs: -2, sm: -4 } }
             : { marginRight: { xs: -2, sm: -4 }, zIndex: 0 }),
           width: '100%',
-          height: { xs: 295, sm: 430, xl:520 },
+          height: { xs: 295, sm: 430, xl: 520 },
           backgroundColor: 'white',
-          boxShadow:'0px 0px 15px 5px rgba(25, 32, 51, 0.05)'
+          boxShadow: '0px 0px 15px 5px rgba(25, 32, 51, 0.05)',
         }}
       >
         <Typography
           sx={{
-            color: (t) => t.palette.secondary.main,
+            color: '#0A35CD',
             fontSize: { xs: '17px', sm: '26px', md: '34px', lg: '38px', xl: '46px' },
             fontFamily: 'Kanit-Regular',
             fontWeight: 'bold',
@@ -65,7 +65,7 @@ export default function CardsSection({ image, title, text, direction = 'row' }: 
           sx={{
             color: (t) => t.palette.secondary.main,
             fontSize: { xs: '12px', sm: '19px', md: '22px', lg: '24px' },
-            fontFamily: 'Kanit-Regular',
+            fontFamily: 'Kanit-Light',
             mt: 2,
           }}
         >

@@ -87,7 +87,7 @@ export default function Benchmarking() {
           sx={{
             color: 'black',
             fontSize: { xs: '12px', sm: '14px', md: '16px', lg: '20px', xl: '24px' },
-            fontFamily: 'Kanit-Regular',
+            fontFamily: 'Kanit-Light',
           }}
         >
           Fazemos questão que você comprove a qualidade da nossa entrega com as empresas que já

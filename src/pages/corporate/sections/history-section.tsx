@@ -28,15 +28,16 @@ export default function HistorySection() {
           backgroundImage: 'url(/assets/images/corporate/history-section.png)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          filter: 'brightness(60%)',
+          filter: {xs:'brightness(75%)',md:'brightness(100%)'},
           backgroundSize: { xs: 'cover', md: '100%' },
           aspectRatio: { xs: '10/7.5', sm: '10/6', md: '10/4.55' },
         }}
       />
       <Box
         sx={{
-          pl: { xs: 2, sm: 5, xl: 15 },
-          pr: { xs: 2, sm: 5, xl: 15 },
+          pl: { xs: 2, sm: 5, xl: 11 },
+          pr: { xs: 2, sm: 5, xl: 11 },
+          pb: { xs: 2, sm: 5, xl: 5 },
           position: 'absolute',
           top: { xs: 10, sm: 15 },
           display: 'flex',
@@ -70,6 +71,12 @@ export default function HistorySection() {
           experiência no ramo.
         </Typography>
         <Button
+          onClick={() =>
+            window.open(
+              'https://api.whatsapp.com/send/?phone=5534999482515&type=phone_number&app_absent=0',
+              '_blank'
+            )
+          }
           id="soluções"
           sx={{
             pl: 3,

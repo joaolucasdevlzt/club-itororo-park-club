@@ -99,6 +99,22 @@ export default function NavMobile({ data }: NavProps) {
           >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>Soluções</Box>
           </Typography>
+
+          <Typography
+            onClick={() => {
+              handleCloseMenu();
+              window.document.getElementById('clientes')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            sx={{
+              width: 'fit-content',
+
+              fontFamily: 'Kanit-ExtraLight',
+
+              color: 'white',
+            }}
+          >
+            Clientes
+          </Typography>
           <Typography
             onClick={() => {
               handleCloseMenu();
@@ -115,21 +131,6 @@ export default function NavMobile({ data }: NavProps) {
             }}
           >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}> Fornecedores</Box>
-          </Typography>
-          <Typography
-            onClick={() => {
-              handleCloseMenu();
-              window.document.getElementById('clientes')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            sx={{
-              width: 'fit-content',
-
-              fontFamily: 'Kanit-ExtraLight',
-
-              color: 'white',
-            }}
-          >
-            Clientes
           </Typography>
           <Box
             sx={{

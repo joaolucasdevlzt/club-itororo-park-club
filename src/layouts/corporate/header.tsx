@@ -131,16 +131,15 @@ export default function Header() {
               fontFamily: 'Kanit-ExtraLight',
 
               color: 'white',
-
               '&:hover': {
                 backgroundColor: '#0A35CD80',
                 borderRadius: '6px',
                 textDecoration: 'none',
               },
             }}
-            href="/corporate/#fornecedores"
+            href="/corporate/#clientes"
           >
-            Fornecedores
+            Clientes
           </Link>
           <Link
             sx={{
@@ -154,16 +153,18 @@ export default function Header() {
               fontFamily: 'Kanit-ExtraLight',
 
               color: 'white',
+
               '&:hover': {
                 backgroundColor: '#0A35CD80',
                 borderRadius: '6px',
                 textDecoration: 'none',
               },
             }}
-            href="/corporate/#clientes"
+            href="/corporate/#fornecedores"
           >
-            Clientes
+            Fornecedores
           </Link>
+
           <Box
             sx={{
               minWidth: '191px',

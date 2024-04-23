@@ -13,7 +13,7 @@ export default function OurSolutionsSection() {
         mt: { xs: 10, sm: 15 },
         pl: { xs: 2, sm: 5, xl: 15 },
         pr: { xs: 2, sm: 5, xl: 15 },
-        gap: 5,
+        gap: 7,
       }}
     >
       <Typography
@@ -53,7 +53,7 @@ export default function OurSolutionsSection() {
               sx={{
                 color: 'black',
                 fontSize: { xs: '12px', sm: '14px', md: '16px', lg: '20px', xl: '24px' },
-                fontFamily: 'Kanit-Regular',
+                fontFamily: 'Kanit-Light',
               }}
             >
               Sem o planejamento correto, a compra de passagens aéreas corporativas podem gerar
@@ -81,7 +81,7 @@ export default function OurSolutionsSection() {
               sx={{
                 color: 'black',
                 fontSize: { xs: '12px', sm: '14px', md: '16px', lg: '20px', xl: '24px' },
-                fontFamily: 'Kanit-Regular',
+                fontFamily: 'Kanit-Light',
               }}
             >
               Contamos com um time especializado em identificar oportunidades na redução de custos,
@@ -119,7 +119,7 @@ export default function OurSolutionsSection() {
               sx={{
                 color: 'black',
                 fontSize: { xs: '12px', sm: '14px', md: '16px', lg: '20px', xl: '24px' },
-                fontFamily: 'Kanit-Regular',
+                fontFamily: 'Kanit-Light',
               }}
             >
               Você mesmo poderá conferir as passagens disponíveis através do sistema que oferecemos
@@ -148,7 +148,7 @@ export default function OurSolutionsSection() {
               sx={{
                 color: 'black',
                 fontSize: { xs: '12px', sm: '14px', md: '16px', lg: '20px', xl: '24px' },
-                fontFamily: 'Kanit-Regular',
+                fontFamily: 'Kanit-Light',
               }}
             >
               Com nossas ferramentas de gestão financeira, você terá em mãos todos os gastos e

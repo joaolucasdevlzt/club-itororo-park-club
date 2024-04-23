@@ -59,6 +59,12 @@ export default function FinalBanner() {
           escolheu a melhor opção para sua viagem corporativa.
         </Typography>
         <Button
+          onClick={() =>
+            window.open(
+              'https://api.whatsapp.com/send/?phone=5534999482515&type=phone_number&app_absent=0',
+              '_blank'
+            )
+          }
           sx={{
             pl: 3,
             pr: 3,

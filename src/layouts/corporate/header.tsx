@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import { Link, createTheme, useMediaQuery } from '@mui/material';
+import { Box, createTheme, useMediaQuery } from '@mui/material';
 
 import NavMobile from './nav/mobile';
 import { HEADER } from '../config-layout';
@@ -77,7 +76,10 @@ export default function Header() {
             justifyContent: 'space-between',
           }}
         >
-          <Link
+          <Box
+            onClick={() => {
+              window.document.getElementById('sobre-nós')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             sx={{
               pl: { xs: 1, lg: 3 },
               pr: { xs: 1, lg: 3 },
@@ -92,11 +94,10 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            href="/corporate/#sobre-nós"
           >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>Sobre nós</Box>
-          </Link>
-          <Link
+          </Box>
+          <Box
             sx={{
               pl: { xs: 1, lg: 3 },
               pr: { xs: 1, lg: 3 },
@@ -115,11 +116,13 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            href="/corporate/#soluções"
+            onClick={() => {
+              window.document.getElementById('soluções')?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>Soluções</Box>
-          </Link>
-          <Link
+          </Box>
+          <Box
             sx={{
               pl: { xs: 1, lg: 3 },
               pr: { xs: 1, lg: 3 },
@@ -137,11 +140,13 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            href="/corporate/#clientes"
+            onClick={() => {
+              window.document.getElementById('clientes')?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             Clientes
-          </Link>
-          <Link
+          </Box>
+          <Box
             sx={{
               pl: { xs: 1, lg: 3 },
               pr: { xs: 1, lg: 3 },
@@ -160,10 +165,14 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            href="/corporate/#fornecedores"
+            onClick={() => {
+              window.document
+                .getElementById('fornecedores')
+                ?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             Fornecedores
-          </Link>
+          </Box>
 
           <Box
             sx={{

@@ -15,7 +15,9 @@ export default function Header() {
     const position = window.scrollY;
     setScrollPosition(position);
   };
-
+  const scrollToSection = (section: string) => {
+    window.document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+  };
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
 
@@ -77,9 +79,8 @@ export default function Header() {
           }}
         >
           <Box
-            onClick={() => {
-              window.document.getElementById('sobre-nós')?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            
+            onClick={()=>scrollToSection('sobre-nós')}
             sx={{
               pl: { xs: 1, lg: 3 },
               pr: { xs: 1, lg: 3 },
@@ -116,9 +117,7 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            onClick={() => {
-              window.document.getElementById('soluções')?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={()=>scrollToSection('soluções')}
           >
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>Soluções</Box>
           </Box>
@@ -140,9 +139,7 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            onClick={() => {
-              window.document.getElementById('clientes')?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={()=>scrollToSection('clientes')}
           >
             Clientes
           </Box>
@@ -165,11 +162,7 @@ export default function Header() {
                 textDecoration: 'none',
               },
             }}
-            onClick={() => {
-              window.document
-                .getElementById('fornecedores')
-                ?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={()=>scrollToSection('fornecedores')}
           >
             Fornecedores
           </Box>

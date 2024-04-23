@@ -31,7 +31,9 @@ export default function NavMobile({ data }: NavProps) {
   const handleCloseMenu = useCallback(() => {
     setOpenMenu(false);
   }, []);
-
+  const scrollToSection = (section: string) => {
+    window.document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <>
       <IconButton onClick={handleOpenMenu} sx={{ ml: 1 }}>
@@ -74,7 +76,7 @@ export default function NavMobile({ data }: NavProps) {
           <Typography
             onClick={() => {
               handleCloseMenu();
-              window.document.getElementById('sobre-nós')?.scrollIntoView({ behavior: 'smooth' });
+              scrollToSection('sobre-nós');
             }}
             sx={{
               width: 'fit-content',
@@ -87,7 +89,7 @@ export default function NavMobile({ data }: NavProps) {
           <Typography
             onClick={() => {
               handleCloseMenu();
-              window.document.getElementById('soluções')?.scrollIntoView({ behavior: 'smooth' });
+              scrollToSection('soluções');
             }}
             sx={{
               width: 'fit-content',
@@ -103,7 +105,7 @@ export default function NavMobile({ data }: NavProps) {
           <Typography
             onClick={() => {
               handleCloseMenu();
-              window.document.getElementById('clientes')?.scrollIntoView({ behavior: 'smooth' });
+              scrollToSection('clientes');
             }}
             sx={{
               width: 'fit-content',
@@ -118,9 +120,7 @@ export default function NavMobile({ data }: NavProps) {
           <Typography
             onClick={() => {
               handleCloseMenu();
-              window.document
-                .getElementById('fornecedores')
-                ?.scrollIntoView({ behavior: 'smooth' });
+              scrollToSection('fornecedores');
             }}
             sx={{
               width: 'fit-content',

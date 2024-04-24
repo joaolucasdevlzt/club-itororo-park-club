@@ -24,7 +24,7 @@ export default function CorporatePage() {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: { xs: 'bottom', lg: 'center' },
           backgroundSize: { xs: '160%', sm: '130%' },
-          backgroundImage: 'url(/assets/images/corporate/corporate_hero.png)',
+          backgroundImage: 'url(/assets/images/corporate/corporate_hero.jpg)',
         }}
       />
 

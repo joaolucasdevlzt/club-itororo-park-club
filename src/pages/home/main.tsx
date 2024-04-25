@@ -12,6 +12,7 @@ import AboutUsSection from 'src/sections/about-us';
 import StayInTouch from 'src/sections/stay-in-touch';
 import Carousel from 'src/sections/carousel/carousel';
 import GroupCompanies from 'src/sections/group-companies';
+import CorporateAndExperienceSection from 'src/sections/corp-exp';
 import HighlightPackageSection from 'src/sections/highlight-package';
 import MostWantedDestinations from 'src/sections/most-wanted-destinations';
 import HomepageDescriptionCardsSection from 'src/sections/homepage-description-cards';
@@ -50,7 +51,7 @@ export default function HomePage() {
     fetchImages();
     getAllHighlightPackage(setAll, setLoading);
   }, []);
- 
+
   return (
     <>
       <Helmet>
@@ -85,6 +86,9 @@ export default function HomePage() {
       </SectionWrapper>
       <SectionWrapper>
         <GroupCompanies />
+      </SectionWrapper>
+      <SectionWrapper>
+        <CorporateAndExperienceSection />
       </SectionWrapper>
       <SectionWrapper>
         <FAQ />

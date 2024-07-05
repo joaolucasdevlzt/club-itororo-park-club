@@ -58,7 +58,7 @@ export default function HomePage() {
         {process.env.NODE_ENV === 'development' && (
           <meta name="robots" content="noindex, nofollow" />
         )}
-        <title>Lazertur - Homepage</title>
+        <title>Lazertur Viagens</title>
       </Helmet>
       {!isLoading && rows && <Carousel images={rows} />}
       <SectionWrapper>

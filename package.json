@@ -9,7 +9,7 @@
     "dev": "env-cmd -f .env.development vite",
     "prod": "env-cmd -f .env.production vite",
     "start": "vite preview",
-    "build": "npx tsc -b && vite build",
+    "build": "tsc && vite build",
     "build-prod": "tsc && env-cmd -f .env.production vite build",
     "build-dev": "tsc && env-cmd -f .env.development vite build",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",

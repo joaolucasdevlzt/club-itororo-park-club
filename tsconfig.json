@@ -22,7 +22,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "src/**/*"],
+  "include": ["**/*.ts", "**/*.tsx", "src/**/*, vite.config.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"

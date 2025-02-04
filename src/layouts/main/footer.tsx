@@ -4,11 +4,11 @@ import SectionWrapper from 'src/components/section-wrapper';
 
 export default function Footer() {
   return (
-    <Box sx={{ width: '100%', backgroundColor: '#F9FAFA', pt: 12 }}>
+    <Box sx={{ width: '100%', backgroundColor: '#ffff', pt: 12 }}>
       <Box
         sx={{
           width: '100%',
-          backgroundColor: '#E5E6EE',
+          backgroundColor: '#ffff',
           display: 'flex',
           alignItems: 'flex-start',
           justifyContent: 'center',
@@ -31,70 +31,7 @@ export default function Footer() {
                 src="/logo/lazertur_viagens_logo.svg"
               />
             </Grid>
-            {/* <Grid
-              container
-              item
-              xs={12}
-              md={3}
-              sx={{ display: 'flex', flexDirection: 'column', gap: 3, pb: { xs: 12, sm: 6 } }}
-            >
-              <Grid item>
-                <Link to="/" style={{ textDecoration: 'none' }}>
-                  <Typography
-                    sx={{
-                      fontSize: 18,
-                      fontFamily: 'Kanit-SemiBold',
-                      color: (t) => t.palette.secondary.main,
-                      '&:hover': { textDecoration: 'underline' },
-                    }}
-                  >
-                    Passagens
-                  </Typography>
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link to="/sobre" style={{ textDecoration: 'none' }}>
-                  <Typography
-                    sx={{
-                      fontSize: 18,
-                      fontFamily: 'Kanit-SemiBold',
-                      color: (t) => t.palette.secondary.main,
-                      '&:hover': { textDecoration: 'underline' },
-                    }}
-                  >
-                    Pacotes
-                  </Typography>
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link to="/" style={{ textDecoration: 'none' }}>
-                  <Typography
-                    sx={{
-                      fontSize: 18,
-                      fontFamily: 'Kanit-SemiBold',
-                      color: (t) => t.palette.secondary.main,
-                      '&:hover': { textDecoration: 'underline' },
-                    }}
-                  >
-                    Hospedagem
-                  </Typography>
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link to="/" style={{ textDecoration: 'none' }}>
-                  <Typography
-                    sx={{
-                      fontSize: 18,
-                      fontFamily: 'Kanit-SemiBold',
-                      color: (t) => t.palette.secondary.main,
-                      '&:hover': { textDecoration: 'underline' },
-                    }}
-                  >
-                    Sobre nós
-                  </Typography>
-                </Link>
-              </Grid>
-            </Grid> */}
+   
             <Grid
               container
               item
@@ -122,21 +59,10 @@ export default function Footer() {
                 <Typography
                   sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
                 >
-                  (34) 3237.2515
+                  (34) 3228-5626
                 </Typography>
               </Grid>
-              <Grid item sx={{ display: 'flex', gap: 2 }}>
-                <Box
-                  alt="Whatsapp icon"
-                  component="img"
-                  src="/assets/icons/lazertur/headset_2.svg"
-                />
-                <Typography
-                  sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
-                >
-                  0800 940 7777
-                </Typography>
-              </Grid>
+             
               <Grid item sx={{ display: 'flex', gap: 2, pr: { xs: 2, lg: 4 } }}>
                 <Box
                   alt="location icon"
@@ -144,26 +70,47 @@ export default function Footer() {
                   src="/assets/icons/lazertur/location.svg"
                 />
                 <Typography
-                  sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
+                  sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main, marginTop: 2 }}
                 >
-                  Av. Rondon Pacheco, 1756 Uberlândia, MG
+                  Av Lindormira Borges do Nascimento, s/n CEP 38425-270 
                 </Typography>
               </Grid>
-              {/* <Grid item sx={{ display: 'flex', gap: 2 }}>
-                <Box component="img" src="/assets/icons/lazertur/help.svg" />
-                <Typography
+              <Grid item sx={{ display: 'flex', gap: 2 }}>
+                <Box
+                  onClick={() => {
+                    window.open('https://firebasestorage.googleapis.com/v0/b/ff-prod-platform.appspot.com/o/documents%2FTERMO%20DE%20COMPRA%20E%20POLITICA%20DE%20PRIVACIDADE_revisado.%20(2)%20(2).pdf?alt=media&token=68ac9b11-9645-431f-9148-2a018ae72d20', 'blank');
+                  }}
+                  alt="instagram icon"
+                  component="img"
+                  src="/assets/icons/lazertur/coffee.svg"
+                  sx={{
+                    '&:hover': {
+                      cursor: 'pointer',
+                    },
+                  }}
+                />
+                 <Typography
                   sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
                 >
-                  Ajuda
+                 Termos de Política e Privacidade
                 </Typography>
-              </Grid> */}
+                 </Grid>
+          
             </Grid>
+          
             <Grid
               container
               item
               xs={12}
               md={4}
-              sx={{ pl: { md: 15 }, display: 'flex', flexDirection: 'column', gap: 2 }}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 2,
+                justifyContent: { xs: 'center', md: 'center' },
+                alignItems: 'center',
+                pb: { xs: 12, sm: 6 },
+              }}
             >
               <Grid item>
                 <Typography
@@ -173,174 +120,48 @@ export default function Footer() {
                     color: (t) => t.palette.secondary.main,
                   }}
                 >
-                  Câmbio do dia
-                </Typography>
-                <Typography
-                  sx={{
-                    fontSize: 18,
-                    fontFamily: 'Kanit-Regular',
-                    color: (t) => t.palette.secondary.main,
-                  }}
-                >
-                  {new Date().toLocaleDateString()}
+                  Siga-nos
                 </Typography>
               </Grid>
-
-              <Grid container sx={{ display: 'flex', flexDirection: 'column' }}>
-                <Grid item sx={{ display: 'flex', gap: 1 }}>
-                  <Typography
-                    sx={{ fontFamily: 'Kanit-SemiBold', color: (t) => t.palette.secondary.main }}
-                  >
-                    Dólar
-                  </Typography>
-                  <Typography
-                    sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
-                  >
-                    (USD): R$5.06
-                  </Typography>
-                </Grid>
-                <Grid item sx={{ display: 'flex', gap: 1 }}>
-                  <Typography
-                    sx={{ fontFamily: 'Kanit-SemiBold', color: (t) => t.palette.secondary.main }}
-                  >
-                    Euro
-                  </Typography>
-                  <Typography
-                    sx={{ fontFamily: 'Kanit-Regular', color: (t) => t.palette.secondary.main }}
-                  >
-                    (EUR): R$5.54
-                  </Typography>
-                </Grid>
-              </Grid>
-            </Grid>
-            <Grid container item xs={12} mt={12} sx={{ display: { xs: 'flex', md: 'none' } }}>
-              <Grid item xs={1.5}>
+              <Grid item sx={{ display: 'flex', gap: 2 }}>
                 <Box
                   onClick={() => {
-                    window.open('https://www.instagram.com/lazerturviagens/', 'blank');
+                    window.open('https://www.instagram.com/itororoparkclub/', 'blank');
                   }}
                   alt="instagram icon"
                   component="img"
                   src="/assets/icons/lazertur/instagram.svg"
+                  sx={{
+                    '&:hover': {
+                      cursor: 'pointer',
+                    },
+                  }}
                 />
-              </Grid>
-              <Grid item xs={1.5}>
                 <Box
                   onClick={() => {
-                    window.open('https://www.facebook.com/lazertur/', 'blank');
+                    window.open('https://www.facebook.com/clubecacaepescauberlandia', 'blank');
                   }}
                   alt="Facebook icon"
                   component="img"
                   src="/assets/icons/lazertur/facebook.svg"
-                />
-              </Grid>
-              <Grid item xs={1.5}>
-                <Box
-                  onClick={() => {
-                    window.open(
-                      'https://www.linkedin.com/company/lazertur/?originalSubdomain=br',
-                      'blank'
-                    );
+                  sx={{
+                    '&:hover': {
+                      cursor: 'pointer',
+                    },
                   }}
-                  alt="Linkedin icon"
-                  component="img"
-                  src="/assets/icons/lazertur/linkedin.svg"
                 />
+              
               </Grid>
             </Grid>
-            <Grid container item xs={4} md={4} sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Grid
-                item
-                md={12}
-                sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
-              >
-                <Box
-                  alt="Lazertur Viagens logo"
-                  width={180}
-                  component="img"
-                  src="/logo/lazertur_viagens_logo.svg"
-                />
-              </Grid>
-              <Grid
-                container
-                item
-                md={12}
-                sx={{ display: 'flex', justifyContent: 'flex-end', gap: 3 }}
-              >
-                <Grid
-                  item
-                  xs={1}
-                  sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
-                >
-                  <Box
-                    sx={{
-                      '&:hover': {
-                        cursor: 'pointer',
-                      },
-                    }}
-                    onClick={() => {
-                      window.open('https://www.instagram.com/lazerturviagens/', 'blank');
-                    }}
-                    component="img"
-                    src="/assets/icons/lazertur/instagram.svg"
-                  />
-                </Grid>
-                <Grid
-                  item
-                  xs={1}
-                  sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
-                >
-                  <Box
-                    alt="Facebook icon"
-                    sx={{
-                      '&:hover': {
-                        cursor: 'pointer',
-                      },
-                    }}
-                    onClick={() => {
-                      window.open('https://www.facebook.com/lazertur/', 'blank');
-                    }}
-                    component="img"
-                    src="/assets/icons/lazertur/facebook.svg"
-                  />
-                </Grid>
-                <Grid
-                  item
-                  xs={1}
-                  sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}
-                >
-                  <Box
-                    alt="Linkedin icon"
-                    sx={{
-                      '&:hover': {
-                        cursor: 'pointer',
-                      },
-                    }}
-                    onClick={() => {
-                      window.open(
-                        'https://www.linkedin.com/company/lazertur/?originalSubdomain=br',
-                        'blank'
-                      );
-                    }}
-                    component="img"
-                    src="/assets/icons/lazertur/linkedin.svg"
-                  />
-                </Grid>
-              </Grid>
-            </Grid>
-            <Grid item xs={12} sx={{ mt: { xs: 12, md: 0 } }}>
-              <Typography
-                sx={{
-                  fontSize: 12,
-                  fontFamily: 'Kanit-Regular',
-                  color: (t) => t.palette.secondary.main,
-                }}
-              >
-                LAZERTUR TURISMO LTDA | 38.575.072/0001-30 | AV RONDON PACHECO 1756 CEP 38408343-
-                UBERLÂNDIA - MINAS GERAIS - BRASIL | LAZERTUR VIAGENS. Para mais informações sobre
-                reembolsos, devoluções, cancelamentos, SAC e demais questões relacionadas ao
-                pagamento entrar em contato conosco.
-              </Typography>
+            
+            <Grid container item xs={12} md={4} justifyContent="flex-end">
+              <Box
+                alt="Lazertur Viagens logo"
+                width={180}
+                component="img"
+                src="/logo/lazertur_viagens_logo.svg"
+                sx={{ display: { xs: 'none', md: 'block' } }}
+              />
             </Grid>
           </Grid>
         </SectionWrapper>

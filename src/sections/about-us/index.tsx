@@ -23,7 +23,7 @@ export default function AboutUsSection() {
               color: (t) => t.palette.secondary.main,
             }}
           >
-            Sobre o Grupo LZT
+            Sobre o Itororó Park Club
           </Typography>
           {downMd && (
             <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
@@ -33,7 +33,7 @@ export default function AboutUsSection() {
                   backgroundSize: 'contain',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
-                  backgroundImage: `url(/logo/logo_grupo_lzt.svg)`,
+                  backgroundImage: `url(/logo/logo_itororo.svg)`,
                   aspectRatio: '16/7',
                 }}
               />
@@ -47,8 +47,7 @@ export default function AboutUsSection() {
               color: (t) => t.palette.secondary.main,
             }}
           >
-            Um conglomerado de empresas com presença nacional, o Grupo LZT atua há mais de 30 anos
-            sendo referência em serviços de viagens e segmentos agregados.
+            O Itororó Park Club é um destino de lazer e entretenimento que proporciona experiências inesquecíveis para toda a família. Com uma infraestrutura moderna e atrações para todas as idades, somos o local ideal para momentos de diversão, descanso e conexão com a natureza.
           </Typography>
           <Typography
             sx={{
@@ -59,20 +58,9 @@ export default function AboutUsSection() {
             }}
           >
             Nosso objetivo é encantar nossos clientes, servir com excelência e proporcionar
-            experiências incríveis aos nossos viajantes, e proporcionamos um leque de serviços para
-            atender às necessidades de todos os perfis de pessoas que podem precisar de nós.
+            experiências incríveis aos nossos sócios.
           </Typography>
-          <Typography
-            sx={{
-              fontFamily: 'Kanit-Regular',
-              fontWeight: '700',
-              fontSize: 20,
-              textAlign: 'left',
-              color: (t) => t.palette.secondary.main,
-            }}
-          >
-            Conheça as outras empresas que compõem nosso grupo:
-          </Typography>
+     
         </Box>
       </Grid>
       <Grid item xs={0} md={6} display="flex" justifyContent="center" alignItems="center">
@@ -82,7 +70,7 @@ export default function AboutUsSection() {
             backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            backgroundImage: `url(/logo/logo_grupo_lzt.svg)`,
+            backgroundImage: `url(/logo/logo_itororo.svg)`,
             aspectRatio: '16/7',
           }}
         />

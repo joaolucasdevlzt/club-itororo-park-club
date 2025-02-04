@@ -17,7 +17,7 @@ export default function CardWithTitleAndText({ image, title, text }: CardWithTit
         width: '100%',
         aspectRatio: { xs: '10/8.2', lg: '10/7.2' },
         borderRadius: 2,
-        backgroundImage: `url(/assets/cards/${image}.png)`,
+        backgroundImage: `url(/assets/images/lazertur/${image}.jpg)`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         pl: 5,

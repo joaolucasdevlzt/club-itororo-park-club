@@ -16,17 +16,9 @@ import { SettingsDrawer, SettingsProvider } from 'src/components/settings';
 // ----------------------------------------------------------------------
 
 export default function App() {
-  const charAt = `
 
-  ░░     ░░     ░░░░░░     ░░░░░░░
-   ▒▒   ▒▒     ▒▒          ▒▒    ▒▒
-    ▒▒ ▒▒       ▒▒▒▒▒▒     ▒▒▒▒▒▒▒ 
-     ▓▓▓             ▒▒    ▒▒
-      ▓         ▓▓▓▓▓▓     ▓▓
-  `;
 
-  console.info(`%c${charAt}`, 'color: #5BE49B');
-
+ 
   useScrollToTop();
 
   return (

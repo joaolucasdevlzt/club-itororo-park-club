@@ -31,21 +31,39 @@ export default function HomepageDescriptionCardsSection() {
     >
       <CardWithTitleAndText
         key={1}
-        image="beach"
-        title="Trabalhando há 15 anos no ramo de turismo"
-        text="Desde 2009 atendendo viajantes em Uberlândia."
+        image="itoro1"
+        title=""
+        text=""
       />
       <CardWithTitleAndText
         key={2}
-        image="geisha"
-        title="Agentes especializados"
-        text="Nossa equipe está pronta para te auxiliar tanto durante a compra quanto em alterações na viagem"
+        image="itoror2"
+        title=""
+        text=""
       />
       <CardWithTitleAndText
         key={3}
-        image="disney"
-        title="Pacotes, passagens, hotéis e muito mais"
-        text="Monte sua viagem personalizada e tenha assistência em seguros, aluguéis e ingressos."
+        image="itoro3"
+        title=""
+        text=""
+      />
+       <CardWithTitleAndText
+        key={4}
+        image="itoro5"
+        title=""
+        text=""
+      />
+        <CardWithTitleAndText
+        key={5}
+        image="itoro10"
+        title=""
+        text=""
+      />
+        <CardWithTitleAndText
+        key={6}
+        image="itoro11"
+        title=""
+        text=""
       />
     </Box>
   );

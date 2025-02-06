@@ -78,7 +78,7 @@ export default function Footer() {
               <Grid item sx={{ display: 'flex', gap: 2 }}>
                 <Box
                   onClick={() => {
-                    window.open('https://firebasestorage.googleapis.com/v0/b/ff-prod-platform.appspot.com/o/documents%2FTERMO%20DE%20COMPRA%20E%20POLITICA%20DE%20PRIVACIDADE_revisado.%20(2)%20(2).pdf?alt=media&token=68ac9b11-9645-431f-9148-2a018ae72d20', 'blank');
+                    window.open('https://firebasestorage.googleapis.com/v0/b/ff-prod-platform.appspot.com/o/documents%2FTERMO-DE-COMPRA-E-POLITICA-DE-PRIVACIDADE-ITORORO.pdf?alt=media&token=b8a88f1b-11cf-42cd-a308-54e1c58cda52', 'blank');
                   }}
                   alt="instagram icon"
                   component="img"
